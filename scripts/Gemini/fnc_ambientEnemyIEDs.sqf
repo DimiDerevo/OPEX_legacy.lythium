@@ -392,4 +392,4 @@ private _mainFunction =
 	};
 
 // LOOPING
-while {true} do {sleep ((call Gemini_fnc_ambientSleep)) * 10; [_IED_trigger_none, _IED_trigger_remote, _IED_trigger_cellphone, _IED_trigger_proximity] spawn _mainFunction};
+while {true} do {sleep ((call Gemini_fnc_ambientSleep) * 10); [_IED_trigger_none, _IED_trigger_remote, _IED_trigger_cellphone, _IED_trigger_proximity] spawn _mainFunction};

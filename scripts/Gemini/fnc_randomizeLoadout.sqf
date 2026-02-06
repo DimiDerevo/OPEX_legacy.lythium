@@ -7,6 +7,8 @@ private _side = side _this;
 
 if ((typeOf _unit) in OPEX_civilian_reporters) exitWith {};
 
+waitUntil {!isSwitchingWeapon _unit};
+
 _unit setVariable ["BIS_enableRandomization", false];
 
 removeAllWeapons _unit;

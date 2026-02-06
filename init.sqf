@@ -71,7 +71,7 @@
 	[] spawn Gemini_fnc_ambientEnemyPatrols;
 	[] spawn Gemini_fnc_ambientEnemyReinforcements;
 	[] spawn Gemini_fnc_ambientEnemyIEDs;
-	// [] spawn Gemini_fnc_ambientEnemyAmbushes;
+	[] spawn Gemini_fnc_ambientEnemyAmbushes;
 	[] spawn Gemini_fnc_ambientEnemyBivouacs;
 	[] spawn Gemini_fnc_ambientEnemyCaches;
 	[] spawn Gemini_fnc_ambientEnemyGarrisons;
