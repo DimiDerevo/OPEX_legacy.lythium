@@ -27,7 +27,7 @@ private _scriptStart = diag_tickTime;
 
 // GETTING PARAMETERS
 private _type = param [0, "land", ["", []]];
-private _center = param [1, OPEX_mapCenter, [objNull, []]]; if (typeName _center isEqualTo "OBJECT") then {_center = getPosATL _center};
+private _center = param [1, OPEX_mapCenter, [objNull, []]]; if (typeName _center isEqualTo "OBJECT") then {_center = position _center};
 private _minDistance = param [2, OPEX_spawnDistanceMini, [0]];
 private _maxDistance = param [3, OPEX_spawnDistanceMaxi, [0]];
 private _space = param [4, 0, [0]];
@@ -55,12 +55,12 @@ private _getLocationPosition = {
 		if ("isolated" in _type) then {private _isolated = OPEX_locations_isolated select {(_center distance2D _x > _minDistance) && (_center distance2D _x < _maxDistance)}; _locations append _isolated};
 		//_locations = _locations select {count (_x nearEntities ["Man", 100]) == 0};
 		if (count _locations == 0) exitWith {[0,0,0]};
-		private _location = getPosATL (selectRandom _locations);
+		private _location = position (selectRandom _locations);
 		_location
 	};
 private _selectLocation = {
 		params ["_locationType", "_center", "_minDistance", "_maxDistance"];
-		getPosATL (selectRandom ((_locationType inAreaArray [_center, _maxDistance, _maxDistance]) select {_center distance2D _x > _minDistance}));
+		position (selectRandom ((_locationType inAreaArray [_center, _maxDistance, _maxDistance]) select {_center distance2D _x > _minDistance}));
 	};
 
 // DEFINING MAIN FUNCTION
@@ -83,8 +83,8 @@ private _getPosition = {
 				case "forest"					:	{_position = (selectBestPlaces [_center, _maxDistance, "(1 + forest + trees) * (1 - sea) * (1 - houses)", _maxDistance / 10, 1]) select 0 select 0; _position pushBack 0};
 				case "hill"						:	{_position = (selectBestPlaces [_center, _maxDistance, "(1 + hills) * (1 - sea)", _maxDistance / 10, 1]) select 0 select 0; _position pushBack 0};
 
-				case "road"						:	{private _roads = (_center nearRoads _maxDistance) select {_center distance2D _x > _minDistance}; if (count _roads > 0) then {_position = getPosATL (selectRandom _roads)}};
-				case "building"					:	{private _buildings = ([_center, _maxDistance] call Gemini_fnc_findBuildings) select {_center distance2D _x > _minDistance}; if (count _buildings > 0) then {_position = getPosATL (selectRandom _buildings)}};
+				case "road"						:	{private _roads = (_center nearRoads _maxDistance) select {_center distance2D _x > _minDistance}; if (count _roads > 0) then {_position = position (selectRandom _roads)}};
+				case "building"					:	{private _buildings = ([_center, _maxDistance] call Gemini_fnc_findBuildings) select {_center distance2D _x > _minDistance}; if (count _buildings > 0) then {_position = position (selectRandom _buildings)}};
 
 				case "city"						:	{_position = [OPEX_locations_cities, _center, _minDistance, _maxDistance] call _selectLocation};
 				case "village"					:	{_position = [OPEX_locations_villages, _center, _minDistance, _maxDistance] call _selectLocation};
@@ -95,7 +95,7 @@ private _getPosition = {
 				case "water"					:	{_position = _center getPos [_minDistance + (random _maxDistance), random 360]; _position = [_position select 0, _position select 1, 0]};
 				default								{_position = [_type, _center, _minDistance, _maxDistance] call _getLocationPosition};
 			};
-		if ((count _position) == 2) then {_position set [2, getTerrainHeightASL _position]};
+		if ((count _position) == 2) then {_position set [2, 0]};
 		if (isNil "_position") then {_position = [0,0,0]};
 
 		// DEFINING POSSIBLE CONDITIONS
@@ -112,7 +112,7 @@ private _getPosition = {
 		private _isNearBuilding = !((nearestTerrainObjects [_position, ["House","Building"], 50]) isEqualTo []);
 		private _isInsideBuilding = _position call Gemini_fnc_isInsideBuilding;
 		private	_isPlayerNearby = [_position, OPEX_spawnDistanceMini] call Gemini_fnc_isPlayerNearby;
-		private _isHighEnough =  ((ATLToASL _position)#2) - ((ATLToASL _center)#2) > 5;
+		private _isHighEnough =  ((AGLToASL _position) select 2) + 25 > (AGLToASL _center) select 2;
 
 		// COMPILING CONDITIONS ACCORDING TO REQUESTED TYPE
 		// Test coords 1: [9969,11261,0]
@@ -168,7 +168,7 @@ if (OPEX_debug) then
 		systemChat format ["Searching for position2 of type '%1', %2, %3 attempts", _type, _validPos, _attempts];
 		DD_OPEX_findPosTimes pushBack ((_scriptEnd - _scriptStart)*1000);
 		if (_attempts > 0) then {
-			diag_log text format ["[findPos2.sqf called from: %9] Searching for position of type '%1', %2, %3 attempts in %10 ms | args: [%4, %5, %6, %7, %8]", _type, _validPos, _attempts, _type, _center, _minDistance, _maxDistance, _space, _fnc_scriptNameParent, (_scriptEnd - _scriptStart)*1000];
+			diag_log text format ["[findPos.sqf called from: %9] Searching for position of type '%1', %2, %3 attempts in %10 ms | args: [%4, %5, %6, %7, %8]", _type, _validPos, _attempts, _type, _center, _minDistance, _maxDistance, _space, _fnc_scriptNameParent, (_scriptEnd - _scriptStart)*1000];
 		};
 	};
 

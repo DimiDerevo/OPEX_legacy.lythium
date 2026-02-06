@@ -48,4 +48,4 @@ private _mainFunction =
 	};
 
 // LOOPING
-while {true} do {sleep ((call Gemini_fnc_ambientSleep)) * 10; [] spawn _mainFunction};
+while {true} do {sleep ((call Gemini_fnc_ambientSleep) * 10); [] spawn _mainFunction};
