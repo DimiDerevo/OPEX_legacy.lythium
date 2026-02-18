@@ -7,7 +7,7 @@ private _red	= 	"<t color='#FF0000'>";
 private _green 	= 	"<t color='#00A903'>";
 
 // DEBUG
-[OPEX_debug] call Gemini_fnc_debug;
+// [OPEX_debug] call Gemini_fnc_debug;
 
 // SAVING ACTIONS
 _unit setVariable ["customActionsReady",true];

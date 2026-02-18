@@ -7,7 +7,7 @@ private _side = side _this;
 
 if ((typeOf _unit) in OPEX_civilian_reporters) exitWith {};
 
-waitUntil {!isSwitchingWeapon _unit};
+waitUntil {!isSwitchingWeapon _unit}; // TODO: handle while prone
 
 _unit setVariable ["BIS_enableRandomization", false];
 

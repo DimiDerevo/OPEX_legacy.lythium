@@ -13,4 +13,7 @@ while {true} do
 			OPEX_playingPlayers insert [0, _playersToAdd , true];
 		} forEach OPEX_locations_safe;
 		publicVariable "OPEX_playingPlayers";
+
+		OPEX_Zeuses = (call BIS_fnc_listPlayers) select {!(isNull getAssignedCuratorLogic _x)};
+		publicVariable "OPEX_Zeuses";
 	};

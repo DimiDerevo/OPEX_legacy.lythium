@@ -62,21 +62,22 @@
 	[] spawn Gemini_fnc_ambientCivilianBoats;
 
 	// FRIENDS
-	[] spawn Gemini_fnc_ambientFriendlyPatrols;
-	[] spawn Gemini_fnc_ambientFriendlyBoats;
-	[] spawn Gemini_fnc_ambientFriendlyRoadblocks;
-	[] spawn Gemini_fnc_ambientFriendlyAir;
+	// [] spawn Gemini_fnc_ambientFriendlyPatrols;
+	// [] spawn Gemini_fnc_ambientFriendlyBoats;
+	// [] spawn Gemini_fnc_ambientFriendlyRoadblocks;
+	// [] spawn Gemini_fnc_ambientFriendlyAir;
 
 	// ENEMIES
-	[] spawn Gemini_fnc_ambientEnemyPatrols;
-	[] spawn Gemini_fnc_ambientEnemyReinforcements;
-	[] spawn Gemini_fnc_ambientEnemyIEDs;
-	[] spawn Gemini_fnc_ambientEnemyAmbushes;
-	[] spawn Gemini_fnc_ambientEnemyBivouacs;
-	[] spawn Gemini_fnc_ambientEnemyCaches;
-	[] spawn Gemini_fnc_ambientEnemyGarrisons;
-	[] spawn Gemini_fnc_ambientEnemyBoats;
-	[] spawn Gemini_fnc_ambientEnemyRoadblocks;
+	// [] spawn Gemini_fnc_ambientEnemyPatrols;
+	// [] spawn Gemini_fnc_ambientEnemyReinforcements;
+	// [] spawn Gemini_fnc_ambientEnemyIEDs;
+	// [] spawn Gemini_fnc_ambientEnemyAmbushes;
+	// [] spawn Gemini_fnc_ambientEnemyBivouacs;
+	// [] spawn Gemini_fnc_ambientEnemyCaches;
+	// [] spawn Gemini_fnc_ambientEnemyGarrisons;
+	// [] spawn Gemini_fnc_ambientEnemyBoats;
+	// [] spawn Gemini_fnc_ambientEnemyRoadblocks;
+	[] spawn Gemini_fnc_ambientSpawnController;
 
 // =========================================================================================================
 // INITIALIZING OTHER FUNCTIONS

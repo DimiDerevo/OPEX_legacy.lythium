@@ -313,22 +313,17 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (OPEX_debug) then
-		{
-			private ["_debugMarker"];
-			_debugMarker = createMarker [format ["OPEX_debugMarker_unit_%1", random 100000], position _unit];
-			_debugMarker setMarkerType "mil_dot";
-			if (side _unit == west) then {_debugMarker setMarkerColor "ColorBlue"};
-			if (side _unit == east) then {_debugMarker setMarkerColor "ColorRed"};
-			if (side _unit == resistance) then {_debugMarker setMarkerColor "ColorGreen"};
-			if (side _unit == civilian) then {_debugMarker setMarkerColor "ColorYellow"};
-			if (side _unit == sideLogic) then {_debugMarker setMarkerAlpha 0};
-			[_unit, _debugMarker] spawn
-				{
-					while {alive (_this select 0)} do {sleep 1; (_this select 1) setMarkerPos (position (_this select 0))};
-					deleteMarker (_this select 1);
-				};
-		};
+	if (OPEX_debug) then {
+		private _markerColor = "Default";
+		private _markerAlpha = 1;
+		if (side _unit == west) then {_markerColor = "ColorBlue"};
+		if (side _unit == east) then {_markerColor = "ColorRed"};
+		if (side _unit == resistance) then {_markerColor = "ColorGreen"};
+		if (side _unit == civilian) then {_markerColor = "ColorYellow"};
+		if (side _unit == sideLogic) then {_markerAlpha = 0};
+
+		[[format ["OPEX_debugMarker_unit_%1", random 100000], getPosATL _unit, "ICON", "mil_dot", [0.8, 0.8], 0, "Solid", _markerColor, _markerAlpha, ""], "zeus", "distance", _unit] spawn Gemini_fnc_createMarker2;
+	};
 
 // =========================================================================================================
 // RETURNING CREATED UNIT

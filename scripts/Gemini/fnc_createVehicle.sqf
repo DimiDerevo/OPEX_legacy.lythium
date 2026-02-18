@@ -82,24 +82,11 @@ if ((_vehicle isKindOf "landVehicle") || (_vehicle isKindOf "air") || (_vehicle 
 _vehicle setVariable ["R3F_LOG_disabled", _canBeCarried, true];
 
 // DEBUGGING
-if ((OPEX_debug) && (!isNil "_vehicle")) then
-	{
-		_marker = createMarker [format ["OPEX_marker_%1", random 100000], position _vehicle];
-		_marker setMarkerType "mil_dot";
-		if ((_vehicle isKindOf "air") || (_vehicle isKindOf "tank") || (_vehicle isKindOf "car") || (_vehicle isKindOf "ship")) then {_marker setMarkerColor "ColorBlack"} else {_marker setMarkerColor "ColorGrey"};
-		[_marker, _vehicle] spawn
-			{
-				private ["_marker", "_vehicle"];
-				_marker = _this select 0;
-				_vehicle = _this select 1;
-				while {(alive _vehicle) && (!isNil "_vehicle")} do
-					{
-						sleep 1;
-						_marker setMarkerPos (getPos _vehicle);
-					};
-				deleteMarker _marker;
-			};
-	};
+if ((OPEX_debug) && (!isNil "_vehicle")) then {
+	private _markerColor = "Default";
+	if ((_vehicle isKindOf "air") || (_vehicle isKindOf "tank") || (_vehicle isKindOf "car") || (_vehicle isKindOf "ship")) then {_markerColor = "ColorBlack"} else {_markerColor = "ColorGrey"};
+	[[format ["OPEX_marker_%1", random 100000], getPosATL _vehicle, "ICON", "mil_dot", [0.8, 0.8], 0, "Solid", _markerColor, 1, ""], "zeus", "distance", _vehicle] spawn Gemini_fnc_createMarker2;
+};
 
 // DELETING VEHICLE WHEN USELESS
 [_vehicle, _lifeTime] call Gemini_fnc_setLifeTime;

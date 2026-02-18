@@ -95,8 +95,8 @@ private _getPosition = {
 				case "water"					:	{_position = _center getPos [_minDistance + (random _maxDistance), random 360]; _position = [_position select 0, _position select 1, 0]};
 				default								{_position = [_type, _center, _minDistance, _maxDistance] call _getLocationPosition};
 			};
-		if ((count _position) == 2) then {_position set [2, 0]};
 		if (isNil "_position") then {_position = [0,0,0]};
+		if ((count _position) == 2) then {_position set [2, 0]};
 
 		// DEFINING POSSIBLE CONDITIONS
 		private _isNotInRestrictedArea = (!([_position, OPEX_locations_safe] call BIS_fnc_isPosBlacklisted));

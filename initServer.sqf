@@ -19,6 +19,7 @@
 
 	// INITIALIZING PLAYING PLAYERS (PLAYERS OUTSIDE SAFE AREAS)
 	OPEX_playingPlayers = []; publicVariable "OPEX_playingPlayers";
+	OPEX_Zeuses = []; publicVariable "OPEX_Zeuses";
 
 	// INITIALIZING ENTITIES & MARKERS COUNT
 	OPEX_entities = [[], [], [], []]; publicVariable "OPEX_entities";
