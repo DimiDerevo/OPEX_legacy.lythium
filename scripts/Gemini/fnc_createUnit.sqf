@@ -55,6 +55,11 @@
 
 	private _unit = _unitGroup createUnit [selectRandom _unitTypes, _unitSpawnPosition, [], 0, "NONE"];
 
+// =================================================================================================
+// SETTING UNIT LIFETIME
+// =================================================================================================
+
+	[_unit, _lifeTime] call Gemini_fnc_setLifeTime;
 	
 	[_unit] joinSilent _unitGroup;
 	_unitGroup setBehaviour "safe";
@@ -302,12 +307,6 @@
 
 	// SETTING LANGUAGE
 	[_unit] call Gemini_fnc_setSpeaker;
-
-// =================================================================================================
-// SETTING UNIT LIFETIME
-// =================================================================================================
-
-	[_unit, _lifeTime] call Gemini_fnc_setLifeTime;
 
 // =========================================================================================================
 // DEBUGGING

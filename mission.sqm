@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5419;
+		nextID=5423;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2752;
+		nextID=3052;
 	};
 	class Camera
 	{
-		pos[]={11784.61,36.460472,2284.3828};
-		dir[]={0.83520633,-0.53716552,-0.11786616};
-		up[]={0.53189677,0.8434763,-0.075062603};
-		aside[]={-0.13973834,-1.3023964e-08,-0.99019289};
+		pos[]={11806.563,32.916039,2292.0151};
+		dir[]={-0.84373987,-0.47404507,0.25198248};
+		up[]={-0.45423317,0.88048768,0.13565625};
+		aside[]={0.28618076,3.9106817e-07,0.95823872};
 	};
 };
 binarizationWanted=0;
@@ -926,6 +926,10 @@ class AddonsMetaData
 		};
 	};
 };
+class DynamicSimulation
+{
+	enable=0;
+};
 dlcs[]=
 {
 	"Jets",
@@ -947,6 +951,7 @@ randomSeed=3875761;
 class ScenarioData
 {
 	author="Gemini";
+	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
 {
@@ -25759,6 +25764,7 @@ class Mission
 									};
 									id=677;
 									type="Land_FirstAidKit_01_closed_F";
+									atlOffset=0.17892265;
 									class CustomAttributes
 									{
 										class Attribute0

@@ -23,7 +23,6 @@
 		_position = ["overwatch", player, 100, 500] call Gemini_fnc_findPos; // any overwatch position around player (inside a radius of 500 meters and at least far from 100 meters)
 		_position = [["city", "village"], player, 0, 1000] call Gemini_fnc_findPos; // any city or village around player (inside a radius of 1000 meters)
 */
-private _scriptStart = diag_tickTime;
 
 // GETTING PARAMETERS
 private _type = param [0, "land", ["", []]];
@@ -161,12 +160,10 @@ while {(_validPos isEqualTo [0,0,0]) && (_attempts < _maxAttempts)} do
 		_attempts = _attempts + 1;
 		_validPos = [[_type, _center, _minDistance, _maxDistance, _space, _maxGrad], [_position, _validPos]] call _getPosition;
 	};
-private _scriptEnd = diag_tickTime;
 // DEBUGGING
 if (OPEX_debug) then
 	{
-		systemChat format ["Searching for position2 of type '%1', %2, %3 attempts", _type, _validPos, _attempts];
-		DD_OPEX_findPosTimes pushBack ((_scriptEnd - _scriptStart)*1000);
+		//systemChat format ["Searching for position2 of type '%1', %2, %3 attempts", _type, _validPos, _attempts];
 		if (_attempts > 0) then {
 			diag_log text format ["[findPos.sqf called from: %9] Searching for position of type '%1', %2, %3 attempts in %10 ms | args: [%4, %5, %6, %7, %8]", _type, _validPos, _attempts, _type, _center, _minDistance, _maxDistance, _space, _fnc_scriptNameParent, (_scriptEnd - _scriptStart)*1000];
 		};

@@ -57,9 +57,9 @@
 // =========================================================================================================
 
 	// CIVILIANS
-	[] spawn Gemini_fnc_ambientCivilianLife;
-	[] spawn Gemini_fnc_ambientCivilianCars;
-	[] spawn Gemini_fnc_ambientCivilianBoats;
+	// [] spawn Gemini_fnc_ambientCivilianLife;
+	// [] spawn Gemini_fnc_ambientCivilianCars;
+	// [] spawn Gemini_fnc_ambientCivilianBoats;
 
 	// FRIENDS
 	// [] spawn Gemini_fnc_ambientFriendlyPatrols;
@@ -77,7 +77,9 @@
 	// [] spawn Gemini_fnc_ambientEnemyGarrisons;
 	// [] spawn Gemini_fnc_ambientEnemyBoats;
 	// [] spawn Gemini_fnc_ambientEnemyRoadblocks;
+
 	[] spawn Gemini_fnc_ambientSpawnController;
+	[] spawn Gemini_fnc_ambientCivSpawnController;
 
 // =========================================================================================================
 // INITIALIZING OTHER FUNCTIONS
@@ -177,10 +179,10 @@
 	OPEX_spawnDistanceMini = 500;
 	OPEX_spawnDistanceMaxi = OPEX_spawnDistanceMini * 3;
 
-	"Group" setDynamicSimulationDistance (OPEX_spawnDistanceMini * 2);
-	"Vehicle" setDynamicSimulationDistance (OPEX_spawnDistanceMini * 2);
-	"EmptyVehicle" setDynamicSimulationDistance (OPEX_spawnDistanceMini / 5);
-	"Prop" setDynamicSimulationDistance (OPEX_spawnDistanceMini / 25);
-	"IsMoving" setDynamicSimulationDistanceCoef 2;
-	enableDynamicSimulationSystem true;
-	BIS_fps_rescanNewObjects = true; // refreshing dynamic simulation system (otherwise, units/objects/vehicles with dynamic simulation enabled may be hidden at startup on dedicated persistent servers ?)
+	// "Group" setDynamicSimulationDistance (OPEX_spawnDistanceMini * 2);
+	// "Vehicle" setDynamicSimulationDistance (OPEX_spawnDistanceMini * 2);
+	// "EmptyVehicle" setDynamicSimulationDistance (OPEX_spawnDistanceMini / 5);
+	// "Prop" setDynamicSimulationDistance (OPEX_spawnDistanceMini / 25);
+	// "IsMoving" setDynamicSimulationDistanceCoef 2;
+	// enableDynamicSimulationSystem true;
+	// BIS_fps_rescanNewObjects = true; // refreshing dynamic simulation system (otherwise, units/objects/vehicles with dynamic simulation enabled may be hidden at startup on dedicated persistent servers ?)

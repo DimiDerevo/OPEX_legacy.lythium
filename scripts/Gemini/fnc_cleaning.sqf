@@ -38,7 +38,7 @@ private _cleaning =
 		// MARKERS
 		if (count (OPEX_markers select 0) > 0) then {{if (!([getMarkerPos _x] call Gemini_fnc_isPlayerNearby)) then {deleteMarker _x; OPEX_markers set [0, (OPEX_markers select 0) - [_x]]}} forEach (OPEX_markers select 0)};
 		if (count (OPEX_markers select 1) > 0) then {{if ((!([getMarkerPos _x] call Gemini_fnc_isPlayerNearby)) && (!OPEX_assignedTask)) then {deleteMarker _x; OPEX_markers set [1, (OPEX_markers select 1) - [_x]]}} forEach (OPEX_markers select 1)};
-		if (count (OPEX_markers select 2) > 0) then {{if (!([getMarkerPos _x] call Gemini_fnc_isPlayerNearby)) then {_x setMarkerAlpha 0}} forEach (OPEX_markers select 2)};
+		//if (count (OPEX_markers select 2) > 0) then {{if (!([getMarkerPos _x] call Gemini_fnc_isPlayerNearby)) then {_x setMarkerAlpha 0}} forEach (OPEX_markers select 2)};
 		publicVariable "OPEX_markers";
 
 		// TRIGGERS

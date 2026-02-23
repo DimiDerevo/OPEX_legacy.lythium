@@ -11,7 +11,7 @@ if (count _nearRoads < 3) exitWith {};
 private _road = _nearRoads select 0;
 private _connectedRoads = [];
 _connectedRoads = roadsConnectedTo _road;
-if (count _connectedRoads < 2) exitWith {OPEX_ambientEnemyRoadblock = OPEX_ambientEnemyRoadblock - 1; publicVariable "OPEX_ambientEnemyRoadblock";};
+if (count _connectedRoads < 2) exitWith {};
 private _road1 = _connectedRoads select 0;
 private _road2 = _connectedRoads select 1;
 private _roadDir = [_road, _road1] call BIS_fnc_DirTo;

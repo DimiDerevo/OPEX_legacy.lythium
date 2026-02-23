@@ -8,7 +8,9 @@ class Gemini
 				class ads {file = "scripts\Gemini\fnc_ads.sqf";};
 				class ambientCivilianBoats {file = "scripts\Gemini\fnc_ambientCivilianBoats.sqf";};
 				class ambientCivilianCars {file = "scripts\Gemini\fnc_ambientCivilianCars.sqf";};
+				class ambientCivilianCars2 {file = "scripts\Gemini\fnc_ambientCivilianCars2.sqf";};
 				class ambientCivilianLife {file = "scripts\Gemini\fnc_ambientCivilianLife.sqf";};
+				class ambientCivilianLife2 {file = "scripts\Gemini\fnc_ambientCivilianLife2.sqf";};
 				class ambientEnemyAmbushes {file = "scripts\Gemini\fnc_ambientEnemyAmbushes.sqf";};
 				class ambientEnemyAmbushes2 {file = "scripts\Gemini\fnc_ambientEnemyAmbushes2.sqf";};
 				class ambientEnemyBivouacs {file = "scripts\Gemini\fnc_ambientEnemyBivouacs.sqf";};
@@ -28,10 +30,14 @@ class Gemini
 				class ambientEnemyRoadblocks {file = "scripts\Gemini\fnc_ambientEnemyRoadblocks.sqf";};
 				class ambientEnemyRoadblocks2 {file = "scripts\Gemini\fnc_ambientEnemyRoadblocks2.sqf";};
 				class ambientFriendlyAir {file = "scripts\Gemini\fnc_ambientFriendlyAir.sqf";};
+				class ambientFriendlyAir2 {file = "scripts\Gemini\fnc_ambientFriendlyAir2.sqf";};
 				class ambientFriendlyBoats {file = "scripts\Gemini\fnc_ambientFriendlyBoats.sqf";};
 				class ambientFriendlyPatrols {file = "scripts\Gemini\fnc_ambientFriendlyPatrols.sqf";};
+				class ambientFriendlyPatrols2 {file = "scripts\Gemini\fnc_ambientFriendlyPatrols2.sqf";};
 				class ambientFriendlyRoadblocks {file = "scripts\Gemini\fnc_ambientFriendlyRoadblocks.sqf";};
+				class ambientFriendlyRoadblocks2 {file = "scripts\Gemini\fnc_ambientFriendlyRoadblocks2.sqf";};
 				class ambientSpawnController {file = "scripts\Gemini\fnc_ambientSpawnController.sqf";};
+				class ambientCivSpawnController {file = "scripts\Gemini\fnc_ambientCivSpawnController.sqf";};
 				class ambientSleep {file = "scripts\Gemini\fnc_ambientSleep.sqf";};
 				class armouryDecoration {file = "scripts\Gemini\fnc_armouryDecoration.sqf";}; // outdated
 				class assignAsCargo {file = "scripts\Gemini\fnc_assignAsCargo.sqf";};

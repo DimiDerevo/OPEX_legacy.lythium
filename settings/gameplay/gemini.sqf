@@ -12,5 +12,5 @@ OPEX_spyMicros = ["Gemini_spyMicro"];
 OPEX_canteenItems = ["Gemini_rationSmall", "Gemini_rationMedium", "Gemini_rationBig", "Gemini_bottleSmall", "Gemini_bottleMedium", "Gemini_bottleBig", "Gemini_apple", "Gemini_banana"];
 OPEX_sleepingBags = ["Gemini_sleepingbag", "Gemini_portabletent"];
 
-//waituntil {"OPEX_civilian_items" isEqualTo nil; sleep 1;};
+waitUntil {sleep 1; !isNil "OPEX_civilian_items"};
 OPEX_civilian_items append ["Gemini_dattes", "Gemini_fig", "Gemini_banana", "Gemini_apple", "Gemini_bottleSmall", "Gemini_cigarettsMarlbara", "Gemini_cigarettsLocky", "Gemini_cigarettsCanel", "Gemini_matches", "Gemini_battery", "Gemini_adhesiveTape", "Gemini_pen", "Gemini_cellphone"];

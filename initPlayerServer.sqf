@@ -18,4 +18,4 @@
 // REFRESHING DYNAMIC SIMULATION SYSTEM (otherwise, units/objects/vehicles with dynamic simulation enabled may be hidden at startup on dedicated persistent servers)
 // =========================================================================================================
 
-	call Gemini_fnc_refreshDynamicSimulation;
+	// call Gemini_fnc_refreshDynamicSimulation;
