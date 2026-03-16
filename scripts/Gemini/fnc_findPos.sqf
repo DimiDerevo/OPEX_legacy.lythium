@@ -165,7 +165,7 @@ if (OPEX_debug) then
 	{
 		//systemChat format ["Searching for position2 of type '%1', %2, %3 attempts", _type, _validPos, _attempts];
 		if (_attempts > 0) then {
-			diag_log text format ["[findPos.sqf called from: %9] Searching for position of type '%1', %2, %3 attempts in %10 ms | args: [%4, %5, %6, %7, %8]", _type, _validPos, _attempts, _type, _center, _minDistance, _maxDistance, _space, _fnc_scriptNameParent, (_scriptEnd - _scriptStart)*1000];
+			diag_log text format ["[findPos.sqf called from: %9] Searching for position of type '%1', %2, %3 attempts | args: [%4, %5, %6, %7, %8]", _type, _validPos, _attempts, _type, _center, _minDistance, _maxDistance, _space, _fnc_scriptNameParent];
 		};
 	};
 

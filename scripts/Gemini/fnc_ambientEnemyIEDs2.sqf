@@ -1,4 +1,7 @@
-﻿private _player = selectRandom OPEX_playingPlayers;
+﻿params ["_index"];
+
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
+private _player = selectRandom OPEX_playingPlayers;
 
 // LOOKING FOR A RANDOM ROAD AROUND SELECTED PLAYER
 private _roadPos = ["road", _player, OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi * 0.9] call Gemini_fnc_findPos;
@@ -21,12 +24,12 @@ switch _triggerType do
 		case default			{[_IED, position _IED] spawn OPEX_IED_trigger_none};
 	};
 
-OPEX_ambientEnemyIEDs = OPEX_ambientEnemyIEDs + 1; publicVariable "OPEX_ambientEnemyIEDs";
+OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];
 
-[_roadPos, _IED] spawn {
-	params ["_roadPos", "_IED"];
+[_roadPos, _IED, _index] spawn {
+	params ["_roadPos", "_IED", "_index"];
 	waitUntil {sleep 5; ((_roadPos call Gemini_fnc_isUnplayedArea) || (!alive _IED))};
-	OPEX_ambientEnemyIEDs = OPEX_ambientEnemyIEDs - 1; publicVariable "OPEX_ambientEnemyIEDs";
+	OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) - 1)];
 };
 
 // DEBUGGING

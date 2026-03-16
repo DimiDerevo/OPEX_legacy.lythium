@@ -93,7 +93,7 @@
 	OPEX_enemy_crewman = "LOP_AM_OPF_Infantry_Rifleman_2";
 	OPEX_enemy_commonUnits = [OPEX_enemy_rifleman];
 	OPEX_enemy_specialUnits = [OPEX_enemy_grenadier, OPEX_enemy_MG, OPEX_enemy_AT, OPEX_enemy_marksman, OPEX_enemy_AA];
-	OPEX_enemy_allUnitsWeights = [3.5, 0.3, 0.5, 0.4, 0.25, 0.1];
+	OPEX_enemy_allUnitsWeights = [1, 0.3, 0.5, 1.5, 0.15, 0.05];
 	OPEX_enemy_allUnits = [OPEX_enemy_rifleman, OPEX_enemy_grenadier, OPEX_enemy_MG, OPEX_enemy_AT, OPEX_enemy_marksman, OPEX_enemy_AA];
 	OPEX_enemy_units = OPEX_enemy_commonUnits + OPEX_enemy_commonUnits + OPEX_enemy_specialUnits;
 

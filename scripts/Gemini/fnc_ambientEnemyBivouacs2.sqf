@@ -1,4 +1,7 @@
-﻿private _player = selectRandom OPEX_playingPlayers;
+﻿params ["_index"];
+
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
+private _player = selectRandom OPEX_playingPlayers;
 
 // LOOKING FOR A RANDOM ABANDONED AREA AROUND SELECTED PLAYER
 private _position = ["land_isolated", _player, OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi * 0.9, 5] call Gemini_fnc_findPos;
@@ -14,14 +17,14 @@ for "_i" from 1 to (round random 5) do {private _sleepingBag = [["Land_Sleeping_
 
 // SPAWNING ENEMIES
 [OPEX_enemy_side1, ["infantry"], selectRandom [2,3,4,5], _lightSource, [2, 7.5], "talk", [], OPEX_enemy_AIskill, 100] call Gemini_fnc_spawnSquad;
-[OPEX_enemy_side1, ["infantry"], 2, _lightSource, [50, 100], "patrol", _lightSource, OPEX_enemy_AIskill, 75] call Gemini_fnc_spawnSquad;
+// [OPEX_enemy_side1, ["infantry"], 2, _lightSource, [50, 100], "patrol", _lightSource, OPEX_enemy_AIskill, 75] call Gemini_fnc_spawnSquad;
 
-OPEX_ambientEnemyBivouacs = OPEX_ambientEnemyBivouacs + 1; publicVariable "OPEX_ambientEnemyBivouacs";
+OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];
 
-[_position] spawn {
-	params ["_position"];
+[_position, _index] spawn {
+	params ["_position", "_index"];
 	waitUntil {sleep 5; (_position call Gemini_fnc_isUnplayedArea)};
-	OPEX_ambientEnemyBivouacs = OPEX_ambientEnemyBivouacs - 1; publicVariable "OPEX_ambientEnemyBivouacs";
+	OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) - 1)];
 };
 
 // DEBUGGING

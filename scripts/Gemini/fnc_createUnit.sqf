@@ -166,6 +166,12 @@
 			_unit setSkill ["commanding", random [0.5, 0.8, 1.0]];
 			_unit setSkill ["spotDistance", random [0.25, 0.4 , 0.6]];
 			_unit setSkill ["reloadSpeed", random [0.25, 0.4 , 0.6]];
+
+			_unit spawn {
+				while {primaryWeapon _this isEqualTo ""} do {
+					sleep 10; _this call Gemini_fnc_randomizeLoadout;
+				};
+			};
 		};
 
 // =========================================================================================================

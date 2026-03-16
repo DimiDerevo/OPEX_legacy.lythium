@@ -1,17 +1,19 @@
-﻿if ((OPEX_assignedTask) && (OPEX_taskID == "06")) exitWith {};
+﻿params ["_index"];
 
+if ((OPEX_assignedTask) && (OPEX_taskID == "06")) exitWith {};
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
 private _player = selectRandom OPEX_playingPlayers;
 
 // SPAWNING FRIENDS
 private _squad = [OPEX_friendly_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "motorized", "motorized", "armored"], selectRandom [4,8], _player, [OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi], "patrol", _player, OPEX_friendly_AIskill, 100] call Gemini_fnc_spawnSquad;
 if (isNil "_squad") exitWith {};
 
-OPEX_ambientFriendlyPatrols = OPEX_ambientFriendlyPatrols + 1; publicVariable "OPEX_ambientFriendlyPatrols";
+OPEX_ambientFriendData#_index#1 set [0, ((OPEX_ambientFriendData#_index#1#0) + 1)];
 
-[_squad] spawn {
-	params ["_squad"];
+[_squad, _index] spawn {
+	params ["_squad", "_index"];
 	waitUntil {sleep 5; (!([leader _squad] call Gemini_fnc_isPlayerNearby)) || (count units _squad == 0)};
-	OPEX_ambientFriendlyPatrols = OPEX_ambientFriendlyPatrols - 1; publicVariable "OPEX_ambientFriendlyPatrols";
+	OPEX_ambientFriendData#_index#1 set [0, ((OPEX_ambientFriendData#_index#1#0) - 1)];
 };
 
 // SENDING RADIO MESSAGE + CREATING MARKER TO INFORM PLAYERS THAT A FRIEND PATROL IS NEARBY

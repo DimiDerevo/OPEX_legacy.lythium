@@ -1,6 +1,9 @@
-﻿// CHECKING IF AT LEAST ONE REQUIRED LOCATION EXISTS
+﻿params ["_index"];
+
+// CHECKING IF AT LEAST ONE REQUIRED LOCATION EXISTS
 if (count (OPEX_locations_industrial + OPEX_locations_military + OPEX_locations_isolated) == 0) exitWith {};
 
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
 private _player = selectRandom OPEX_playingPlayers;
 
 // LOOKING FOR A RANDOM LOCATION AROUND SELECTED PLAYER
@@ -21,7 +24,7 @@ _flag setFlagTexture OPEX_enemy_flagTexture;
 for "_i" from 1 to (ceil (random 2)) do {[OPEX_enemy_side1, ["infantry"], ceil (random 5), _flag, [20, 75], "talk", [], OPEX_enemy_AIskill, 50] call Gemini_fnc_spawnSquad};
 for "_i" from 1 to (ceil (random 2)) do {[OPEX_enemy_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "motorized"], selectRandom [2, 3, 4, 5], _flag, [random _locationSize, _locationSize * 5], "patrol", _flag, OPEX_enemy_AIskill, 50] call Gemini_fnc_spawnSquad};
 
-OPEX_ambientEnemyGarrisons = OPEX_ambientEnemyGarrisons + 1; publicVariable "OPEX_ambientEnemyGarrisons";
+OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];
 
 // SPAWNING STATIC DEFENSE
 [position _flag, OPEX_enemy_statics + OPEX_enemy_MGstatics + OPEX_enemy_MGstatics, OPEX_enemy_side1, random 360, _locationSize * 2, ceil (random 3), 75] call Gemini_fnc_spawnStaticDefense;
@@ -43,10 +46,10 @@ if (count ((position _flag) nearObjects ["Building", _locationSize]) <= 5) then	
 	["Land_ClutterCutter_large_F", _sleepingBag] call Gemini_fnc_createVehicle};
 };
 
-[_locationPos] spawn {
-	params ["_locationPos"];
+[_locationPos, _index] spawn {
+	params ["_locationPos", "_index"];
 	waitUntil {sleep 5; (_locationPos call Gemini_fnc_isUnplayedArea)};
-	OPEX_ambientEnemyGarrisons = OPEX_ambientEnemyGarrisons - 1; publicVariable "OPEX_ambientEnemyGarrisons";
+	OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) - 1)];
 };
 
 // DEBUGGING

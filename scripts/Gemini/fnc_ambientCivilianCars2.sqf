@@ -1,3 +1,4 @@
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
 private _player = selectRandom OPEX_playingPlayers;
 
 // LOOKING FOR NEARBY BUILDINGS

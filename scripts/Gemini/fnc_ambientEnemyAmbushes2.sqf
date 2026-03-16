@@ -1,4 +1,7 @@
-﻿private _player = selectRandom OPEX_playingPlayers;
+﻿params ["_index"];
+
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
+private _player = selectRandom OPEX_playingPlayers;
 private _overwatchPos = [];
 
 // LOOKING FOR A RANDOM ROAD AROUND SELECTED PLAYER
@@ -7,16 +10,16 @@ if (_roadPos isEqualTo [0,0,0]) exitWith {};
 
 // SPAWNING AMBUSH
 for "_i" from 1 to (selectRandom [1,1,1,2,2,2,3]) do {
-	_overwatchPos = ["overwatch", _roadPos, 75, 500] call Gemini_fnc_findPos;
+	_overwatchPos = ["overwatch", _roadPos, 20, 100] call Gemini_fnc_findPos;
 	if (_overwatchPos isEqualTo [0,0,0]) exitWith {};
 	[OPEX_enemy_side1, ["infantry"], selectRandom [3,5,7,8], _overwatchPos, [0,0], "hold", _overwatchPos, OPEX_enemy_AIskill, 100] call Gemini_fnc_spawnSquad;
 };
-OPEX_ambientEnemyAmbushes = OPEX_ambientEnemyAmbushes + 1; publicVariable "OPEX_ambientEnemyAmbushes";
+OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];
 
-[_overwatchPos] spawn {
-	params ["_overwatchPos"];
+[_overwatchPos, _index] spawn {
+	params ["_overwatchPos", "_index"];
 	waitUntil {sleep 5; (_overwatchPos call Gemini_fnc_isUnplayedArea)};
-	OPEX_ambientEnemyAmbushes = OPEX_ambientEnemyAmbushes - 1; publicVariable "OPEX_ambientEnemyAmbushes";
+	OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) - 1)];
 };
 
 // DEBUGGING

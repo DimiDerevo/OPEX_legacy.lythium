@@ -287,8 +287,9 @@
 							for "_j" from 0 to ((count (OPEX_persistentData_server select 2 select _i select 5 select 1 select 0)) - 1) do {_crate addMagazineCargoGlobal [OPEX_persistentData_server select 2 select _i select 5 select 1 select 0 select _j, OPEX_persistentData_server select 2 select _i select 5 select 1 select 1 select _j]};
 							for "_j" from 0 to ((count (OPEX_persistentData_server select 2 select _i select 5 select 2 select 0)) - 1) do {_crate addItemCargoGlobal [OPEX_persistentData_server select 2 select _i select 5 select 2 select 0 select _j, OPEX_persistentData_server select 2 select _i select 5 select 2 select 1 select _j]};
 							for "_j" from 0 to ((count (OPEX_persistentData_server select 2 select _i select 5 select 3 select 0)) - 1) do {_crate addBackpackCargoGlobal [OPEX_persistentData_server select 2 select _i select 5 select 3 select 0 select _j, OPEX_persistentData_server select 2 select _i select 5 select 3 select 1 select _j]};
-							if (typeOf _crate == "I_supplyCrate_F") then {[_crate, true] call ace_arsenal_fnc_initBox};
+							if (typeOf _crate == "I_supplyCrate_F") then {_crate execVM "arsenalScript.sqf"};
 							_crate enableSimulationGlobal false;
+							_crate allowDamage false;
 							[_crate, _crates, _i] spawn
 								{
 									sleep 1;

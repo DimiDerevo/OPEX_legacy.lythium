@@ -4,7 +4,7 @@
 
 	// WAITING FOR PLAYER
 	waitUntil {(!isNull player) && (player == player)};
-	[player] joinSilent grpNull;
+	//[player] joinSilent grpNull;
 	//waitUntil {time > 0};
 
 	// WAITING FOR MISSION START

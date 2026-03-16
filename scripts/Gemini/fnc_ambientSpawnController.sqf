@@ -1,85 +1,75 @@
+params ["_index"];
+
 if (!isServer) exitWith {};
 waitUntil {!isNil "OPEX_params_ready"}; waitUntil {OPEX_params_ready};
 waitUntil {!isNil "OPEX_playingPlayers"};
 waitUntil {!isNil "OPEX_spawnDistanceMaxi"};
-OPEX_ambientEnemyPatrols = 0; publicVariable "OPEX_ambientEnemyPatrols";
-OPEX_ambientEnemyPatrolsMax = 3; publicVariable "OPEX_ambientEnemyPatrolsMax";
-OPEX_ambientEnemyBivouacs = 0; publicVariable "OPEX_ambientEnemyBivouacs";
-OPEX_ambientEnemyBivouacsMax = 2; publicVariable "OPEX_ambientEnemyBivouacsMax";
-OPEX_ambientEnemyAmbushes = 0; publicVariable "OPEX_ambientEnemyAmbushes";
-OPEX_ambientEnemyAmbushesMax = 2; publicVariable "OPEX_ambientEnemyAmbushesMax";
-OPEX_ambientEnemyCaches = 0; publicVariable "OPEX_ambientEnemyCaches";
-OPEX_ambientEnemyCachesMax = 1; publicVariable "OPEX_ambientEnemyCachesMax";
-OPEX_ambientEnemyGarrisons = 0; publicVariable "OPEX_ambientEnemyGarrisons";
-OPEX_ambientEnemyGarrisonsMax = 1; publicVariable "OPEX_ambientEnemyGarrisonsMax";
-OPEX_ambientEnemyRoadblock = 0; publicVariable "OPEX_ambientEnemyRoadblock";
-OPEX_ambientEnemyRoadblockMax = 1; publicVariable "OPEX_ambientEnemyRoadblockMax";
-OPEX_ambientEnemyReinforcements = 0; publicVariable "OPEX_ambientEnemyReinforcements";
-OPEX_ambientEnemyReinforcementsMax = 3; publicVariable "OPEX_ambientEnemyReinforcementsMax";
-OPEX_ambientEnemyIEDs = 0; publicVariable "OPEX_ambientEnemyIEDs";
-OPEX_ambientEnemyIEDsMax = 2; publicVariable "OPEX_ambientEnemyIEDsMax";
 
-OPEX_ambientFriendlyPatrols = 0; publicVariable "OPEX_ambientFriendlyPatrols";
-OPEX_ambientFriendlyPatrolsMax = 3; publicVariable "OPEX_ambientFriendlyPatrolsMax";
-OPEX_ambientFriendlyRoadblock = 0; publicVariable "OPEX_ambientFriendlyRoadblock";
-OPEX_ambientFriendlyRoadblockMax = 3; publicVariable "OPEX_ambientFriendlyRoadblockMax";
-OPEX_ambientFriendlyAir = 0; publicVariable "OPEX_ambientFriendlyAir";
-OPEX_ambientFriendlyAirMax = 1; publicVariable "OPEX_ambientFriendlyAirMax";
-
-[] spawn Gemini_fnc_ambientEnemyIEDsInit;
-
+[] call Gemini_fnc_ambientEnemyIEDsInit;
 OPEX_ambientSpawnHandlerLoop = true;
-OPEX_ambientSpawnBaseInterval = 10;
-private _interval = OPEX_ambientSpawnBaseInterval;
-
+OPEX_ambientSpawnBaseInterval = 20;
+DD_playingPlayersTest = 10;
 private _handle = [] spawn {};
-private _ambientSpawnSides = [
-    "west", 0.2,
-    "east", 0.8
+private _interval = OPEX_ambientSpawnBaseInterval;
+private _newSpawnType = "";
+private _playerCount = 0;
+private _newType = "";
+
+OPEX_ambientEnemyData = [
+//  ["name",    [current, max], [limit, coef, time multi, base weight]], weight
+    ["Patrol",          [0, 2], [6, 0.70, 1.0, 1.0]],                    1.0,
+    ["Bivouac",         [0, 1], [3, 0.30, 2.0, 0.8]],                    0.8,
+    ["Ambush",          [0, 1], [3, 0.30, 1.5, 0.5]],                    0.5,
+    ["Cache",           [0, 1], [3, 0.20, 2.0, 0.3]],                    0.3,
+    ["Garrison",        [0, 1], [3, 0.20, 2.5, 0.3]],                    0.3,
+    ["Roadblock",       [0, 1], [3, 0.20, 1.5, 0.3]],                    0.3,
+    ["Reinforcement",   [0, 2], [6, 0.60, 1.0, 0.5]],                    0.5,
+    ["IED",             [0, 2], [5, 0.50, 1.5, 0.5]],                    0.5
 ];
-private _ambientEnemyTypes = [
-    "Ambush", 0.5,
-    "Bivouac", 0.8,
-    "Cache", 0.3,
-    "Garrison", 0.3,
-    "IED", 0.5,
-    "Patrol", 1,
-    "Reinforcement", 0.5,
-    "Roadblock", 0.3
-];
-private _ambientFriendTypes = [
-    "Patrol", 0.6,
-    "Roadblock", 0.2,
-    "Air", 0.2
-];
-private _ambientCivTypes = [
-    "Man", 1
+
+OPEX_ambientFriendData = [
+//  ["name",    [current, max], [limit, coef, time multi, base weight]], weight
+    ["Patrol",          [0, 1], [3, 0.30, 1.0, 0.8]],                    0.8,
+    ["Roadblock",       [0, 1], [2, 0.15, 1.5, 0.1]],                    0.1,
+    ["Air",             [0, 1], [1, 0.10, 1.0, 0.1]],                    0.1
 ];
 
 while {true} do {
-    waitUntil {OPEX_playingPlayers isNotEqualTo []};
+    waitUntil {sleep 1; OPEX_playingPlayers isNotEqualTo []};
     if (OPEX_ambientSpawnHandlerLoop) then {
-        _interval = OPEX_ambientSpawnBaseInterval;
-        terminate _handle; _handles = []; // Resetting script
 
-        switch (selectRandomWeighted _ambientSpawnSides) do {
+        _playerCount = (count OPEX_playingPlayers) max 1;
+        //_playerCount = DD_playingPlayersTest max 1;
+        for "_i" from 0 to ((count OPEX_ambientEnemyData) - 1) step 2 do {
+            OPEX_ambientEnemyData#_i#1 set [1, round (OPEX_ambientEnemyData#_i#2#0 min (1 + OPEX_ambientEnemyData#_i#2#1 * (_playerCount - 1) ^ 0.7))]; // Updating new max enemy type count based on player count
+            OPEX_ambientEnemyData set [_i+1, 0 max (OPEX_ambientEnemyData#_i#2#3 * (linearConversion [OPEX_ambientEnemyData#_i#1#1, 0, OPEX_ambientEnemyData#_i#1#0, 0, 1, true]))]; // Updating weight of enemy type based on current amount of this type
+        };
+        for "_i" from 0 to ((count OPEX_ambientFriendData) - 1) step 2 do {
+            OPEX_ambientFriendData#_i#1 set [1, round (OPEX_ambientFriendData#_i#2#0 min (1 + OPEX_ambientFriendData#_i#2#1 * (_playerCount - 1) ^ 0.5))]; // Updating new max friend type count based on player count
+            OPEX_ambientFriendData set [_i+1, 0 max (OPEX_ambientFriendData#_i#2#3 * (linearConversion [OPEX_ambientFriendData#_i#1#1, 0, OPEX_ambientFriendData#_i#1#0, 0, 1, true]))]; // Updating weight of friend type based on current amount of this type
+        };
+
+        _interval = OPEX_ambientSpawnBaseInterval;
+        terminate _handle; // Resetting script
+        
+        switch (["east", "west"] selectRandomWeighted [0.9, 0.1]) do {
             case "east": {
-                switch (selectRandomWeighted _ambientEnemyTypes) do {
-                    case "Patrol":          {if (OPEX_ambientEnemyPatrols < OPEX_ambientEnemyPatrolsMax) then               {_handle = ([] spawn Gemini_fnc_ambientEnemyPatrols2)}};
-                    case "Bivouac":         {if (OPEX_ambientEnemyBivouacs < OPEX_ambientEnemyBivouacsMax) then             {_handle = ([] spawn Gemini_fnc_ambientEnemyBivouacs2); _interval = OPEX_ambientSpawnBaseInterval * 2}};
-                    case "Ambush":          {if (OPEX_ambientEnemyAmbushes < OPEX_ambientEnemyAmbushesMax) then             {_handle = ([] spawn Gemini_fnc_ambientEnemyAmbushes2); _interval = OPEX_ambientSpawnBaseInterval * 1.5}};
-                    case "Cache":           {if (OPEX_ambientEnemyCaches < OPEX_ambientEnemyCachesMax) then                 {_handle = ([] spawn Gemini_fnc_ambientEnemyCaches2); _interval = OPEX_ambientSpawnBaseInterval * 2}};
-                    case "Garrison":        {if (OPEX_ambientEnemyGarrisons < OPEX_ambientEnemyGarrisonsMax) then           {_handle = ([] spawn Gemini_fnc_ambientEnemyGarrisons2); _interval = OPEX_ambientSpawnBaseInterval * 2.5}};
-                    case "Roadblock":       {if (OPEX_ambientEnemyRoadblock < OPEX_ambientEnemyRoadblockMax) then           {_handle = ([] spawn Gemini_fnc_ambientEnemyRoadblocks2); _interval = OPEX_ambientSpawnBaseInterval * 1.5}};
-                    case "Reinforcement":   {if (OPEX_ambientEnemyReinforcements < OPEX_ambientEnemyReinforcementsMax) then {_handle = ([] spawn Gemini_fnc_ambientEnemyReinforcements2)}};
-                    case "IED":             {if (OPEX_ambientEnemyIEDs < OPEX_ambientEnemyIEDsMax) then                     {_handle = ([] spawn Gemini_fnc_ambientEnemyIEDs2); _interval = OPEX_ambientSpawnBaseInterval * 1.5}};
-                };
+                switch ((selectRandomWeighted OPEX_ambientEnemyData)#0) do {
+                    case (OPEX_ambientEnemyData#00#0):    {if (OPEX_ambientEnemyData#00#1#0 < OPEX_ambientEnemyData#00#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#00#2#2; _handle = ([00] spawn Gemini_fnc_ambientEnemyPatrols2)}};
+                    case (OPEX_ambientEnemyData#02#0):    {if (OPEX_ambientEnemyData#02#1#0 < OPEX_ambientEnemyData#02#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#02#2#2; _handle = ([02] spawn Gemini_fnc_ambientEnemyBivouacs2)}};
+                    case (OPEX_ambientEnemyData#04#0):    {if (OPEX_ambientEnemyData#04#1#0 < OPEX_ambientEnemyData#04#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#04#2#2; _handle = ([04] spawn Gemini_fnc_ambientEnemyAmbushes2)}};
+                    case (OPEX_ambientEnemyData#06#0):    {if (OPEX_ambientEnemyData#06#1#0 < OPEX_ambientEnemyData#06#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#06#2#2; _handle = ([06] spawn Gemini_fnc_ambientEnemyCaches2)}};
+                    case (OPEX_ambientEnemyData#08#0):    {if (OPEX_ambientEnemyData#08#1#0 < OPEX_ambientEnemyData#08#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#08#2#2; _handle = ([08] spawn Gemini_fnc_ambientEnemyGarrisons2)}};
+                    case (OPEX_ambientEnemyData#10#0):    {if (OPEX_ambientEnemyData#10#1#0 < OPEX_ambientEnemyData#10#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#10#2#2; _handle = ([10] spawn Gemini_fnc_ambientEnemyRoadblocks2)}};
+                    case (OPEX_ambientEnemyData#12#0):    {if (OPEX_ambientEnemyData#12#1#0 < OPEX_ambientEnemyData#12#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#12#2#2; _handle = ([12] spawn Gemini_fnc_ambientEnemyReinforcements2)}};
+                    case (OPEX_ambientEnemyData#14#0):    {if (OPEX_ambientEnemyData#14#1#0 < OPEX_ambientEnemyData#14#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#14#2#2; _handle = ([14] spawn Gemini_fnc_ambientEnemyIEDs2)}};
+                };  
             };
             case "west": {
-                switch (selectRandomWeighted _ambientFriendTypes) do {
-                    case "Patrol":          {if ((OPEX_ambientFriendlyPatrols < OPEX_ambientFriendlyPatrolsMax) && !(OPEX_taskID == "06")) then {_handle = ([] spawn Gemini_fnc_ambientFriendlyPatrols2)}};
-                    case "Roadblock":       {if (OPEX_ambientFriendlyRoadblock < OPEX_ambientFriendlyRoadblockMax) then                         {_handle = ([] spawn Gemini_fnc_ambientFriendlyRoadblocks2); _interval = OPEX_ambientSpawnBaseInterval * 1.5}};
-                    case "Air":             {if (OPEX_ambientFriendlyAir < OPEX_ambientFriendlyAirMax) then                                     {_handle = ([] spawn Gemini_fnc_ambientFriendlyAir2)}};
+                switch ((selectRandomWeighted OPEX_ambientFriendData)#0) do {
+                    case (OPEX_ambientFriendData#00#0):    {if ((OPEX_ambientFriendData#00#1#0 < OPEX_ambientFriendData#00#1#1) && !(OPEX_taskID == "06")) then     {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientFriendData#00#2#2; _handle = ([00] spawn Gemini_fnc_ambientFriendlyPatrols2)}};
+                    case (OPEX_ambientFriendData#02#0):    {if (OPEX_ambientFriendData#02#1#0 < OPEX_ambientFriendData#02#1#1) then                                 {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientFriendData#02#2#2; _handle = ([02] spawn Gemini_fnc_ambientFriendlyRoadblocks2)}};
+                    case (OPEX_ambientFriendData#04#0):    {if (OPEX_ambientFriendData#04#1#0 < OPEX_ambientFriendData#04#1#1) then                                 {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientFriendData#04#2#2; _handle = ([04] spawn Gemini_fnc_ambientFriendlyAir2)}};
                 };
             };
         };

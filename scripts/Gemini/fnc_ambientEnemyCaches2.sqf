@@ -1,4 +1,7 @@
-﻿if (count OPEX_locations_isolated == 0) exitWith {};
+﻿params ["_index"];
+
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
+if (count OPEX_locations_isolated == 0) exitWith {};
 
 private _player = selectRandom OPEX_playingPlayers;
 
@@ -24,7 +27,7 @@ private _crate = [_crateType, _cratePos] call Gemini_fnc_createVehicle;
 [_crate, 50, random 4, OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill] call Gemini_fnc_spawnUnitsStandingInside;
 [_locationPos, _locationSize, random 4, OPEX_enemy_side1, [OPEX_enemy_rifleman, OPEX_enemy_grenadier, OPEX_enemy_MG], OPEX_enemy_AIskill] call Gemini_fnc_spawnUnitsStandingOutside;
 
-OPEX_ambientEnemyCaches = OPEX_ambientEnemyCaches + 1; publicVariable "OPEX_ambientEnemyCaches";
+OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];
 
 // FILLING AMMO CRATE
 clearWeaponCargoGlobal _crate; clearMagazineCargoGlobal _crate; clearItemCargoGlobal _crate; clearBackpackCargoGlobal _crate;
@@ -34,6 +37,14 @@ for "_i" from 1 to (count OPEX_enemy_ATlaunchers) do {_crate addItemCargoGlobal 
 {_crate addItemCargoGlobal [(getArray (configfile >> "CfgWeapons" >> _x >> "magazines")) select 0, ceil random 10]} forEach (OPEX_enemy_ATlaunchers);
 for "_i" from 1 to (count OPEX_enemy_handGrenades) do {_crate addItemCargoGlobal [(OPEX_enemy_handGrenades select _i), ceil random 25]};
 
+[_locationPos, _crate, _index] spawn {
+	params ["_locationPos", "_crate", "_index"];
+	private _cratePos = getPosATL _crate;
+	waitUntil {sleep 5; (_locationPos call Gemini_fnc_isUnplayedArea) || (damage _crate >= 0.15)};
+	if (damage _crate >= 0.15) then {"HelicopterExploBig" createvehicle _cratePos; "Bomb_04_F" createvehicle _cratePos; {_x setDamage 1} forEach (_crate nearEntities 15); deleteVehicle _crate; ["cacheDestroyed"] call Gemini_fnc_updateStats};
+	OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) - 1)];
+};
+
 // SPAWNING A TRUCK
 private _truck = [_truckType, _truckPos] call Gemini_fnc_createVehicle;
 _nearRoads = _crate nearRoads 35;
@@ -41,13 +52,6 @@ if (count _nearRoads > 1)
 	then {_truck setPos (position (_nearRoads select 0)); _truck setDir ([(_nearRoads select 0), (_nearRoads select 1)] call BIS_fnc_DirTo)}
 	else {_dir = [_truck, _crate] call BIS_fnc_relativeDirTo; _truck setDir (_dir + 180)};
 if (_truck distance _crate > 50) then {deleteVehicle _truck};
-
-[_locationPos, _crate] spawn {
-	params ["_locationPos", "_crate"];
-	waitUntil {sleep 5; (_locationPos call Gemini_fnc_isUnplayedArea) || (damage _crate >= 0.15)};
-	if (damage _crate >= 0.15) then {"HelicopterExploBig" createvehicle _cratePos; "Bomb_04_F" createvehicle _cratePos; {_x setDamage 1} forEach (_crate nearEntities 15); deleteVehicle _crate; ["cacheDestroyed"] call Gemini_fnc_updateStats};
-	OPEX_ambientEnemyCaches = OPEX_ambientEnemyCaches - 1; publicVariable "OPEX_ambientEnemyCaches";
-};
 
 // DEBUGGING
 if (OPEX_debug) then {

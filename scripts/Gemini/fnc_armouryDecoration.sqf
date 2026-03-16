@@ -29,6 +29,7 @@
 	_texture setPosATL [_texturePos select 0, _texturePos select 1, 1.75];
 	*/
 
+	if (true) exitWith {}; // disabling this script
 	if (!isServer) exitWith {};
 	if ((isNil "armoury_ammo") || (isNil "armoury_clothes") || (isNil "armoury_explosives") || (isNil "armoury_grenades") || (isNil "armoury_launchers") || (isNil "armoury_support") || (isNil "armoury_weapons")) exitWith {};
 

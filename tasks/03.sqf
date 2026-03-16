@@ -53,10 +53,10 @@
 			[OPEX_enemy_motorizedVehicles, OPEX_enemy_side1, _villagePos, _villageSize, [OPEX_enemy_units, ceil (random 3)], 40, "task"] call Gemini_fnc_spawnVehicle;
 
 			// SPAWNING STATIC ENEMIES INSIDE BUILDINGS
-			[_villagePos, _villageSize, -1, OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill, "task"] call Gemini_fnc_spawnUnitsStandingInside;
+			[_villagePos, _villageSize, selectRandom [2,2,2,3,3,5], OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill, "task"] call Gemini_fnc_spawnUnitsStandingInside;
 
 			// SPAWNING ENEMIES INTO THE VILLAGE
-			[_villagePos, _villageSize, -1, OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill, "task"] call Gemini_fnc_spawnUnitsStandingOutside;
+			[_villagePos, _villageSize, selectRandom [2,2,2,3,3,5], OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill, "task"] call Gemini_fnc_spawnUnitsStandingOutside;
 
 			//  SPAWNING SQUAD(S) PATROLLING THE AREA
 			for "_i" from 1 to 2 do {[OPEX_enemy_side1, ["infantry"], selectRandom [2,2,2,3,3,5], _villagePos, _villageSize * 3, "patrol", _villagePos, OPEX_enemy_AIskill, 50, "task"] call Gemini_fnc_spawnSquad};

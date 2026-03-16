@@ -17,7 +17,7 @@ private _handleMan = [] spawn {};
 private _handleCar = [] spawn {};
 
 while {true} do {
-    waitUntil {OPEX_playingPlayers isNotEqualTo []};
+    waitUntil {sleep 1; OPEX_playingPlayers isNotEqualTo []};
     if (OPEX_ambientSpawnCivHandlerLoop) then {
         _interval = OPEX_ambientSpawnCivBaseInterval;
         terminate _handleMan; _handleMan = [] spawn {}; // Resetting script
@@ -28,5 +28,5 @@ while {true} do {
         if (OPEX_ambientCivilianMan < OPEX_ambientCivilianManMax) then {_handleMan = ([] spawn Gemini_fnc_ambientCivilianLife2)};
         if (OPEX_ambientCivilianCars < OPEX_ambientCivilianCarsMax) then {_handleCar = ([] spawn Gemini_fnc_ambientCivilianCars2)};
     };
-    waitUntil {sleep 1; scriptDone _handleMan && scriptDone _handleCar || (serverTime > _scriptStartTime + _interval)};
+    waitUntil {sleep 1; (scriptDone _handleMan && scriptDone _handleCar) || (serverTime > _scriptStartTime + _interval)};
 };

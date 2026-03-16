@@ -1,4 +1,7 @@
-﻿private _player = selectRandom OPEX_playingPlayers;
+﻿params ["_index"];
+
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
+private _player = selectRandom OPEX_playingPlayers;
 
 // LOOKING FOR A RANDOM ROAD AROUND SELECTED PLAYER
 private _roadPos = ["road", _player] call Gemini_fnc_findPos;
@@ -34,19 +37,19 @@ private _lightSources = ["Land_PortableLight_single_F", "Land_PortableLight_doub
 private _squad = [OPEX_enemy_side1, ["infantry"], selectRandom [4,6,8], _roadPos, [3, 10], "wait", objNull, OPEX_enemy_AIskill, 100] call Gemini_fnc_spawnSquad;
 if (isNil "_squad") exitWith {};
 {_x setDir (selectRandom [_dir1, _dir2])} forEach units _squad;
-[_roadPos, 25, -1, OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill] call Gemini_fnc_spawnUnitsStandingInside;
-[OPEX_enemy_side1, ["infantry"], selectRandom [2,2,3,3,3,5], _roadPos, [10, 100], "patrol", _roadPos, OPEX_enemy_AIskill, 75] call Gemini_fnc_spawnSquad;
+[_roadPos, 25, random 5, OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill] call Gemini_fnc_spawnUnitsStandingInside;
+// [OPEX_enemy_side1, ["infantry"], selectRandom [2,2,3,3,3,5], _roadPos, [10, 100], "patrol", _roadPos, OPEX_enemy_AIskill, 75] call Gemini_fnc_spawnSquad;
 
-OPEX_ambientEnemyRoadblock = OPEX_ambientEnemyRoadblock + 1; publicVariable "OPEX_ambientEnemyRoadblock";
+OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];
 
 // SPAWNING VEHICLES
 [OPEX_enemy_armored + OPEX_enemy_motorizedVehicles + OPEX_enemy_motorizedVehicles + OPEX_enemy_motorizedVehicles + OPEX_enemy_motorizedVehicles + OPEX_enemy_motorizedVehicles, OPEX_enemy_side1, _roadPos, [10,30], [OPEX_enemy_units, ceil (random 3)], 50] call Gemini_fnc_spawnVehicle;
 [OPEX_enemy_armored + OPEX_enemy_motorizedVehicles + OPEX_enemy_motorizedVehicles + OPEX_enemy_motorizedVehicles + OPEX_enemy_motorizedVehicles + OPEX_enemy_motorizedVehicles, OPEX_enemy_side1, _roadPos, [10,30], [OPEX_enemy_units, ceil (random 3)], 50] call Gemini_fnc_spawnVehicle;
 
-[_roadPos] spawn {
-	params ["_roadPos"];
+[_roadPos, _index] spawn {
+	params ["_roadPos", "_index"];
 	waitUntil {sleep 5; (_roadPos call Gemini_fnc_isUnplayedArea)};
-	OPEX_ambientEnemyRoadblock = OPEX_ambientEnemyRoadblock - 1; publicVariable "OPEX_ambientEnemyRoadblock";
+	OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) - 1)];
 };
 
 // DEBUGGING

@@ -1,4 +1,7 @@
-﻿private _player = selectRandom OPEX_playingPlayers;
+﻿params ["_index"];
+
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
+private _player = selectRandom OPEX_playingPlayers;
 private _type = ["infantry"];
 if (count ((getPosATL _player) nearRoads  OPEX_spawnDistanceMaxi) > 100) then {
 	if (random 100 < 10) then {_type = ["motorized"]};
@@ -15,12 +18,12 @@ private _squad = [
 	100
 ] call Gemini_fnc_spawnSquad;
 if (isNil "_squad") exitWith {};
-OPEX_ambientEnemyPatrols = OPEX_ambientEnemyPatrols + 1; publicVariable "OPEX_ambientEnemyPatrols";
+OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];
 
-[_squad] spawn {
-	params ["_squad"];
+[_squad, _index] spawn {
+	params ["_squad", "_index"];
 	waitUntil {sleep 5; (!([leader _squad] call Gemini_fnc_isPlayerNearby)) || (count units _squad == 0)};
-	OPEX_ambientEnemyPatrols = OPEX_ambientEnemyPatrols - 1; publicVariable "OPEX_ambientEnemyPatrols";
+	OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) - 1)];
 };
 
 if (OPEX_debug) then {

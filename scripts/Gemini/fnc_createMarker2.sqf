@@ -32,6 +32,7 @@
 		["_markerAlpha", 1, [0]],
 		["_markerText","", [""]]
 	];
+	if (_markerPos isEqualTo [0,0,0]) exitWith {};
 	_showTo = toLower _showTo;
 	private _showTargets = [];
 
@@ -63,10 +64,11 @@
 		case "zeus": {_showTargets = OPEX_Zeuses};
 	};
 	_markerName setMarkerAlpha 0;
-	[_markerName, _markerAlpha] remoteExec ["setMarkerAlphaLocal", _showTargets];
 
-	if (_followUnit isNotEqualTo objNull) then {
-		switch (typeName _followUnit) do {
+	if (_showTargets isNotEqualTo []) then {
+		[_markerName, _markerAlpha] remoteExec ["setMarkerAlphaLocal", _showTargets];
+		if (_followUnit isNotEqualTo objNull) then {
+			switch (typeName _followUnit) do {
 			case "OBJECT": {
 				[_markerName, _followUnit, _showTargets] spawn {
 					params ["_markerName", "_followUnit", "_showTargets"];
@@ -80,6 +82,7 @@
 					while {_followUnit isNotEqualTo grpNull} do {sleep 1;[_markerName, getPosATL (leader _followUnit)] remoteExec ["setMarkerPoslocal", _showTargets]};
 					deleteMarker _markerName;
 				};
+			};
 			};
 		};
 	};

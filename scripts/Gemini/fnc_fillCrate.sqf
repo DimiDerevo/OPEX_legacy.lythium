@@ -4,6 +4,7 @@
 
 	waitUntil {!isNil "OPEX_params_ready"}; waitUntil {OPEX_params_ready};
 	waitUntil {!isNil "OPEX_param_gearManagement"};
+	if (true) exitWith {}; // disabling this func
 
 // =========================================================================================================
 // PRIVATIZING LOCAL VARIABLES

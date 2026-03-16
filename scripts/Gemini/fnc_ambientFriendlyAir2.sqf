@@ -1,3 +1,6 @@
+params ["_index"];
+
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
 private _player = selectRandom OPEX_playingPlayers;
 
 // LOOKING FOR A RANDOM POSITION AROUND SELECTED PLAYER
@@ -22,16 +25,8 @@ private _endPos = _player getPos [OPEX_spawnDistanceMaxi * 10, _generalDir - (ra
 private _az = [_startPos, _endPos] call BIS_fnc_dirTo;
 
 // CALCULATING DESTINATION
-// private _trajectoryTemp = [_position, _player] call Gemini_fnc_trajectory;
-// private _destinationTemp = [_trajectoryTemp select 0, _trajectoryTemp select 1, _height];
-// private _trajectory = [_player, _destinationTemp] call Gemini_fnc_trajectory;
-// private _destination = [_trajectory select 0, _trajectory select 1, _height];
-
-// // SPAWNING VEHICLE
-// private _spawnPos = [_position select 0, _position select 1, _height];
-// private _azimuth = [_position, _player] call BIS_fnc_dirTo;
 private _vehicle = ([_startPos, _az, _class, west] call BIS_fnc_spawnVehicle) select 0;
-OPEX_ambientFriendlyAir = OPEX_ambientFriendlyAir + 1; publicVariable "OPEX_ambientFriendlyAir";
+OPEX_ambientFriendData#_index#1 set [0, ((OPEX_ambientFriendData#_index#1#0) + 1)];
 [_vehicle, "distance"] call Gemini_fnc_setLifeTime;
 
 private _markerStart = "";
@@ -44,11 +39,11 @@ if (OPEX_debug) then {
 	_markerEnd = [[format ["OPEX_debugMarker_ambient_%1", random 100000], _endPos, "ICON", "mil_end", [0.8, 0.8], 0, "Solid", "ColorBlue", 1, "AIR END"], "zeus", "unlimited"] call Gemini_fnc_createMarker2;
 };
 
-[_vehicle, _markerStart, _markerEnd] spawn {
-	params ["_vehicle", "_markerStart", "_markerEnd"];
+[_vehicle, _markerStart, _markerEnd, _index] spawn {
+	params ["_vehicle", "_markerStart", "_markerEnd", "_index"];
 	waitUntil {sleep 5; (!alive _vehicle)};
 	deleteMarker _markerStart; deleteMarker _markerEnd;
-	OPEX_ambientFriendlyAir = OPEX_ambientFriendlyAir - 1; publicVariable "OPEX_ambientFriendlyAir";
+	OPEX_ambientFriendData#_index#1 set [0, ((OPEX_ambientFriendData#_index#1#0) - 1)];
 };
 
 _vehicle doMove _endPos;
@@ -68,4 +63,3 @@ _vehicle setSkill 1;
 	_wp setWaypointCombatMode "WHITE";
 	_wp setWaypointSpeed (selectRandom ["normal", "full", "full"]);
 };
-

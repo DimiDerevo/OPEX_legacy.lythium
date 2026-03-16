@@ -1,5 +1,7 @@
-﻿
+﻿params ["_index"];
+
 // GETTING SPOTTED PLAYERS
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
 private _spottedPlayers = [];
 {if (OPEX_enemy_side1 knowsAbout _x > 3.5) then {_spottedPlayers append [_x]}} forEach OPEX_playingPlayers;
 if (_spottedPlayers isEqualTo []) exitWith {};
@@ -12,12 +14,12 @@ private _reinforcePos = getPosATL _player;
 private _squad = [OPEX_enemy_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "motorized", "motorized", "motorized", "motorized", "motorized", "motorized", "armored"], selectRandom [3,3,3,5,5,5,5,5,8], _player, [OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi], "attack", [_reinforcePos#0 + (random 250) - (random 250), _reinforcePos#1 + (random 250) - (random 250), _reinforcePos#2], OPEX_enemy_AIskill, 100] call Gemini_fnc_spawnSquad;
 if (isNil "_squad") exitWith {};
 
-OPEX_ambientEnemyReinforcements = OPEX_ambientEnemyReinforcements + 1; publicVariable "OPEX_ambientEnemyReinforcements";
+OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];
 
-[_squad] spawn {
-	params ["_squad"];
+[_squad, _index] spawn {
+	params ["_squad", "_index"];
 	waitUntil {sleep 5; (!([leader _squad] call Gemini_fnc_isPlayerNearby)) || (count units _squad == 0)};
-	OPEX_ambientEnemyReinforcements = OPEX_ambientEnemyReinforcements - 1; publicVariable "OPEX_ambientEnemyReinforcements";
+	OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) - 1)];
 };
 
 // DEBUGGING

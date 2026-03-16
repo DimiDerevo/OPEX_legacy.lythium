@@ -1,3 +1,4 @@
+if (OPEX_playingPlayers isEqualTo []) exitWith {};
 private _player = selectRandom OPEX_playingPlayers;
 private _playerPos = position _player;
 

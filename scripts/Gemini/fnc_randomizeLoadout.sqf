@@ -163,7 +163,7 @@ switch (_side) do
 								if (OPEX_sunHeight > 1) then {_glasses = selectRandom (OPEX_enemy_sunglasses + OPEX_enemy_glasses + OPEX_enemy_glasses)} else {_glasses = selectRandom OPEX_enemy_glasses};
 								_vest = ""; _proba_vest = 0;
 								_backpack = ""; _proba_backpack = 0;
-								_rifle = "";
+								_rifle = selectRandom OPEX_enemy_commonRifles;
 								_handgun = selectRandom OPEX_enemy_commonHandguns;
 								_launcher = "";
 							};
@@ -223,6 +223,16 @@ switch (_side) do
 
 				// RANDOMLY ADDING GRENADES
 				if (random 100 <= 50) then {for "_i" from 1 to (selectRandom [1,2,3]) do {_unit addItem (selectRandom OPEX_enemy_handGrenades)}};
+
+				if (((typeOf _unit) isEqualTo OPEX_enemy_grenadier)) then {
+					private _scndMuzzles = ["GP25Muzzle", "PBG40Muzzle"];
+					private _scndMuzzle = (getArray (configFile >> "CfgWeapons" >> _rifle >> "muzzles"))#1;
+					if (_scndMuzzle in _scndMuzzles) then {
+						private _scndMuzzleMag = (getArray (configFile >> "CfgWeapons" >> _rifle >> _scndMuzzle >> "magazines"))#0;
+						_unit addPrimaryWeaponItem _scndMuzzleMag;
+						for "_i" from 1 to (random 5) do {_unit addMagazine _scndMuzzleMag};
+					};
+				};
 
 				// RANDOMLY ADDING OTHER ITEMS (IF GEMINI MOD IS ENABLED)
 				if (isClass(configFile >> "CfgPatches" >> "Gemini_items")) then
