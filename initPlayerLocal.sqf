@@ -183,3 +183,4 @@
 		};
 	};
 	
+	player setVariable ["SFSM_Excluded", true, true];
