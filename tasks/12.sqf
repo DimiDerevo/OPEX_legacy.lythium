@@ -157,7 +157,7 @@
 		[0, 0, 0, false],
 		["any", "present", false],
 		["(OPEX_assignedTask) && (body_1 distance (getMarkerPos 'OPEX_marker_medical') < 50) && (body_2 distance (getMarkerPos 'OPEX_marker_medical') < 50) && (body_3 distance (getMarkerPos 'OPEX_marker_medical') < 50) && (body_4 distance (getMarkerPos 'OPEX_marker_medical') < 50) && (body_5 distance (getMarkerPos 'OPEX_marker_medical') < 50)",
-			"[] remoteExec ['Gemini_fnc_taskSucceeded']; ['support', 'random'] remoteExecCall ['Gemini_fnc_bonus', 2]; ['supply', 'random'] call Gemini_fnc_bonus",
+			"[] remoteExec ['Gemini_fnc_taskSucceeded']; ['support', 'random'] remoteExecCall ['Gemini_fnc_bonus', 2]; ['supply', 'random'] call Gemini_fnc_bonus; 0 spawn {sleep 10; {deleteVehicle _x} forEach [body_1, body_2, body_3, body_4, body_5]};",
 			""],
 		[0, 0, 0, false],
 		"task"
