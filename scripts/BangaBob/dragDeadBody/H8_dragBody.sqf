@@ -57,14 +57,18 @@
 		 _hideID = (_this select 2);
 		 _dropID = player getVariable "H8dropact";
 		 _unit = (_this select 3);
-		 _vehicle = cursorTarget;
+		 _vehicle = cursorObject;
 
 		private ["_loadedBodies"];
-		_loadedBodies =_vehicle getVariable ["H8loadedBodies", []];
+		_loadedBodies =_vehicle getVariable ["H8loadedBodies", nil];
 		if (isNil "_loadedBodies") then
 			{
 				_vehicle setVariable ["H8loadedBodies", [], true];
-				[_vehicle] spawn {waitUntil {sleep 1; (!alive (_this select 0)) || (isNull (_this select 0))}; {deleteVehicle _x} forEach attachedObjects (_this select 0)};
+				_vehicle spawn {
+					params ["_vehicle"];
+					waitUntil {sleep 1; (!alive _vehicle) || (isNull _vehicle)};
+					{deleteVehicle _x} forEach (_vehicle getVariable ["H8loadedBodies",[]]);
+				};
 			};
 		_loadedBodies =_vehicle getVariable ["H8loadedBodies", []];
 		if ((_vehicle emptyPositions "cargo" == 0) || (count _loadedBodies >= _vehicle emptyPositions "cargo")) exitWith {hint localize "STR_hint_fullVehicle"};
