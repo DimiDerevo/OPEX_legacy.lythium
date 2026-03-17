@@ -75,6 +75,8 @@ if ((typeOf _vehicle) in (OPEX_enemy_transportTrucks + OPEX_enemy_fuelTrucks + O
 		if (round (random 100) <= _intelProbability) then {_vehicle setVariable ["intel", round (random 25), true]} else {_vehicle setVariable ["intel", 0, true]};
 	};
 
+[_vehicle] call Gemini_fnc_setVehicleLoadout;
+
 // INITIALIZING MUSIC RECEIVER
 if ((_vehicle isKindOf "landVehicle") || (_vehicle isKindOf "air") || (_vehicle isKindOf "ship") || (_vehicle isKindOf "tank")) then {waitUntil {!isNil "Gemini_fnc_vehicleMusicReceiver_initVehicle"}; 0 = [_vehicle] spawn Gemini_fnc_vehicleMusicReceiver_initVehicle};
 

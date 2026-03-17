@@ -158,6 +158,7 @@ class Gemini
 				class setUnitInsigna {file = "scripts\Gemini\fnc_setUnitInsigna.sqf";};
 				class setUnitName {file = "scripts\Gemini\fnc_setUnitName.sqf";};
 				class setUnitPos {file = "scripts\Gemini\fnc_setUnitPos.sqf";};
+				class setVehicleLoadout {file = "scripts\Gemini\fnc_setVehicleLoadout.sqf";};
 				class setVehicleVarName {file = "scripts\Gemini\fnc_setVehicleVarName.sqf";};
 				class shootingRange {file = "scripts\Gemini\fnc_shootingRange.sqf";};
 				class shout {file = "scripts\Gemini\fnc_shout.sqf";};

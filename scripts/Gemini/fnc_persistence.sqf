@@ -252,6 +252,7 @@
 									{_vehicle setHitIndex [_forEachIndex, _x]} forEach (_vehicles select _i select 5);
 									_vehicle setFuel (_vehicles select _i select 6);
 									if (_vehicles select _i select 7 != -1) then {_vehicle setAmmoCargo (_vehicles select _i select 7)};
+									clearWeaponCargoGlobal _vehicle; clearMagazineCargoGlobal _vehicle; clearItemCargoGlobal _vehicle; clearBackpackCargoGlobal _vehicle; 
 									for "_j" from 0 to ((count (OPEX_persistentData_server select 1 select _i select 8 select 0 select 0)) - 1) do {_vehicle addWeaponCargoGlobal [OPEX_persistentData_server select 1 select _i select 8 select 0 select 0 select _j, OPEX_persistentData_server select 1 select _i select 8 select 0 select 1 select _j]};
 									for "_j" from 0 to ((count (OPEX_persistentData_server select 1 select _i select 8 select 1 select 0)) - 1) do {_vehicle addMagazineCargoGlobal [OPEX_persistentData_server select 1 select _i select 8 select 1 select 0 select _j, OPEX_persistentData_server select 1 select _i select 8 select 1 select 1 select _j]};
 									for "_j" from 0 to ((count (OPEX_persistentData_server select 1 select _i select 8 select 2 select 0)) - 1) do {_vehicle addItemCargoGlobal [OPEX_persistentData_server select 1 select _i select 8 select 2 select 0 select _j, OPEX_persistentData_server select 1 select _i select 8 select 2 select 1 select _j]};
