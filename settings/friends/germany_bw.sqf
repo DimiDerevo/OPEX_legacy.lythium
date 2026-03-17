@@ -317,3 +317,301 @@
 	OPEX_friendly_medicBackpacks_woodland = ["BWA3_TacticalPack_Tropen_Medic","BWA3_TacticalPack_Fleck_Medic","BWA3_Kitbag_Tropen_Medic", "BWA3_AssaultPack_Tropen_Medic"];
 	OPEX_friendly_medicBackpacks_desert = ["BWA3_TacticalPack_Tropen_Medic","BWA3_TacticalPack_Fleck_Medic","BWA3_Kitbag_Tropen_Medic", "BWA3_AssaultPack_Tropen_Medic"];
 	OPEX_friendly_medicBackpacks_snow = ["BWA3_TacticalPack_Tropen_Medic","BWA3_TacticalPack_Fleck_Medic","BWA3_Kitbag_Tropen_Medic", "BWA3_AssaultPack_Tropen_Medic"];
+
+OPEX_vehicleTypeDingo = [
+    [
+        "BWA3_Dingo2_FLW100_MG3_Tropen", 
+        "BWA3_Dingo2_FLW200_GMW_Tropen", 
+        "BWA3_Dingo2_FLW200_M2_Tropen", 
+        "BWA3_Dingo2_FLW200_GMW_CG13_Tropen", 
+        "BWA3_Dingo2_FLW200_M2_CG13_Tropen", 
+        "BWA3_Dingo2_FLW100_MG3_CG13_Tropen", 
+        "BWA3_Dingo2_FLW100_MG3_Fleck", 
+        "BWA3_Dingo2_FLW200_GMW_Fleck", 
+        "BWA3_Dingo2_FLW200_M2_Fleck", 
+        "BWA3_Dingo2_FLW200_GMW_CG13_Fleck", 
+        "BWA3_Dingo2_FLW200_M2_CG13_Fleck", 
+        "BWA3_Dingo2_FLW100_MG3_CG13_Fleck"
+    ], [
+        [
+            ["BWA3_G36KA2_RSAS_pointer", 2],
+            ["BWA3_PzF3_Tandem_Loaded", 2],
+            ["BWA3_30Rnd_556x45_G36", 30],
+            ["BWA3_30Rnd_556x45_G36_Tracer", 6],
+            ["BWA3_200Rnd_556x45", 10],
+            ["BWA3_DM51A1", 10],
+            ["BWA3_DM25", 10],
+            ["BWA3_DM32_Purple", 2],
+            ["BWA3_DM32_Red", 2],
+            ["kat_IFAK", 3],
+            ["ToolKit", 1],
+            ["ACE_rope15", 1]
+        ], [
+            ["BWA3_AssaultPack_Tropen", 1]
+        ]
+    ]
+];
+OPEX_vehicleTypeEagle = [
+    [
+        "BWA3_Eagle_Fleck", 
+        "BWA3_Eagle_FLW100_Fleck", 
+        "BWA3_Eagle_Tropen", 
+        "BWA3_Eagle_FLW100_Tropen",
+        "Redd_Tank_LKW_leicht_gl_Wolf_Tropentarn_FueFu", 
+        "Redd_Tank_LKW_leicht_gl_Wolf_Wintertarn_FueFu", 
+        "Redd_Tank_LKW_leicht_gl_Wolf_Flecktarn_FueFu", 
+        "Redd_Tank_LKW_leicht_gl_Wolf_Tropentarn_FJg", 
+        "Redd_Tank_LKW_leicht_gl_Wolf_Wintertarn_FJg", 
+        "Redd_Tank_LKW_leicht_gl_Wolf_Flecktarn_FJg"
+    ], [
+        [
+            ["BWA3_G36KA2_RSAS_pointer", 2],
+            ["BWA3_PzF3_Tandem_Loaded", 1],
+            ["BWA3_30Rnd_556x45_G36", 20],
+            ["BWA3_30Rnd_556x45_G36_Tracer", 4],
+            ["BWA3_200Rnd_556x45", 10],
+            ["BWA3_DM51A1", 10],
+            ["BWA3_DM25", 10],
+            ["BWA3_DM32_Purple", 2],
+            ["BWA3_DM32_Red", 2],
+            ["kat_IFAK", 2],
+            ["ToolKit", 1],
+            ["ACE_rope15", 1]
+        ], [
+            ["BWA3_AssaultPack_Tropen", 1]
+        ]
+    ]
+];
+OPEX_vehicleTypeFuchs = [
+    [
+        "Redd_Tank_Fuchs_1A4_Jg_Tropentarn", 
+        "Redd_Tank_Fuchs_1A4_Jg_Wintertarn", 
+        "Redd_Tank_Fuchs_1A4_Jg_Flecktarn", 
+        "Redd_Tank_Fuchs_1A4_Jg_Milan_Tropentarn", 
+        "Redd_Tank_Fuchs_1A4_Jg_Milan_Wintertarn", 
+        "Redd_Tank_Fuchs_1A4_Jg_Milan_Flecktarn"
+    ], [
+        [
+            ["BWA3_G36KA2_RSAS_pointer", 2],
+            ["BWA3_PzF3_Tandem_Loaded", 2],
+            ["BWA3_30Rnd_556x45_G36", 50],
+            ["BWA3_30Rnd_556x45_G36_Tracer", 10],
+            ["BWA3_200Rnd_556x45", 10],
+            ["BWA3_120Rnd_762x51_soft", 8],
+            ["BWA3_DM51A1", 15],
+            ["BWA3_DM25", 15],
+            ["BWA3_DM32_Purple", 2],
+            ["BWA3_DM32_Red", 2],
+            ["kat_IFAK", 5],
+            ["ToolKit", 1],
+            ["ACE_rope15", 1]
+        ], [
+            ["BWA3_AssaultPack_Tropen", 1]
+        ]
+    ]
+];
+OPEX_vehicleTypeMarder = [
+    [
+        "Redd_Marder_1A5_Tropentarn", 
+        "Redd_Marder_1A5_Wintertarn", 
+        "Redd_Marder_1A5_Flecktarn"
+    ], [
+        [
+            ["BWA3_MP7_RSAS_pointer", 1],
+            ["BWA3_PzF3_Tandem_Loaded", 2],
+            ["BWA3_30Rnd_556x45_G36", 50],
+            ["BWA3_30Rnd_556x45_G36_Tracer", 10],
+            ["BWA3_200Rnd_556x45", 10],
+            ["BWA3_120Rnd_762x51_soft", 8],
+            ["BWA3_40Rnd_46x30_MP7", 4],
+            ["BWA3_DM51A1", 15],
+            ["BWA3_DM25", 15],
+            ["BWA3_DM32_Purple", 2],
+            ["BWA3_DM32_Red", 2],
+            ["kat_IFAK", 5],
+            ["ToolKit", 1],
+            ["ACE_rope15", 1]
+        ], [
+            ["BWA3_AssaultPack_Tropen", 1]
+        ]
+    ]
+];
+OPEX_vehicleTypeFuchsEngi = [
+    [
+        "Redd_Tank_Fuchs_1A4_Pi_Tropentarn", 
+        "Redd_Tank_Fuchs_1A4_Pi_Wintertarn", 
+        "Redd_Tank_Fuchs_1A4_Pi_Flecktarn"
+    ], [
+        [
+            ["BWA3_G36KA2_RSAS_pointer", 2],
+            ["BWA3_CarlGustav_Optic", 1],
+            ["rhs_weap_M136_hedp", 2],
+            ["ACE_VMM3", 3],
+            ["BWA3_30Rnd_556x45_G36", 40],
+            ["BWA3_30Rnd_556x45_G36_Tracer", 8],
+            ["BWA3_200Rnd_556x45", 5],
+            ["BWA3_120Rnd_762x51_soft", 5],
+            ["BWA3_CarlGustav_HEDP", 2],
+            ["BWA3_CarlGustav_HE", 4],
+            ["BWA3_DM51A1", 10],
+            ["BWA3_DM25", 10],
+            ["BWA3_DM32_Purple", 2],
+            ["BWA3_DM32_Red", 2],
+            ["rhsusf_m112_mag", 8],
+            ["rhsusf_m112x4_mag", 1],
+            ["kat_IFAK", 4],
+            ["ACE_EntrenchingTool", 3],
+            ["ACE_Clacker", 1],
+            ["tsp_breach_shock", 3],
+            ["ACE_wirecutter", 1],
+            ["ACE_DefusalKit", 3],
+            ["ToolKit", 2],
+            ["ACE_rope15", 1]
+        ], [
+            ["BWA3_AssaultPack_Tropen", 2]
+        ]
+    ]
+];
+OPEX_vehicleTypeFuchsMed = [
+    [
+        "Redd_Tank_Fuchs_1A4_San_Tropentarn", 
+        "Redd_Tank_Fuchs_1A4_San_Wintertarn", 
+        "Redd_Tank_Fuchs_1A4_San_Flecktarn",
+        "Redd_Tank_LKW_leicht_gl_Wolf_Tropentarn_San", 
+        "Redd_Tank_LKW_leicht_gl_Wolf_Wintertarn_San", 
+        "Redd_Tank_LKW_leicht_gl_Wolf_Flecktarn_San"
+    ], [
+        [
+            ["BWA3_G36KA2_RSAS_pointer", 1],
+            ["BWA3_30Rnd_556x45_G36", 25],
+            ["BWA3_30Rnd_556x45_G36_Tracer", 5],
+            ["BWA3_200Rnd_556x45", 10],
+            ["BWA3_DM51A1", 10],
+            ["BWA3_DM25", 10],
+            ["BWA3_DM32_Purple", 2],
+            ["BWA3_DM32_Red", 2],
+            ["kat_IFAK", 4],
+            ["kat_MFAK", 2],
+            ["ACE_surgicalKit", 2],
+            ["ACE_suture", 75],
+            ["kat_X_AED", 1],
+            ["kat_nasal", 2],
+            ["kat_ultrasound", 1],
+            ["kat_clamp", 2],
+            ["kat_retractor", 2],
+            ["kat_scalpel", 2],
+            ["kat_accuvac", 2],
+            ["kat_Pulseoximeter", 2],
+            ["kat_plate", 15],
+            ["kat_etomidate", 15],
+            ["kat_lorazepam", 15],
+            ["kat_flumazenil", 15],
+            ["ACE_atropine", 15],
+            ["kat_lidocaine", 15],
+            ["kat_norepinephrine", 15],
+            ["kat_nitroglycerin", 15],
+            ["kat_IV_16", 15],
+            ["kat_IO_FAST", 2],
+            ["kat_larynx", 15],
+            ["kat_BVM", 1],
+            ["kat_oxygenTank_300", 5],
+            ["ACE_plasmaIV_500", 4],
+            ["ACE_salineIV", 3],
+            ["ACE_salineIV_500", 6],
+            ["kat_bloodIV_O_N_500", 2],
+            ["KAT_Empty_bloodIV_500", 4],
+            ["ToolKit", 1],
+            ["ACE_rope15", 1],
+            ["ACE_bodyBag", 15]
+        ], [
+            ["BWA3_AssaultPack_Tropen", 1]
+        ]
+    ]
+];
+OPEX_vehicleTypeTruck = [
+    [
+        "BWA3_Multi_Fleck", 
+        "BWA3_Multi_Tropen", 
+        "Redd_Tank_Wiesel_1A2_TOW_Tropentarn", 
+        "Redd_Tank_Wiesel_1A2_TOW_Wintertarn", 
+        "Redd_Tank_Wiesel_1A2_TOW_Flecktarn", 
+        "Redd_Tank_Wiesel_1A4_MK20_Tropentarn", 
+        "Redd_Tank_Wiesel_1A4_MK20_Wintertarn", 
+        "Redd_Tank_Wiesel_1A4_MK20_Flecktarn", 
+        "rnt_lkw_10t_mil_gl_kat_i_repair_trope", 
+        "rnt_lkw_10t_mil_gl_kat_i_repair_winter", 
+        "rnt_lkw_10t_mil_gl_kat_i_repair_fleck", 
+        "rnt_lkw_5t_mil_gl_kat_i_fuel_trope", 
+        "rnt_lkw_5t_mil_gl_kat_i_fuel_winter", 
+        "rnt_lkw_5t_mil_gl_kat_i_fuel_fleck", 
+        "rnt_lkw_5t_mil_gl_kat_i_transport_trope", 
+        "rnt_lkw_5t_mil_gl_kat_i_transport_winter", 
+        "rnt_lkw_5t_mil_gl_kat_i_transport_fleck", 
+        "rnt_lkw_7t_mil_gl_kat_i_mun_trope", 
+        "rnt_lkw_7t_mil_gl_kat_i_mun_winter", 
+        "rnt_lkw_7t_mil_gl_kat_i_mun_fleck", 
+        "rnt_lkw_7t_mil_gl_kat_i_transport_trope", 
+        "rnt_lkw_7t_mil_gl_kat_i_transport_winter", 
+        "rnt_lkw_7t_mil_gl_kat_i_transport_fleck"
+    ], [
+        [
+            ["BWA3_G36KA2_RSAS_pointer", 2],
+            ["BWA3_30Rnd_556x45_G36", 15],
+            ["BWA3_30Rnd_556x45_G36_Tracer", 3],
+            ["kat_IFAK", 2],
+            ["ToolKit", 1],
+            ["ACE_rope15", 1]
+        ], [
+            ["BWA3_AssaultPack_Tropen", 1]
+        ]
+    ]
+];
+OPEX_vehicleTypeHeli = [
+    [
+        "BWA3_NH90_TTH_Fleck", 
+        "BWA3_NH90_TTH_M3M_Fleck", 
+        "BWA3_Tiger", 
+        "BWA3_Tiger_RMK", 
+        "BWA3_NH90_TTH_Tropen", 
+        "BWA3_NH90_TTH_M3M_Tropen", 
+        "RHS_MELB_AH6M",
+        "RHS_MELB_AH6M_H", 
+        "RHS_MELB_AH6M_L", 
+        "RHS_MELB_AH6M_M", 
+        "RHS_MELB_MH6M", 
+        "RHS_MELB_H6M"
+    ], [
+        [
+            ["BWA3_MP7_RSAS_pointer", 2],
+            ["BWA3_40Rnd_46x30_MP7", 8],
+            ["BWA3_DM32_Purple", 2],
+            ["ACE_HandFlare_Green", 2],
+            ["kat_IFAK", 2],
+            ["ACE_rope36", 2],
+            ["ACE_bodyBag", 10]
+        ], []
+    ]
+];
+OPEX_loadoutHeliDefault = [
+    [
+        ["BWA3_MP7_RSAS_pointer", 2],
+        ["BWA3_40Rnd_46x30_MP7", 8],
+        ["BWA3_DM32_Purple", 2],
+        ["ACE_HandFlare_Green", 2],
+        ["kat_IFAK", 2],
+        ["ACE_rope36", 2],
+        ["ACE_bodyBag", 10]
+    ], []
+];
+OPEX_loadoutCarDefault = [
+    [
+        ["BWA3_G36KA2_RSAS_pointer", 2],
+        ["BWA3_30Rnd_556x45_G36", 15],
+        ["BWA3_30Rnd_556x45_G36_Tracer", 3],
+        ["kat_IFAK", 2],
+        ["ToolKit", 1],
+        ["ACE_rope15", 1]
+    ], [
+        ["BWA3_AssaultPack_Tropen", 1]
+    ]
+];
