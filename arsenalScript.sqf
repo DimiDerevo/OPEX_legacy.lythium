@@ -6,6 +6,8 @@ _rifle_G27 = ["BWA3_G27", "BWA3_G27_tan"];
 _arsenalArray append _rifle_G27;
 _rifle_G28 = ["BWA3_G28"];
 _arsenalArray append _rifle_G28;
+_rifle_G29 = ["BWA3_G29"];
+_arsenalArray append _rifle_G29;
 
 _rifle_G36A2 = ["BWA3_G36A2"];
 _arsenalArray append _rifle_G36A2;
@@ -20,10 +22,7 @@ _arsenalArray append _rifle_G36KA2;
 _rifle_G36KA3 = ["BWA3_G36KA3"];
 _arsenalArray append _rifle_G36KA3;
 
-_rifle_G38 = ["BWA3_G38"];
-_arsenalArray append _rifle_G38;
-_rifle_G38_UGL = ["BWA3_G38_AG40"];
-_arsenalArray append _rifle_G38_UGL;
+
 
 _rifle_MG3 = ["BWA3_MG3"];
 _arsenalArray append _rifle_MG3;
@@ -35,6 +34,22 @@ _arsenalArray append _rifle_MG5;
 _rifle_MP7 = ["BWA3_MP7"];
 _arsenalArray append _rifle_MP7;
 
+_rifleHK416_D10_stock = ["rhs_weap_hk416d10"];
+_arsenalArray append _rifleHK416_D10_stock;
+_rifleHK416_D10_M320 = ["rhs_weap_hk416d10_m320"];
+_arsenalArray append _rifleHK416_D10_M320;
+_rifleHK416_D14_stock = ["rhs_weap_hk416d145"];
+_arsenalArray append _rifleHK416_D14_stock;
+_rifleHK416_D14_desert = ["rhs_weap_hk416d145_d"];
+_arsenalArray append _rifleHK416_D14_desert;
+_rifleHK416_D14_desertnet = ["rhs_weap_hk416d145_d_2"];
+_arsenalArray append _rifleHK416_D14_desertnet;
+_rifleHK416_D14_M320 = ["rhs_weap_hk416d145_m320"];
+_arsenalArray append _rifleHK416_D14_M320;
+_rifleHK416_D14_woodland = ["rhs_weap_hk416d145_wd"];
+_arsenalArray append _rifleHK416_D14_woodland;
+_rifleHK416_D14_woodlandnet = ["rhs_weap_hk416d145_wd"];
+_arsenalArray append _rifleHK416_D14_woodlandnet;
 // ==========================Sidearm==========================
 
 _pistol_P8 = ["BWA3_P8"];
@@ -83,7 +98,7 @@ _arsenalArray append _launcher_MortarBaseplate;
 
 _headgear_Beret = ["BWA3_Beret_Falli","BWA3_Beret_HFlieger","BWA3_Beret_Jaeger", "BWA3_Beret_PzAufkl", "BWA3_Beret_PzGren", "BWA3_Beret_Pz", "BWA3_Beret_Wach_blue", "BWA3_Beret_Wach_green"];
 _arsenalArray append _headgear_Beret;
-_headgear_Booniehat = ["BWA3_Booniehat_Fleck", "BWA3_Booniehat_Multi", "BWA3_Booniehat_Tropen"];
+_headgear_Booniehat = ["BWA3_Booniehat_Fleck", "BWA3_Booniehat_Multi", "BWA3_Booniehat_Tropen", "H_Booniehat_tan_headset", "H_Booniehat_mcamo_headset"];
 _arsenalArray append _headgear_Booniehat;
 _headgear_Crew = ["BWA3_CrewmanKSK", "BWA3_CrewmanKSK_Fleck", "BWA3_CrewmanKSK_Fleck_Headset", "BWA3_CrewmanKSK_Headset", "BWA3_CrewmanKSK_Tropen", "BWA3_CrewmanKSK_Tropen_Headset"];
 _arsenalArray append _headgear_Crew;
@@ -96,6 +111,14 @@ _headgear_FAST = ["BWA3_OpsCore_FastMT", "BWA3_OpsCore_FastMT_Fleck", "BWA3_OpsC
 "BWA3_OpsCore_FastMT_Peltor_Tropen", "BWA3_OpsCore_FastMT_SOF_Tropen"];
 _arsenalArray append _headgear_FAST;
 
+_headgear_cap_tan = ["H_MilCap_tan"];
+_arsenalArray append _headgear_cap_tan;
+_headgear_bandana_tan = ["H_Bandana_sand_headset"];
+_arsenalArray append _headgear_bandana_tan;
+_headgear_bandana_mc = ["H_Bandana_mcamo_headset"];
+_arsenalArray append _headgear_bandana_mc;
+_headgear_capy_tan = ["H_Cap_tan_headset"];
+_arsenalArray append _headgear_capy_tan;
 // ==========================Uniform==========================
 
 _uniform_Boiler_Heli = ["BWA3_Uniform_Helipilot"];
@@ -120,7 +143,36 @@ _arsenalArray append _vest_JPC;
 _vest_LegStrap = ["V_LegStrapBag_black_F"];
 _arsenalArray append _vest_LegStrap;
 
-
+_vest_MBAV_MC_gl = ["mbavmc_gl"];
+_arsenalArray append _vest_MBAV_MC_gl;
+_vest_MBAV_MC_light = ["mbavmc_l"];
+_arsenalArray append _vest_MBAV_MC_light;
+_vest_MBAV_MC_mg = ["mbavmc_mg"];
+_arsenalArray append _vest_MBAV_MC_mg;
+_vest_MBAV_MC_med = ["mbavmc_m"];
+_arsenalArray append _vest_MBAV_MC_med;
+_vest_MBAV_MC_rifle = ["mbavmc_r"];
+_arsenalArray append _vest_MBAV_MC_rifle;
+_vest_MBAV_RG_gl = ["mbavr_gl"];
+_arsenalArray append _vest_MBAV_RG_gl;
+_vest_MBAV_RG_light = ["mbavr_l"];
+_arsenalArray append _vest_MBAV_RG_light;
+_vest_MBAV_RG_mg = ["mbavr_mg"];
+_arsenalArray append _vest_MBAV_RG_mg;
+_vest_MBAV_RG_med = ["mbavr_m"];
+_arsenalArray append _vest_MBAV_RG_med;
+_vest_MBAV_RG_rifle = ["mbavr_r"];
+_arsenalArray append _vest_MBAV_RG_rifle;
+_vest_MBAV_Tan_gl = ["rhsusf_mbav_grenadier"];
+_arsenalArray append _vest_MBAV_Tan_gl;
+_vest_MBAV_Tan_light = ["rhsusf_mbav_light"];
+_arsenalArray append _vest_MBAV_Tan_light;
+_vest_MBAV_Tan_mg = ["rhsusf_mbav_mg"];
+_arsenalArray append _vest_MBAV_Tan_mg;
+_vest_MBAV_Tan_med = ["rhsusf_mbav_medic"];
+_arsenalArray append _vest_MBAV_Tan_med;
+_vest_MBAV_Tan_rifle = ["rhsusf_mbav_rifleman"];
+_arsenalArray append _vest_MBAV_Tan_rifle;
 // ==========================Backpack==========================
 
 
@@ -136,6 +188,9 @@ _backpack_Ladder = ["ACE_TacticalLadder_Pack"];
 _arsenalArray append _backpack_Ladder;
 _backpack_Gunbag = ["ace_gunbag_Tan"];
 _arsenalArray append _backpack_Gunbag;
+
+_backpack_Milan = ["Redd_Milan_Static_Tripod", "Redd_Milan_Static_Barrel"];
+_arsenalArray append _backpack_Milan;
 
 // ==========================Facewear==========================
 
@@ -219,11 +274,18 @@ _mags = ["ACE_10Rnd_127x99_Mag", "ACE_10Rnd_127x99_AMAX_Mag", "ACE_10Rnd_127x99_
 _arsenalArray append _mags;
 _mags_CSW = ["ace_csw_100Rnd_127x99_mag", "ACE_1Rnd_82mm_Mo_HE", "ACE_1Rnd_82mm_Mo_Illum", "ACE_1Rnd_82mm_Mo_Smoke", "ace_compat_rhs_usf3_mag_TOW2", "ace_compat_rhs_usf3_mag_TOW2bb", "ace_compat_rhs_usf3_48Rnd_40mm_MK19"];
 _arsenalArray append _mags_CSW;
-
+_mags_rhs = ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull_Tracer_Red","rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M200_Stanag","rhs_mag_30Rnd_556x45_M855A1_EPM","rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger","rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_EPM_Pull","rhs_mag_30Rnd_556x45_M855A1_EPM_Pull_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_EPM_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red","rhs_mag_30Rnd_556x45_M855_PMAG_Tan_Tracer_Red","rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red","rhs_mag_30Rnd_556x45_M855_PMAG","rhs_mag_30Rnd_556x45_M855_PMAG_Tan","rhs_mag_30Rnd_556x45_M855A1_PMAG","rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan","rhs_mag_30Rnd_556x45_M855_Stanag_Pull","rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red","rhs_mag_30Rnd_556x45_M855_Stanag_Ranger_Tracer_Red","rhs_mag_30Rnd_556x45_M855_Stanag_Ranger","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger","rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag"];
+_arsenalArray append _mags_rhs;
 // ==========================Grenades==========================
 
 _grenades = ["Chemlight_blue","Chemlight_green","ACE_Chemlight_HiBlue","ACE_Chemlight_HiGreen","ACE_Chemlight_HiRed","ACE_Chemlight_HiWhite","ACE_Chemlight_IR","ACE_Chemlight_Orange","ACE_Chemlight_HiYellow","Chemlight_red","ACE_Chemlight_UltraHiOrange","Chemlight_yellow","ACE_Chemlight_White","BWA3_DM25","BWA3_DM32_Blue","BWA3_DM32_Green","BWA3_DM32_Orange","BWA3_DM32_Purple","BWA3_DM32_Red","BWA3_DM32_Yellow","BWA3_DM51A1","ACE_HandFlare_Green","ACE_HandFlare_Red","ACE_HandFlare_White","tsp_flashbang_m84"];
 _arsenalArray append _grenades;
+
+// =======================Explosives========================
+
+_explosives = ["SatchelCharge_Remote_Mag", "DemoCharge_Remote_Mag"];
+_arsenalArray append _explosives;
+
 
 // ==========================Other==========================
 
