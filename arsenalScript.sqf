@@ -189,8 +189,6 @@ _arsenalArray append _backpack_Ladder;
 _backpack_Gunbag = ["ace_gunbag_Tan"];
 _arsenalArray append _backpack_Gunbag;
 
-_backpack_Milan = ["Redd_Milan_Static_Tripod", "Redd_Milan_Static_Barrel"];
-_arsenalArray append _backpack_Milan;
 
 // ==========================Facewear==========================
 
