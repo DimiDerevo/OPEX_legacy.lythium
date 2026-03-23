@@ -23,13 +23,10 @@ private ["_position", "_radius"];
 _position = _this select 0;
 _radius = _this select 1;
 
-private _isEnterable = {[_x, 3] call BIS_fnc_isBuildingEnterable};
-private _isNotBlacklisted = {!((typeOf _x) in ["Land_HouseV2_03", "Land_Nasypka", "Land_Pier_F", "Land_Radar_F"])};
-private _isNotMilitary = {!((["cargo", typeOf _x] call BIS_fnc_inString) || (["office", typeOf _x] call BIS_fnc_inString))};
 private _isNotTooClose = {!([_x, OPEX_spawnDistanceMini] call Gemini_fnc_isPlayerNearby)};
-private _isNotInSafeArea = {!([_x] call Gemini_fnc_isInSafeLocation)};
+private _isValidBuilding = {(OPEX_validBuildings get (str (getPosworld _x))) isEqualTo true};
 
-private _validPosition = {call _isEnterable && call _isNotBlacklisted && call _isNotMilitary && call _isNotTooClose && call _isNotInSafeArea};
+private _validPosition = {call _isValidBuilding && call _isNotTooClose};
 
 private _buildings = (nearestTerrainObjects [_position, ["House"], _radius]) select {call _validPosition};
 

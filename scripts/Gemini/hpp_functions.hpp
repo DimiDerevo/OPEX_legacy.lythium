@@ -89,6 +89,7 @@ class Gemini
 				class fastTravel {file = "scripts\Gemini\fnc_fastTravel.sqf";};
 				class fillCrate {file = "scripts\Gemini\fnc_fillCrate.sqf";};
 				class findBuildings {file = "scripts\Gemini\fnc_findBuildings.sqf";};
+				class cacheBuildings {file = "scripts\Gemini\fnc_cacheBuildings.sqf";};
 				class findPos {file = "scripts\Gemini\fnc_findPos.sqf";};
 				class findPos2 {file = "scripts\Gemini\fnc_findPos2.sqf";};
 				class fitness {file = "scripts\Gemini\fnc_fitness.sqf";};
