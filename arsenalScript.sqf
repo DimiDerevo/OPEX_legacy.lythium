@@ -141,10 +141,16 @@ _arsenalArray append _headgear_capy_tan;
 
 _uniform_Boiler_Heli = ["BWA3_Uniform_Helipilot"];
 _arsenalArray append _uniform_Boiler_Heli;
-_uniform_Boiler_Crew = ["BWA3_Uniform_Crew_Tropen"];
+_uniform_Boiler_Crew = ["BWA3_Uniform_Crew_Tropen", "BWA3_Uniform_Crew_Fleck", "BWA3_Uniform_Crew_Multi"];
 _arsenalArray append _uniform_Boiler_Crew;
 _uniform_IdZ_Tropen = ["BWA3_Uniform_Tropen", "BWA3_Uniform_sleeves_Tropen", "BWA3_Uniform_tee_Tropen"];
 _arsenalArray append _uniform_IdZ_Tropen;
+_uniform_IdZ_Fleck = ["BWA3_Uniform_Fleck", "BWA3_Uniform_sleeves_Fleck", "BWA3_Uniform_tee_Fleck"];
+_arsenalArray append _uniform_IdZ_Fleck;
+_uniform_IdZ_Multi = ["BWA3_Uniform_Multi", "BWA3_Uniform_sleeves_Multi", "BWA3_Uniform_tee_Multi"];
+_arsenalArray append _uniform_IdZ_Multi;
+_uniform_G3 = ["BWA3_Uniform_Crye_G3_Fleck", "BWA3_Uniform_Crye_G3_Multi", "BWA3_Uniform_Crye_G3_Tropen"];
+_arsenalArray append _uniform_G3;
 
 // ==========================Vest==========================
 
