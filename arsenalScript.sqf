@@ -50,6 +50,24 @@ _rifleHK416_D14_woodland = ["rhs_weap_hk416d145_wd"];
 _arsenalArray append _rifleHK416_D14_woodland;
 _rifleHK416_D14_woodlandnet = ["rhs_weap_hk416d145_wd"];
 _arsenalArray append _rifleHK416_D14_woodlandnet;
+
+_rifleHK416_D10_SMR = ["rhs_weap_HK416D10_smr"];
+_arsenalArray append _rifleHK416_D10_SMR;
+_rifleHK416_D10_SMR_des = ["rhs_weap_HK416D10_smr_des"];
+_arsenalArray append _rifleHK416_D10_SMR_des;
+_rifleHK416_D10_SMR_tan = ["rhs_weap_HK416D10_smr_tan"];
+_arsenalArray append _rifleHK416_D10_SMR_tan;
+_rifleHK416_D10_SMR_wdl = ["rhs_weap_HK416D10_smr_wdl"];
+_arsenalArray append _rifleHK416_D10_SMR_wdl;
+
+_rifleHK416_D15_SMR = ["rhs_weap_HK416D15_smr"];
+_arsenalArray append _rifleHK416_D15_SMR;
+_rifleHK416_D15_SMR_des = ["rhs_weap_HK416D15_smr_des"];
+_arsenalArray append _rifleHK416_D15_SMR_des;
+_rifleHK416_D15_SMR_tan = ["rhs_weap_HK416D15_smr_tan"];
+_arsenalArray append _rifleHK416_D15_SMR_tan;
+_rifleHK416_D15_SMR_wdl = ["rhs_weap_HK416D15_smr_wdl"];
+_arsenalArray append _rifleHK416_D15_SMR_wdl;
 // ==========================Sidearm==========================
 
 _pistol_P8 = ["BWA3_P8"];
