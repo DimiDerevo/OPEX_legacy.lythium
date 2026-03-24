@@ -4,6 +4,8 @@ if (!isServer) exitWith {};
 waitUntil {!isNil "OPEX_params_ready"}; waitUntil {OPEX_params_ready};
 waitUntil {!isNil "OPEX_playingPlayers"};
 waitUntil {!isNil "OPEX_spawnDistanceMaxi"};
+waitUntil {!isNil "OPEX_validBuildings"};
+
 
 [] call Gemini_fnc_ambientEnemyIEDsInit;
 OPEX_ambientSpawnHandlerLoop = true;

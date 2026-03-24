@@ -307,6 +307,8 @@
 									];
 						};
 				};
+
+			_unit setVariable ["SFSM_Excluded", true, true];
 		};
 
 	_unit enableSimulationGlobal true;
@@ -314,7 +316,6 @@
 	// SETTING LANGUAGE
 	[_unit] call Gemini_fnc_setSpeaker;
 
-	_unit setVariable ["SFSM_Excluded", true, true];
 
 // =========================================================================================================
 // DEBUGGING

@@ -192,3 +192,5 @@
 	private _respawnMarkers = allMapMarkers select {"bis_o" in _x}; if (count _respawnMarkers > 0) then {{_x setMarkerAlpha 0} forEach _respawnMarkers}; // hiding respawn marker
 	private _flag = [getMarkerPos "OPEX_marker_toc", OPEX_friendly_flag_marker, "Default", OPEX_friendly_camp, "hq"] call Gemini_fnc_createMarker;
 	_flag setMarkerSize [2,2];
+
+	[] call Gemini_fnc_cacheBuildings;
