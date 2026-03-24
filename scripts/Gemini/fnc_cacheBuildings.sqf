@@ -8,4 +8,4 @@ private _selectedBuildings = [];
 {
 	if (_x call _allConditions) then {_selectedBuildings pushBackUnique [str (getPosWorld _x), true]};
 } forEach (nearestTerrainObjects [[worldSize / 2, worldSize / 2, 0], ["House"], sqrt 2 / 2 * worldSize]);
-OPEX_validBuildings = createHashMapFromArray _selectedBuildings;
+OPEX_validBuildings = createHashMapFromArray _selectedBuildings; publicVariable "OPEX_validBuildings";

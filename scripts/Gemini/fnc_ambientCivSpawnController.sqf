@@ -2,6 +2,7 @@ if (!isServer) exitWith {};
 waitUntil {!isNil "OPEX_params_ready"}; waitUntil {OPEX_params_ready};
 waitUntil {!isNil "OPEX_playingPlayers"};
 waitUntil {!isNil "OPEX_spawnDistanceMaxi"};
+waitUntil {!isNil "OPEX_validBuildings"};
 OPEX_ambientCivilianMan = 0; publicVariable "OPEX_ambientCivilianMan";
 OPEX_ambientCivilianManMax = 50; publicVariable "OPEX_ambientCivilianManMax";
 OPEX_ambientCivilianCars = 0; publicVariable "OPEX_ambientCivilianCars";
