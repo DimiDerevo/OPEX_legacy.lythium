@@ -10,7 +10,7 @@ private _nearbyBuildings = [_player, OPEX_spawnDistanceMaxi] call Gemini_fnc_fin
 
 // DEFINING LOCATION POPULATION AMOUNT
 private _maxCiviliansPerLocation = 2 max (round (count _nearbyBuildings / 5)); // ratio = 1 civilian for 5 houses
-private _maxCiviliansNearby = _maxCiviliansPerLocation min 50; // maximum 50 civilians per location
+private _maxCiviliansNearby = _maxCiviliansPerLocation min 75; // maximum 75 civilians per location
 
 // CHECKING IF THE LOCATION HASN'T BEEN POPULATED ALREADY
 private _nearbyCivilians = (_player nearEntities ["CAManBase", OPEX_spawnDistanceMaxi]) select {(alive _x) && (side _x == civilian) && (!isPlayer _x) && (_x isKindOf "Man") && (!(_x call Gemini_fnc_isInSafeLocation))};

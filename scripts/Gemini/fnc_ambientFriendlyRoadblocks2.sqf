@@ -41,7 +41,7 @@ private _lightSources = ["Land_PortableLight_single_F", "Land_PortableLight_doub
 private _squad = [OPEX_friendly_side1, ["infantry"], selectRandom [4,6,8], _roadPos, [0, 20], "wait", objNull, OPEX_friendly_AIskill, 100] call Gemini_fnc_spawnSquad;
 if (isNil "_squad") exitWith {};
 {_x setDir (selectRandom [_dir1, _dir2])} forEach units _squad;
-[_roadPos, 25, random 4, OPEX_friendly_side1, OPEX_friendly_commonUnits, OPEX_friendly_AIskill] call Gemini_fnc_spawnUnitsStandingInside;
+// [_roadPos, 25, random 4, OPEX_friendly_side1, OPEX_friendly_commonUnits, OPEX_friendly_AIskill] call Gemini_fnc_spawnUnitsStandingInside;
 //[OPEX_friendly_side1, ["infantry"], selectRandom [2,2,3,3,3,5], _roadPos, [10, 100], "patrol", _roadPos, OPEX_friendly_AIskill, 75] call Gemini_fnc_spawnSquad;
 {if (true) then {["Base", "STR_radio_friendliesNearby"] remoteExec ["Gemini_fnc_commandChat", _x]}} forEach OPEX_playingPlayers;
 
