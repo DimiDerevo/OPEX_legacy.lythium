@@ -14,7 +14,6 @@ OPEX_ambientCivSpawnBaseInterval = 10;
 private _interval = OPEX_ambientCivSpawnBaseInterval;
 private _scriptStartTime = 0;
 private _playerCount = 0;
-DD_playingPlayersTest = 10;
 
 private _minCivs = 50;
 private _maxCivs = 250;
@@ -31,8 +30,7 @@ while {true} do {
     waitUntil {sleep 1; OPEX_playingPlayers isNotEqualTo []};
     if (OPEX_ambientCivSpawnHandlerLoop) then {
         _interval = OPEX_ambientCivSpawnBaseInterval;
-        // _playerCount = (count OPEX_playingPlayers) max 1;
-        _playerCount = DD_playingPlayersTest max 1;
+        _playerCount = (count OPEX_playingPlayers) max 1;
 
         OPEX_ambientCivilianManMax = floor (_minCivs + (_maxCivs - _minCivs) * ((_playerCount - 1) / (_maxCivsAtPlayerCount - 1))); publicVariable "OPEX_ambientCivilianManMax";
         OPEX_ambientCivilianCarsMax = floor (_minCars + (_maxCivs - _minCars) * ((_playerCount - 1) / (_maxCarsAtPlayerCount - 1))); publicVariable "OPEX_ambientCivilianCarsMax";
