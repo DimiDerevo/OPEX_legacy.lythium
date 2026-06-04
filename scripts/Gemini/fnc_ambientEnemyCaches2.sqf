@@ -23,7 +23,7 @@ private _crate = [_crateType, _cratePos] call Gemini_fnc_createVehicle;
 
 // SPAWNING ENEMIES
 [OPEX_enemy_side1, ["infantry"], selectRandom [2,3,5], _crate, [2, 10], "talk", [], OPEX_enemy_AIskill, 100] call Gemini_fnc_spawnSquad;
-[OPEX_enemy_side1, ["infantry"], selectRandom [2,3,5], _crate, [10, 200], "patrol", _crate, OPEX_enemy_AIskill, 75] call Gemini_fnc_spawnSquad;
+// [OPEX_enemy_side1, ["infantry"], selectRandom [2,3,5], _crate, [10, 200], "patrol", _crate, OPEX_enemy_AIskill, 75] call Gemini_fnc_spawnSquad;
 [_crate, 50, random 4, OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill] call Gemini_fnc_spawnUnitsStandingInside;
 [_locationPos, _locationSize, random 4, OPEX_enemy_side1, [OPEX_enemy_rifleman, OPEX_enemy_grenadier, OPEX_enemy_MG], OPEX_enemy_AIskill] call Gemini_fnc_spawnUnitsStandingOutside;
 
