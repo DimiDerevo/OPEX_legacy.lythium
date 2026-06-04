@@ -10,7 +10,7 @@ if (_roadPos isEqualTo [0,0,0]) exitWith {};
 
 // SPAWNING AMBUSH
 for "_i" from 1 to (selectRandom [1,1,1,2,2,2,3]) do {
-	_overwatchPos = ["overwatch", _roadPos, 20, 100] call Gemini_fnc_findPos;
+	_overwatchPos = ["land", _roadPos, 20, 100] call Gemini_fnc_findPos;
 	if (_overwatchPos isEqualTo [0,0,0]) exitWith {};
 	[OPEX_enemy_side1, ["infantry"], selectRandom [3,5,7,8], _overwatchPos, [0,0], "hold", _overwatchPos, OPEX_enemy_AIskill, 100] call Gemini_fnc_spawnSquad;
 };

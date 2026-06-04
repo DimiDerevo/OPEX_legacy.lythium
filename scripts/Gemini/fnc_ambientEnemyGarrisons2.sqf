@@ -22,7 +22,7 @@ _flag setFlagTexture OPEX_enemy_flagTexture;
 [_flag, _locationSize, random 8, OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill] call Gemini_fnc_spawnUnitsStandingInside;
 [_flag, 15, 2 + (round random 3), OPEX_enemy_side1, OPEX_enemy_units, OPEX_enemy_AIskill] call Gemini_fnc_spawnUnitsStandingOutside;
 for "_i" from 1 to (ceil (random 2)) do {[OPEX_enemy_side1, ["infantry"], ceil (random 5), _flag, [20, 75], "talk", [], OPEX_enemy_AIskill, 50] call Gemini_fnc_spawnSquad};
-for "_i" from 1 to (ceil (random 2)) do {[OPEX_enemy_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "motorized"], selectRandom [2, 3, 4, 5], _flag, [random _locationSize, _locationSize * 5], "patrol", _flag, OPEX_enemy_AIskill, 50] call Gemini_fnc_spawnSquad};
+// for "_i" from 1 to (ceil (random 2)) do {[OPEX_enemy_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "motorized"], selectRandom [2, 3, 4, 5], _flag, [random _locationSize, _locationSize * 5], "patrol", _flag, OPEX_enemy_AIskill, 50] call Gemini_fnc_spawnSquad};
 
 OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];
 
