@@ -44,7 +44,7 @@ switch (_side) do
 									{
 										case (("STR_enemy_name_TALIB_4") + " " + "(" + "CUP" + ")")	:	{_proba_balaclava = 5; _proba_headgear = 90; _proba_beard = 90; _proba_scarf = 75; _proba_glasses = 5; _proba_vest = 100; _proba_backpack = 20};
 										case (("STR_enemy_name_TALIB_4") + " " + "(" + "CFP" + ")")	:	{_proba_balaclava = 5; _proba_headgear = 90; _proba_beard = 90; _proba_scarf = 75; _proba_glasses = 5; _proba_vest = 100; _proba_backpack = 20};
-										case (("STR_enemy_name_TALIB_4") + " " + "(" + "LOP" + ")")	:	{_proba_balaclava = 5; _proba_headgear = 90; _proba_beard = 90; _proba_scarf = 75; _proba_glasses = 5; _proba_vest = 0; _proba_backpack = 20};
+										case (("STR_enemy_name_TALIB_4") + " " + "(" + "LOP" + ")")	:	{_proba_balaclava = 0; _proba_headgear = 100; _proba_beard = 90; _proba_scarf = 75; _proba_glasses = 5; _proba_vest = 0; _proba_backpack = 20};
 										case (("STR_enemy_name_TALIB_4") + " " + "(" + "3CB" + ")")	:	{_proba_balaclava = 5; _proba_headgear = 90; _proba_beard = 90; _proba_scarf = 75; _proba_glasses = 5; _proba_vest = 0; _proba_backpack = 20};
 										default															{_proba_balaclava = 5; _proba_headgear = 90; _proba_beard = 90; _proba_scarf = 75; _proba_glasses = 5; _proba_vest = 0; _proba_backpack = 20};
 									};
@@ -185,11 +185,12 @@ switch (_side) do
 
 				// ASSIGNING GEAR
 				_unit forceAddUniform _uniform;
-				if ((random 100 < _proba_balaclava) && (goggles _unit == "")) then {_unit addGoggles _balaclava};
-				if ((random 100 < _proba_headgear) && (goggles _unit == "") && (headgear _unit != "")) then {_unit addHeadgear _glasses};
-				if ((random 100 < _proba_beard) && (goggles _unit == "") && (count OPEX_enemy_beards > 0)) then {_unit addGoggles _beard};
-				if ((random 100 < _proba_scarf) && (goggles _unit == "")) then {_unit addGoggles _scarf};
-				if ((random 100 < _proba_glasses) && (goggles _unit == "")) then {_unit addGoggles _glasses};
+				// if ((random 100 < _proba_balaclava) && (goggles _unit == "")) then {_unit addGoggles _balaclava};
+				// if ((random 100 < _proba_headgear) && (goggles _unit == "") && (headgear _unit != "")) then {_unit addHeadgear _glasses};
+				// if ((random 100 < _proba_beard) && (goggles _unit == "") && (count OPEX_enemy_beards > 0)) then {_unit addGoggles _beard};
+				// if ((random 100 < _proba_scarf) && (goggles _unit == "")) then {_unit addGoggles _scarf};
+				// if ((random 100 < _proba_glasses) && (goggles _unit == "")) then {_unit addGoggles _glasses};
+				if (random 100 < _proba_headgear) then {_unit addHeadgear _headgear};
 				if ((random 100 < _proba_vest) && (_vest != "") && (count (OPEX_enemy_commonVests + OPEX_enemy_beltVests + OPEX_enemy_grenadierVests) > 0)) then {_unit addVest _vest};
 				if ((random 100 < _proba_backpack) && (_backpack != "")) then {_unit addBackpackGlobal _backpack; waitUntil {!isNull backpackContainer _unit}};	
 
@@ -321,7 +322,7 @@ switch (_side) do
 					{
 						case "ULTRA"	:	{_proba_headgear = 50; _proba_beard = 10; _proba_glasses = 25; _proba_scarf = 30; _proba_vest = 0};
 						case "ISIS"		:	{_proba_headgear = 50; _proba_beard = 60; _proba_glasses = 10; _proba_scarf = 50; _proba_vest = 0; if (count OPEX_civilian_vests > 0) then {_proba_vest = 70}};
-						case "TALIB"	:	{_proba_headgear = 50; _proba_beard = 75; _proba_glasses = 10; _proba_scarf = 90; _proba_vest = 0; if (count OPEX_civilian_vests > 0) then {_proba_vest = 90}};
+						case "TALIB"	:	{_proba_headgear = 100; _proba_beard = 75; _proba_glasses = 10; _proba_scarf = 90; _proba_vest = 0; if (count OPEX_civilian_vests > 0) then {_proba_vest = 90}};
 						case "BOKO"		:	{_proba_headgear = 50; _proba_beard = 75; _proba_glasses = 25; _proba_scarf = 70; _proba_vest = 0; if (count OPEX_civilian_vests > 0) then {_proba_vest = 50}};
 						default				{_proba_headgear = 50; _proba_beard = 10; _proba_glasses = 15; _proba_scarf = 25; _proba_vest = 0};
 					};
@@ -329,11 +330,11 @@ switch (_side) do
 				// ASSIGNING GEAR
 				_unit forceAddUniform (selectRandom OPEX_civilian_uniforms);
 				[_unit, ""] call BIS_fnc_setUnitInsignia;
-				if ((random 100 < _proba_headgear) && (headgear _unit != "")) then {_unit addHeadGear (selectRandom OPEX_civilian_headgears)};
-				if ((random 100 < _proba_beard) && (goggles _unit != "") && (count OPEX_civilian_beards > 0)) then {_unit addGoggles (selectRandom OPEX_civilian_beards)};
-				if ((random 100 < _proba_scarf) && (goggles _unit != "") && (count OPEX_civilian_scarfs > 0)) then {_unit addGoggles (selectRandom OPEX_civilian_scarfs)};
-				if ((random 100 < _proba_glasses) && (goggles _unit != "") && (OPEX_sunHeight > 1) && (overcast < 0.5)) then {_unit addGoggles (selectRandom OPEX_civilian_sunglasses)};
-				if ((random 100 < _proba_glasses) && (goggles _unit != "")) then {_unit addGoggles (selectRandom OPEX_civilian_glasses)};
+				if (random 100 < _proba_headgear) then {_unit addHeadGear (selectRandom OPEX_civilian_headgears)};
+				// if ((random 100 < _proba_beard) && (goggles _unit != "") && (count OPEX_civilian_beards > 0)) then {_unit addGoggles (selectRandom OPEX_civilian_beards)};
+				// if ((random 100 < _proba_scarf) && (goggles _unit != "") && (count OPEX_civilian_scarfs > 0)) then {_unit addGoggles (selectRandom OPEX_civilian_scarfs)};
+				// if ((random 100 < _proba_glasses) && (goggles _unit != "") && (OPEX_sunHeight > 1) && (overcast < 0.5)) then {_unit addGoggles (selectRandom OPEX_civilian_sunglasses)};
+				// if ((random 100 < _proba_glasses) && (goggles _unit != "")) then {_unit addGoggles (selectRandom OPEX_civilian_glasses)};
 				if ((random 100 < _proba_vest) && (vest _unit != "")) then {_unit addVest (selectRandom OPEX_civilian_vests)};
 
 				// ASSIGNING ITEMS

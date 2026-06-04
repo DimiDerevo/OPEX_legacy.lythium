@@ -68,10 +68,25 @@
 							case "TALIB" :
 								{
 									OPEX_civilian_units = ["C_man_1"];
-									OPEX_civilian_uniforms = ["U_BG_Guerilla2_2","U_BG_Guerilla2_3","U_BG_Guerilla2_1"];
-									if (395180 in (getDLCs 1)) then {OPEX_civilian_uniforms append ["U_I_C_Soldier_Bandit_3_F"]};
-									if (1.02179e+006 in (getDLCs 1)) then {OPEX_civilian_uniforms append ["U_C_Uniform_Farmer_01_F"]};
-									OPEX_civilian_headgears = ["H_Cap_tan","H_Cap_blk","H_Cap_oli","H_Cap_grn","H_Cap_blu","H_Cap_red"];
+									OPEX_civilian_uniforms = [
+										"LOP_U_TAK_Civ_Fatigue_06",
+										"LOP_U_TAK_Civ_Fatigue_08",
+										"LOP_U_TAK_Civ_Fatigue_07",
+										"LOP_U_TAK_Civ_Fatigue_05",
+										"LOP_U_TAK_Civ_Fatigue_01",
+										"LOP_U_TAK_Civ_Fatigue_10",
+										"LOP_U_TAK_Civ_Fatigue_02",
+										"LOP_U_TAK_Civ_Fatigue_09",
+										"LOP_U_TAK_Civ_Fatigue_11",
+										"LOP_U_TAK_Civ_Fatigue_12",
+										"LOP_U_TAK_Civ_Fatigue_04",
+										"LOP_U_TAK_Civ_Fatigue_14",
+										"LOP_U_TAK_Civ_Fatigue_13",
+										"LOP_U_TAK_Civ_Fatigue_16",
+										"LOP_U_TAK_Civ_Fatigue_15",
+										"LOP_U_CHR_Doctor_01"
+									];
+									OPEX_civilian_headgears = ["LOP_H_Pakol", "LOP_H_Turban"];
 								};
 							// OTHER MIDDLE-EAST REGIONS (IRAQ, SYRIA...)
 							default
@@ -122,15 +137,34 @@
 		];
 
 	// VEHICLES
-	OPEX_civilian_cars = ["C_Hatchback_01_F","C_SUV_01_F","C_Offroad_02_unarmed_F","C_Offroad_01_F"]; if (1.02179e+006 in (getDLCs 1)) then {OPEX_civilian_cars append ["C_Offroad_01_covered_F","C_Tractor_01_F"]};
-	OPEX_civilian_trucks = ["C_Van_01_box_F","C_Van_01_transport_F","C_Truck_02_transport_F"];
+	OPEX_civilian_cars = [
+		"LOP_TAK_Civ_UAZ", 
+		"LOP_TAK_Civ_UAZ_Open", 
+		"LOP_TAK_Civ_Landrover", 
+		"C_Tractor_01_F", 
+		"RDS_Gaz24_Civ_03", 
+		"RDS_Golf4_Civ_01",
+		"RDS_JAWA353_Civ_01", 
+		"RDS_Old_bike_Civ_01", 
+		"RDS_S1203_Civ_01", 
+		"RDS_S1203_Civ_03", 
+		"RDS_Octavia_Civ_01", 
+		"RDS_Lada_Civ_01", 
+		"RDS_Lada_Civ_04", 
+		"RDS_tt650_Civ_01"
+	];
+	OPEX_civilian_trucks = [
+		"C_Truck_02_transport_F", 
+		"C_Truck_02_box_F", 
+		"C_Truck_02_fuel_F", 
+		"C_Truck_02_covered_F", 
+		"RHS_Ural_Civ_01", 
+		"RHS_Ural_Open_Civ_01", 
+		"RHS_Ural_Civ_03", 
+		"RHS_Ural_Open_Civ_03", 
+		"RHS_Ural_Civ_02", 
+		"RHS_Ural_Open_Civ_02", 
+		"RDS_Ikarus_Civ_02"
+	];
 	OPEX_civilian_boats = ["C_Boat_Civil_01_F","C_Rubberboat"];
 	OPEX_civilian_vehicles = OPEX_civilian_cars + OPEX_civilian_trucks; // don't delete this line if you have defined any of these variables
-
-	// REMOVING VANILLA VEHICLES IF BETTER ONES (FROM MODS) HAVE BEEN DETECTED (DON'T DELETE THIS LINE)
-	waitUntil {!isNil "OPEX_params_ready"};
-	waitUntil {OPEX_params_ready};
-	if (count OPEX_civilian_cars <= 7) exitWith {};
-	{if (_x in OPEX_civilian_cars) then {OPEX_civilian_cars = OPEX_civilian_cars - [_x]}} forEach ["C_Hatchback_01_F","C_SUV_01_F","C_Offroad_02_unarmed_F","C_Offroad_01_F","C_Offroad_01_covered_F","C_Tractor_01_F"];
-	{if (_x in OPEX_civilian_trucks) then {OPEX_civilian_trucks = OPEX_civilian_trucks - [_x]}} forEach ["C_Van_01_box_F","C_Van_01_transport_F","C_Truck_02_transport_F"];
-	OPEX_civilian_vehicles = OPEX_civilian_cars + OPEX_civilian_trucks;
