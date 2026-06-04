@@ -63,8 +63,8 @@
 							case "TALIB" :
 								{
 									OPEX_civilian_units append ["LOP_Tak_Civ_Random"];
-									OPEX_civilian_uniforms append ["LOP_U_CHR_Villager_02", "LOP_U_CHR_Villager_03", "LOP_U_CHR_Villager_04", "LOP_U_CHR_Worker_01", "LOP_U_CHR_Worker_02", "LOP_U_CHR_Worker_03", "LOP_U_CHR_Worker_04", "LOP_U_CHR_Citizen_01", "LOP_U_CHR_Citizen_02", "LOP_U_CHR_Citizen_04", "LOP_U_TAK_Civ_Fatigue_01", "LOP_U_TAK_Civ_Fatigue_02", "LOP_U_TAK_Civ_Fatigue_04", "LOP_U_TAK_Civ_Fatigue_05", "LOP_U_TAK_Civ_Fatigue_06", "LOP_U_TAK_Civ_Fatigue_07", "LOP_U_TAK_Civ_Fatigue_08", "LOP_U_TAK_Civ_Fatigue_09", "LOP_U_TAK_Civ_Fatigue_10", "LOP_U_TAK_Civ_Fatigue_11", "LOP_U_TAK_Civ_Fatigue_12", "LOP_U_TAK_Civ_Fatigue_13", "LOP_U_TAK_Civ_Fatigue_14", "LOP_U_TAK_Civ_Fatigue_15", "LOP_U_TAK_Civ_Fatigue_16", "LOP_U_TAK_Civ_Fatigue_01", "LOP_U_TAK_Civ_Fatigue_02", "LOP_U_TAK_Civ_Fatigue_04", "LOP_U_TAK_Civ_Fatigue_05", "LOP_U_TAK_Civ_Fatigue_06", "LOP_U_TAK_Civ_Fatigue_07", "LOP_U_TAK_Civ_Fatigue_08", "LOP_U_TAK_Civ_Fatigue_09", "LOP_U_TAK_Civ_Fatigue_10", "LOP_U_TAK_Civ_Fatigue_11", "LOP_U_TAK_Civ_Fatigue_12", "LOP_U_TAK_Civ_Fatigue_13", "LOP_U_TAK_Civ_Fatigue_14", "LOP_U_TAK_Civ_Fatigue_15", "LOP_U_TAK_Civ_Fatigue_16"];
-									OPEX_civilian_headgears append ["LOP_H_Villager_cap", "LOP_H_Worker_cap", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban"];
+									//OPEX_civilian_uniforms append ["LOP_U_CHR_Villager_02", "LOP_U_CHR_Villager_03", "LOP_U_CHR_Villager_04", "LOP_U_CHR_Worker_01", "LOP_U_CHR_Worker_02", "LOP_U_CHR_Worker_03", "LOP_U_CHR_Worker_04", "LOP_U_CHR_Citizen_01", "LOP_U_CHR_Citizen_02", "LOP_U_CHR_Citizen_04", "LOP_U_TAK_Civ_Fatigue_01", "LOP_U_TAK_Civ_Fatigue_02", "LOP_U_TAK_Civ_Fatigue_04", "LOP_U_TAK_Civ_Fatigue_05", "LOP_U_TAK_Civ_Fatigue_06", "LOP_U_TAK_Civ_Fatigue_07", "LOP_U_TAK_Civ_Fatigue_08", "LOP_U_TAK_Civ_Fatigue_09", "LOP_U_TAK_Civ_Fatigue_10", "LOP_U_TAK_Civ_Fatigue_11", "LOP_U_TAK_Civ_Fatigue_12", "LOP_U_TAK_Civ_Fatigue_13", "LOP_U_TAK_Civ_Fatigue_14", "LOP_U_TAK_Civ_Fatigue_15", "LOP_U_TAK_Civ_Fatigue_16", "LOP_U_TAK_Civ_Fatigue_01", "LOP_U_TAK_Civ_Fatigue_02", "LOP_U_TAK_Civ_Fatigue_04", "LOP_U_TAK_Civ_Fatigue_05", "LOP_U_TAK_Civ_Fatigue_06", "LOP_U_TAK_Civ_Fatigue_07", "LOP_U_TAK_Civ_Fatigue_08", "LOP_U_TAK_Civ_Fatigue_09", "LOP_U_TAK_Civ_Fatigue_10", "LOP_U_TAK_Civ_Fatigue_11", "LOP_U_TAK_Civ_Fatigue_12", "LOP_U_TAK_Civ_Fatigue_13", "LOP_U_TAK_Civ_Fatigue_14", "LOP_U_TAK_Civ_Fatigue_15", "LOP_U_TAK_Civ_Fatigue_16"];
+									//OPEX_civilian_headgears append ["LOP_H_Villager_cap", "LOP_H_Worker_cap", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Pakol", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban", "LOP_H_Turban","LOP_H_Turban","LOP_H_Turban"];
 								};
 							// OTHER MIDDLE-EAST REGIONS (IRAQ, SYRIA...)
 							default
@@ -95,6 +95,6 @@
 		};
 
 	// VEHICLES
-	OPEX_civilian_cars append ["LOP_TAK_Civ_Landrover","LOP_TAK_Civ_Offroad","LOP_TAK_Civ_UAZ","LOP_TAK_Civ_UAZ_Open"];
+	OPEX_civilian_cars append ["LOP_TAK_Civ_Landrover","LOP_TAK_Civ_UAZ","LOP_TAK_Civ_UAZ_Open"];
 	OPEX_civilian_trucks append ["LOP_TAK_Civ_Ural_open","LOP_TAK_Civ_Ural"];
 	OPEX_civilian_vehicles = OPEX_civilian_cars + OPEX_civilian_trucks; // don't delete this line if you have defined any of these variables
