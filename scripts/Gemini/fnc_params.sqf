@@ -168,14 +168,16 @@
 	private ["_primaryNeeds_list"];
 	_primaryNeeds_list = _display displayCtrl _params_primaryNeeds_list;
 	_primaryNeeds_list lbAdd localize "STR_no";
-	if (isClass (configFile >> "CfgPatches" >> "Gemini_items")) then {_primaryNeeds_list lbAdd localize "STR_yes"; lbSetCurSel [_params_primaryNeeds_list, 1]} else {lbSetCurSel [_params_primaryNeeds_list, 0]};
+	//if (isClass (configFile >> "CfgPatches" >> "Gemini_items")) then {_primaryNeeds_list lbAdd localize "STR_yes"; lbSetCurSel [_params_primaryNeeds_list, 1]} else {lbSetCurSel [_params_primaryNeeds_list, 0]};
+	lbSetCurSel [_params_primaryNeeds_list, 0];
 
 	// FAST TRAVEL
 	private ["_fastTravel_list"];
 	_fastTravel_list = _display displayCtrl _params_fastTravel_list;
 	_fastTravel_list lbAdd localize "STR_no";
 	_fastTravel_list lbAdd localize "STR_yes";
-	if (OPEX_debug) then {lbSetCurSel [_params_fastTravel_list, 1]} else {lbSetCurSel [_params_fastTravel_list, 0]};
+	//if (OPEX_debug) then {lbSetCurSel [_params_fastTravel_list, 1]} else {lbSetCurSel [_params_fastTravel_list, 0]};
+	lbSetCurSel [_params_fastTravel_list, 0];
 
 	// INTEL
 	private ["_intel_list"];
@@ -187,8 +189,8 @@
 	_intel_list lbAdd "1 000";
 	_intel_list lbAdd "10 000";
 	lbSetCurSel [_params_intel_list, 0];
-	if (isMultiplayer) then {lbSetCurSel [_params_intel_list, 0]} else {lbSetCurSel [_params_intel_list, 2]};
-	if (OPEX_debug) then {lbSetCurSel [_params_intel_list, 5]};
+	//if (isMultiplayer) then {lbSetCurSel [_params_intel_list, 0]} else {lbSetCurSel [_params_intel_list, 2]};
+	//if (OPEX_debug) then {lbSetCurSel [_params_intel_list, 5]};
 
 	// DAYTIME
 	private ["_dayTime_list"];
@@ -198,7 +200,8 @@
 	_dayTime_list lbAdd localize "STR_params_dayTime_noon";
 	_dayTime_list lbAdd localize "STR_params_dayTime_evening";
 	_dayTime_list lbAdd localize "STR_params_dayTime_night";
-	if (OPEX_debug) then {lbSetCurSel [_params_dayTime_list, 2]} else {lbSetCurSel [_params_dayTime_list, 0]};
+	//if (OPEX_debug) then {lbSetCurSel [_params_dayTime_list, 2]} else {lbSetCurSel [_params_dayTime_list, 0]};
+	lbSetCurSel [_params_dayTime_list, 2];
 
 	// TIME MULTIPLIER
 	private ["_timeMultiplier_list"];
@@ -208,7 +211,8 @@
 	_timeMultiplier_list lbAdd "x6";
 	_timeMultiplier_list lbAdd "x12";
 	_timeMultiplier_list lbAdd "x24";
-	lbSetCurSel [_params_timeMultiplier_list, 1];
+	//lbSetCurSel [_params_timeMultiplier_list, 1];
+	lbSetCurSel [_params_timeMultiplier_list, 0];
 
 // =========================================================================================================
 // SETTING START BUTTON & VALIDATING CHOSEN PARAMETERS

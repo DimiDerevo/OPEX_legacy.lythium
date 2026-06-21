@@ -194,3 +194,17 @@
 	_flag setMarkerSize [2,2];
 
 	[] call Gemini_fnc_cacheBuildings;
+
+	[] spawn {
+		DD_scriptAmountWarning = true;
+		DD_scriptAmountWarningThreshold = 1000;
+		private _activeScriptsAmount = 0;
+		private _systemChatString = "Warning! Detected high amount of acive scripts (%1), mission restart suggested";
+		while {true} do {
+			_activeScriptsAmount = diag_activeScripts#0;
+			if (DD_scriptAmountWarning && _activeScriptsAmount > DD_scriptAmountWarningThreshold) then {
+				[format [_systemChatString, _activeScriptsAmount]] remoteExec ["systemChat"];
+			};
+			sleep 60;
+		};
+	};
