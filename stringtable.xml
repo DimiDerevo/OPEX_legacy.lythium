@@ -5193,124 +5193,124 @@
   <Package name="TASKS">
     <Container name="...">
       <Key ID="STR_taskObjective_00">
-        <Original>[Random selection]</Original>
-        <French>[Sélection aléatoire]</French>
-		<Spanish>[Selección aleatoria]</Spanish>
+        <Original>[00] Random selection</Original>
+        <French>[00] Sélection aléatoire</French>
+		<Spanish>[00] Selección aleatoria</Spanish>
       </Key>
       <Key ID="STR_taskObjective_01">
-        <Original>Exfiltrate the pilot</Original>
-        <French>Exfiltrer le pilote</French>
-		<Spanish>Exfiltrar al piloto</Spanish>
+        <Original>[01] Exfiltrate the pilot</Original>
+        <French>[01] Exfiltrer le pilote</French>
+		    <Spanish>[01] Exfiltrar al piloto</Spanish>
       </Key>
       <Key ID="STR_taskObjective_02">
-        <Original>Neutralize the mortar</Original>
-        <French>Neutraliser le mortier</French>
-		<Spanish>Neutralizar el mortero</Spanish>
+        <Original>[02] Neutralize the mortar</Original>
+        <French>[02] Neutraliser le mortier</French>
+		    <Spanish>[02] Neutralizar el mortero</Spanish>
       </Key>
       <Key ID="STR_taskObjective_03">
-        <Original>Secure the village</Original>
-        <French>Sécuriser le village</French>
-		<Spanish>Asegurar la aldea</Spanish>
+        <Original>[03] Secure the village</Original>
+        <French>[03] Sécuriser le village</French>
+		    <Spanish>[03] Asegurar la aldea</Spanish>
       </Key>
       <Key ID="STR_taskObjective_04">
-        <Original>Patrol into hostile territory</Original>
-        <French>Patrouiller en territoire hostile</French>
-		<Spanish>Patrullar en territorio hostil</Spanish>
+        <Original>[04] Patrol into hostile territory</Original>
+        <French>[04] Patrouiller en territoire hostile</French>
+		    <Spanish>[04] Patrullar en territorio hostil</Spanish>
       </Key>
       <Key ID="STR_taskObjective_05">
-        <Original>Free the hostage</Original>
-        <French>Libérer l'otage</French>
-		<Spanish>Liberar al rehén</Spanish>
+        <Original>[05] Free the hostage</Original>
+        <French>[05] Libérer l'otage</French>
+		    <Spanish>[05] Liberar al rehén</Spanish>
       </Key>
       <Key ID="STR_taskObjective_06">
-        <Original>Repair the tanker truck</Original>
-        <French>Réparer le véhicule citerne</French>
-		<Spanish>Reparar el camión cisterna</Spanish>
+        <Original>[06] Repair the tanker truck</Original>
+        <French>[06] Réparer le véhicule citerne</French>
+		    <Spanish>[06] Reparar el camión cisterna</Spanish>
       </Key>
       <Key ID="STR_taskObjective_07">
-        <Original>Protect the village</Original>
-        <French>Protéger le village</French>
-		<Spanish>Proteger la aldea</Spanish>
+        <Original>[07] Protect the village</Original>
+        <French>[07] Protéger le village</French>
+		    <Spanish>[07] Proteger la aldea</Spanish>
       </Key>
       <Key ID="STR_taskObjective_08">
-        <Original>Neutralize the officers</Original>
-        <French>Neutraliser les officiers</French>
-		<Spanish>Neutralizar a los oficiales</Spanish>
+        <Original>[08] Neutralize the officers</Original>
+        <French>[08] Neutraliser les officiers</French>
+		    <Spanish>[08] Neutralizar a los oficiales</Spanish>
       </Key>
       <Key ID="STR_taskObjective_09">
-        <Original>Capture the suspect</Original>
-        <French>Capturer le suspect</French>
-		<Spanish>Capturar al sospechoso</Spanish>
+        <Original>[09] Capture the suspect</Original>
+        <French>[09] Capturer le suspect</French>
+		    <Spanish>[09] Capturar al sospechoso</Spanish>
       </Key>
       <Key ID="STR_taskObjective_10">
-        <Original>Neutralize the sniper</Original>
-        <French>Neutraliser le tireur d'élite</French>
-		<Spanish>Neutralizar al francotirador</Spanish>
+        <Original>[10] Neutralize the sniper</Original>
+        <French>[10] Neutraliser le tireur d'élite</French>
+		    <Spanish>[10] Neutralizar al francotirador</Spanish>
       </Key>
       <Key ID="STR_taskObjective_11">
-        <Original>Bring back or destroy the tank</Original>
-        <French>Récupérer ou détruire le blindé</French>
-		<Spanish>Recuperar o destruir el blindado</Spanish>
+        <Original>[11] Bring back or destroy the tank</Original>
+        <French>[11] Récupérer ou détruire le blindé</French>
+		    <Spanish>[11] Recuperar o destruir el blindado</Spanish>
       </Key>
       <Key ID="STR_taskObjective_12">
-        <Original>Repatriate bodies</Original>
-        <French>Rapatrier les corps</French>
-		<Spanish>Repatriar cuerpos</Spanish>
+        <Original>[12] Repatriate bodies</Original>
+        <French>[12] Rapatrier les corps</French>
+		    <Spanish>[12] Repatriar cuerpos</Spanish>
       </Key>
       <Key ID="STR_taskObjective_13">
-        <Original>Install a wire</Original>
-        <French>Installer un mouchard</French>
-		<Spanish>Instalar micro</Spanish>
+        <Original>[13] Install a wire</Original>
+        <French>[13] Installer un mouchard</French>
+		    <Spanish>[13] Instalar micro</Spanish>
       </Key>
       <Key ID="STR_taskObjective_14">
-        <Original>Attack the training camp</Original>
-        <French>Attaquer le camp d'entraînement</French>
-		<Spanish>Atacar el campamento de entrenamiento</Spanish>
+        <Original>[14] Attack the training camp</Original>
+        <French>[14] Attaquer le camp d'entraînement</French>
+		    <Spanish>[14] Atacar el campamento de entrenamiento</Spanish>
       </Key>
       <Key ID="STR_taskObjective_15">
-        <Original>Capture or kill attacks instigator</Original>
-        <French>Capturer ou éliminer le commanditaire</French>
-		<Spanish>Capturar o matar al instigador</Spanish>
+        <Original>[15] Capture or kill attacks instigator</Original>
+        <French>[15] Capturer ou éliminer le commanditaire</French>
+		    <Spanish>[15] Capturar o matar al instigador</Spanish>
       </Key>
       <Key ID="STR_taskObjective_16">
-        <Original>Disarmed the IED</Original>
-        <French>Désamorcer l'EEI</French>
-		<Spanish>Desmontar IED</Spanish>
+        <Original>[16] Disarm an IED</Original>
+        <French>[16] Désamorcer l'EEI</French>
+		    <Spanish>[16] Desmontar IED</Spanish>
       </Key>
       <Key ID="STR_taskObjective_17">
-        <Original>Deliver humanitarian supplies</Original>
-        <French>Livrer le matériel humanitaire</French>
-		<Spanish>Entregar ayuda humanitaria</Spanish>
+        <Original>[17] Deliver humanitarian supplies</Original>
+        <French>[17] Livrer le matériel humanitaire</French>
+		    <Spanish>[17] Entregar ayuda humanitaria</Spanish>
       </Key>
       <Key ID="STR_taskObjective_18">
-        <Original>Retrieve data from the drone</Original>
-        <French>Récupérer les données du drone</French>
-		<Spanish>Recuperar datos del dron</Spanish>
+        <Original>[18] Retrieve data from the drone</Original>
+        <French>[18] Récupérer les données du drone</French>
+		    <Spanish>[18] Recuperar datos del dron</Spanish>
       </Key>
       <Key ID="STR_taskObjective_19">
-        <Original>Locate the camp</Original>
-        <French>Localiser le campement</French>
-		<Spanish>Localizar el campamento</Spanish>
+        <Original>[19] Locate the camp</Original>
+        <French>[19] Localiser le campement</French>
+		    <Spanish>[19] Localizar el campamento</Spanish>
       </Key>
       <Key ID="STR_taskObjective_20">
-        <Original>Intercept the convoy</Original>
-        <French>Intercepter le convoi</French>
-		<Spanish>Interceptar el convoy</Spanish>
+        <Original>[20] Intercept the convoy</Original>
+        <French>[20] Intercepter le convoi</French>
+		    <Spanish>[20] Interceptar el convoy</Spanish>
       </Key>
       <Key ID="STR_taskObjective_21">
-        <Original>Protect the helicopter</Original>
-        <French>Protéger l'hélicoptère</French>
-		<Spanish>Proteger el helicóptero</Spanish>
+        <Original>[21] Protect the helicopter</Original>
+        <French>[21] Protéger l'hélicoptère</French>
+		    <Spanish>[21] Proteger el helicóptero</Spanish>
       </Key>
       <Key ID="STR_taskObjective_22">
-        <Original>Evacuate civilians</Original>
-        <French>Évacuer les civils</French>
-		<Spanish>Evacuar a los civiles</Spanish>
+        <Original>[22] Evacuate civilians</Original>
+        <French>[22] Évacuer les civils</French>
+		    <Spanish>[22] Evacuar a los civiles</Spanish>
       </Key>	  
       <Key ID="STR_taskObjective_FATA_01">
-        <Original>Secure the hideouts</Original>
-        <French>Sécuriser les caches</French>
-		<Spanish>Asegurar los escondites</Spanish>
+        <Original>[F01] Secure the hideouts</Original>
+        <French>[F01] Sécuriser les caches</French>
+		    <Spanish>[F01] Asegurar los escondites</Spanish>
       </Key>
       <Key ID="STR_taskOverview_00">
         <Original>Random selection among non-succeeded tasks.</Original>

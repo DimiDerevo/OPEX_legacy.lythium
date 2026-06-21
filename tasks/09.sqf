@@ -79,7 +79,7 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
+	// ["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
 
 // =========================================================================================================
 // SPAWNING OBJECTIVE
@@ -109,9 +109,9 @@
 
 	// GEAR
 	_civilian forceAddUniform (selectRandom (OPEX_civilian_uniforms - ["LOP_U_CHR_Priest_01"]));
-	_civilian addHeadGear (selectRandom ["H_Cap_red"]);
-	removeGoggles _civilian;
-	if (OPEX_sunHeight > 1) then {_civilian addGoggles (selectRandom ["G_Aviator"])} else {_civilian addItemToUniform "G_Aviator"};
+	// _civilian addHeadGear (selectRandom ["H_Cap_red"]);
+	// removeGoggles _civilian;
+	// if (OPEX_sunHeight > 1) then {_civilian addGoggles (selectRandom ["G_Aviator"])} else {_civilian addItemToUniform "G_Aviator"};
 	if (isClass (configFile >> "CfgPatches" >> "Gemini_items")) then {_civilian addItem "Gemini_deadManSwitch"; _civilian addItem "Gemini_cellphone"};
 	[_civilian] call Gemini_fnc_checkCivilianGear;
 
@@ -182,7 +182,7 @@
 			[0, 0, 0, false],
 			["any", "present", true],
 			["(OPEX_assignedTask) && (!alive suspect)", "detach suspect; [] remoteExec ['Gemini_fnc_taskFailed']", ""],
-			[0, 0, 0, false],
+			[30, 60, 120, false],
 			"task"
 		] call Gemini_fnc_createTrigger;
 

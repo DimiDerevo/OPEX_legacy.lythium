@@ -17,23 +17,23 @@
 			["03", "tasks\03.sqf", localize "STR_taskObjective_03", localize "STR_taskObjective_03", localize "STR_taskOverview_03", localize "STR_taskBriefing_03"],
 			["04", "tasks\04.sqf", localize "STR_taskObjective_04", localize "STR_taskObjective_04", localize "STR_taskOverview_04", localize "STR_taskBriefing_04"],
 			["05", "tasks\05.sqf", localize "STR_taskObjective_05", localize "STR_taskObjective_05", localize "STR_taskOverview_05", localize "STR_taskBriefing_05"],
-			["06", "tasks\06.sqf", localize "STR_taskObjective_06", localize "STR_taskObjective_06", localize "STR_taskOverview_06", localize "STR_taskBriefing_06"],
+			//["06", "tasks\06.sqf", localize "STR_taskObjective_06", localize "STR_taskObjective_06", localize "STR_taskOverview_06", localize "STR_taskBriefing_06"],
 			["07", "tasks\07.sqf", localize "STR_taskObjective_07", localize "STR_taskObjective_07", localize "STR_taskOverview_07", localize "STR_taskBriefing_07"],
 			["08", "tasks\08.sqf", localize "STR_taskObjective_08", localize "STR_taskObjective_08", localize "STR_taskOverview_08", localize "STR_taskBriefing_08"],
 			["09", "tasks\09.sqf", localize "STR_taskObjective_09", localize "STR_taskObjective_09", localize "STR_taskOverview_09", localize "STR_taskBriefing_09"],
 			["10", "tasks\10.sqf", localize "STR_taskObjective_10", localize "STR_taskObjective_10", localize "STR_taskOverview_10", localize "STR_taskBriefing_10"],
-			["11", "tasks\11.sqf", localize "STR_taskObjective_11", localize "STR_taskObjective_11", localize "STR_taskOverview_11", localize "STR_taskBriefing_11"],
+			//["11", "tasks\11.sqf", localize "STR_taskObjective_11", localize "STR_taskObjective_11", localize "STR_taskOverview_11", localize "STR_taskBriefing_11"],
 			["12", "tasks\12.sqf", localize "STR_taskObjective_12", localize "STR_taskObjective_12", localize "STR_taskOverview_12", localize "STR_taskBriefing_12"],
-			["13", "tasks\13.sqf", localize "STR_taskObjective_13", localize "STR_taskObjective_13", localize "STR_taskOverview_13", localize "STR_taskBriefing_13"],
+			//["13", "tasks\13.sqf", localize "STR_taskObjective_13", localize "STR_taskObjective_13", localize "STR_taskOverview_13", localize "STR_taskBriefing_13"],
 			["14", "tasks\14.sqf", localize "STR_taskObjective_14", localize "STR_taskObjective_14", localize "STR_taskOverview_14", localize "STR_taskBriefing_14"],
 			["15", "tasks\15.sqf", localize "STR_taskObjective_15", localize "STR_taskObjective_15", localize "STR_taskOverview_15", localize "STR_taskBriefing_15"],
-			["16", "tasks\16.sqf", localize "STR_taskObjective_16", localize "STR_taskObjective_16", localize "STR_taskOverview_16", localize "STR_taskBriefing_16"],
+			//["16", "tasks\16.sqf", localize "STR_taskObjective_16", localize "STR_taskObjective_16", localize "STR_taskOverview_16", localize "STR_taskBriefing_16"],
 			["17", "tasks\17.sqf", localize "STR_taskObjective_17", localize "STR_taskObjective_17", localize "STR_taskOverview_17", localize "STR_taskBriefing_17"],
 			["18", "tasks\18.sqf", localize "STR_taskObjective_18", localize "STR_taskObjective_18", localize "STR_taskOverview_18", localize "STR_taskBriefing_18"],
-			["19", "tasks\19.sqf", localize "STR_taskObjective_19", localize "STR_taskObjective_19", localize "STR_taskOverview_19", localize "STR_taskBriefing_19"],
+			["19", "tasks\19.sqf", localize "STR_taskObjective_19", localize "STR_taskObjective_19", localize "STR_taskOverview_19", localize "STR_taskBriefing_19"]
 			//["20", "tasks\20.sqf", localize "STR_taskObjective_20", localize "STR_taskObjective_20", localize "STR_taskOverview_20", localize "STR_taskBriefing_20"],
-			["21", "tasks\21.sqf", localize "STR_taskObjective_21", localize "STR_taskObjective_21", localize "STR_taskOverview_21", localize "STR_taskBriefing_21"],
-			["22", "tasks\22.sqf", localize "STR_taskObjective_22", localize "STR_taskObjective_22", localize "STR_taskOverview_22", localize "STR_taskBriefing_22"]
+			//["21", "tasks\21.sqf", localize "STR_taskObjective_21", localize "STR_taskObjective_21", localize "STR_taskOverview_21", localize "STR_taskBriefing_21"],
+			//["22", "tasks\22.sqf", localize "STR_taskObjective_22", localize "STR_taskObjective_22", localize "STR_taskOverview_22", localize "STR_taskBriefing_22"]
 		];
 
 	// DEDICATED TASKS (COMPATIBLE WITH SPECIFIC MAPS ONLY)

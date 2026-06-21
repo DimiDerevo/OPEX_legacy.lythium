@@ -68,7 +68,7 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
+	// ["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
 
 // =========================================================================================================
 // SPAWNING OBJECTIVE
@@ -140,7 +140,7 @@
 		{
 			private _sniper = _this;
 			while {(alive _sniper) && (OPEX_assignedTask)} do {sleep 3};
-			if ((!alive _sniper) && (OPEX_assignedTask)) then {[] remoteExec ["Gemini_fnc_taskSucceeded"]; ['support', 'landAssistance'] call Gemini_fnc_bonus};
+			if ((!alive _sniper) && (OPEX_assignedTask)) then {[] remoteExec ["Gemini_fnc_taskSucceeded"]};
 		};
 
 // =========================================================================================================

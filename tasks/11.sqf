@@ -2,6 +2,7 @@
 // TASK ID : 			11
 // TASK OBJECTIVE :		BRING BACK OR DESTROY AN ARMORED VEHICLE
 // TASK CREATOR : 		GEMINI (gemini.69@free.fr)
+// TODO: 				Disable and rethink the concept
 // =========================================================================================================
 
 // =========================================================================================================

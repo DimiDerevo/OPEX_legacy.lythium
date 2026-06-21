@@ -119,7 +119,7 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
+	// ["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
 
 // =========================================================================================================
 // DEFINING CONDITIONS OF VICTORY
@@ -132,7 +132,7 @@
 		[_campSize select 0, _campSize select 1, 0, false],
 		[OPEX_enemy_side2, "not present", false],
 		["OPEX_assignedTask && this", "[] remoteExec ['Gemini_fnc_taskSucceeded']; ['intel', 25] call Gemini_fnc_bonus", ""],
-		[0, 0, 0, false],
+		[15, 30, 120, false],
 		"task"
 	] call Gemini_fnc_createTrigger;
 
