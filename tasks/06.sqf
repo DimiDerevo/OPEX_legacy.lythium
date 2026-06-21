@@ -2,6 +2,7 @@
 // TASK ID : 			06
 // TASK OBJECTIVE :		DEFEND A FUEL TRUCK WHILE IT'S BEEN REPAIRING
 // TASK CREATOR : 		GEMINI (gemini.69@free.fr)
+// TDOD: 				Disable this task
 // =========================================================================================================
 
 // =========================================================================================================
@@ -302,4 +303,4 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
+	//["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname

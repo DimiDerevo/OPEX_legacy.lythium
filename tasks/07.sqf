@@ -67,7 +67,7 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
+	// ["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
 
 // =========================================================================================================
 // SPAWNING OBJECTIVE

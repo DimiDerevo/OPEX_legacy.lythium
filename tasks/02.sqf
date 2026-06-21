@@ -130,6 +130,7 @@
 			while {OPEX_assignedTask && alive _mortar} do {sleep 5};
 			if (OPEX_assignedTask && !(alive _mortar)) then
 				{
+					sleep (random 30);
 					[] remoteExec ["Gemini_fnc_taskSucceeded"];
 				};
 		};
@@ -151,7 +152,7 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["calm"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
+	//["calm"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
 
 // =========================================================================================================
 // DEBUGGING

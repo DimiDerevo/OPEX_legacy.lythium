@@ -117,10 +117,10 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["calm"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
+	// ["calm"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
 
 // =========================================================================================================
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then {[_lightSource, "mil_objective", "colorRed", "CAMP", "task"] call Gemini_fnc_createMarker; player setUnitTrait ["interpret", true, true]};
+	if (_debug) then {[_lightSource, "mil_objective", "colorRed", "CAMP", "task"] call Gemini_fnc_createMarker};

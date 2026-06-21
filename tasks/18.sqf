@@ -50,8 +50,8 @@
 	_drone setVariable ["R3F_LOG_disabled", true, true];
 	_drone allowDamage false; [_drone] spawn {sleep 5; (_this select 0) allowDamage true; (_this select 0) setDamage 0.5};
 	_drone addEventHandler ["killed", {[_this select 1, 10000] remoteExec ["addRating", _this select 1, _this select 0]}]; // this line is necessary because ArmA's engines consider that destroying a friendly vehicle, even if it's empty, is bad ;)
-	private _smoke = ["test_EmptyObjectForSmoke", _crashPos, random 360, true, "task"] call Gemini_fnc_createVehicle;
-	_smoke attachTo [_drone, [0,0,0]];
+	// private _smoke = ["test_EmptyObjectForSmoke", _crashPos, random 360, true, "task"] call Gemini_fnc_createVehicle;
+	//_smoke attachTo [_drone, [0,0,0]];
 
 	// ADDING ACTION TO RETRIEVE DATA
 	retrievedData = 0; publicVariable "retrievedData";
@@ -156,7 +156,7 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
+	// ["punchy"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
 
 // =========================================================================================================
 // DEBUGGING

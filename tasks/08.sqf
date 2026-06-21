@@ -102,7 +102,7 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["stealth"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
+	// ["stealth"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
 
 // =========================================================================================================
 // SPAWNING OBJECTIVE
@@ -159,10 +159,9 @@
 		_x unassignItem "NVGoggles_OPFOR";
 		_x removeItem "NVGoggles_OPFOR";
 		_x allowDamage true;
+		_x addHeadgear (selectRandom OPEX_enemy_officerHeadgears);
+		_x forceAddUniform (selectRandom OPEX_enemy_officerUniforms);
 	} forEach [officer_1, officer_2, officer_3];
-	officer_1 addHeadgear (selectRandom OPEX_enemy_officerHeadgears);
-	officer_2 addHeadgear (selectRandom OPEX_enemy_officerHeadgears);
-	officer_3 addHeadgear (selectRandom OPEX_enemy_officerHeadgears);
 
 	// ADDING AMBIENT LIGHT SOURCE
 	if (_outsideMeeting)
@@ -218,7 +217,7 @@
 			[0, 0, 0, false],
 			["any", "present", true],
 			["(OPEX_assignedTask) && (!alive officer_1) && (!alive officer_2) && (!alive officer_3)", "[] remoteExec ['Gemini_fnc_taskSucceeded']; ['intel', 50] call Gemini_fnc_bonus", ""],
-			[0, 0, 0, false],
+			[30, 60, 120, false],
 			"task"
 		] call Gemini_fnc_createTrigger;
 

@@ -65,7 +65,7 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["stealth"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
+	// ["stealth"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "jungle" or a specific music classname
 
 // =========================================================================================================
 // SPAWNING OBJECTIVE
@@ -131,7 +131,7 @@
 		[0, 0, 0, false],
 		["any", "present", true],
 		["(OPEX_assignedTask) && (!alive instigator)", "[] remoteExec ['Gemini_fnc_taskSucceeded']", ""],
-		[0, 0, 0, false],
+		[30, 60, 120, false],
 		"task"
 	] call Gemini_fnc_createTrigger;
 
@@ -141,7 +141,7 @@
 		[0, 0, 0, false],
 		["any", "present", true],
 		["(OPEX_assignedTask) && (alive instigator) && (instigator getVariable ['isJailed', false])", "[] remoteExec ['Gemini_fnc_taskSucceeded']; ['intel', 50] call Gemini_fnc_bonus", ""],
-		[0, 0, 0, false],
+		[30, 60, 120, false],
 		"task"
 	] call Gemini_fnc_createTrigger;
 

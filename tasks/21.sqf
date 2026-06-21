@@ -2,6 +2,7 @@
 // TASK ID : 			21
 // TASK OBJECTIVE :		PROTECT A CHOPPER WHILE IT'S REPAIRED BY ITS PILOTS
 // TASK CREATOR : 		GEMINI (gemini.69@free.fr)
+// TODO:				Disable this task
 // =========================================================================================================
 
 // =========================================================================================================

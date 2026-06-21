@@ -189,7 +189,7 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["stealth"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
+	// ["stealth"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
 
 // =========================================================================================================
 // DEBUGGING

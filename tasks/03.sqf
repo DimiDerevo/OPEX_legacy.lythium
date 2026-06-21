@@ -83,7 +83,7 @@
 		] call Gemini_fnc_createTrigger;
 
 	// DEFINING 2 RANDOM CASES
-	if (random 10 > 1.5)
+	if (random 100 > 15)
 
 	// SOMETIMES, INTEL IS RIGHT: ENEMY IS IN THE VILLAGE, SO PLAYERS HAVE TO KILL THEM
 	then
@@ -139,4 +139,4 @@
 // PLAYING AMBIENT MUSIC
 // =========================================================================================================
 
-	["calm"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
+	// ["calm"] remoteExec ["Gemini_fnc_playMusic"]; // music type can be: "punchy", "calm", "stealth", "sad", "oriental", "tropical" or a specific music classname
