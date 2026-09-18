@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=3652;
+		nextID=3802;
 	};
 	class Camera
 	{
-		pos[]={11817.348,39.986309,2336.6924};
-		dir[]={-0.87019229,-0.48776752,0.069778502};
-		up[]={-0.486267,0.87294024,0.038992733};
-		aside[]={0.079932645,7.6368451e-08,0.99680895};
+		pos[]={11791.405,30.491472,2351.8315};
+		dir[]={-0.7680912,-0.62012595,0.15969552};
+		up[]={-0.60719448,0.78445977,0.12624331};
+		aside[]={0.20356202,2.5460031e-07,0.97907197};
 	};
 };
 binarizationWanted=0;
@@ -225,7 +225,7 @@ class AddonsMetaData
 		class Item1
 		{
 			className="A3_Props_F_Destroyer";
-			name="CFGPATCHES_A3_Props_F_Destroyer";
+			name="Arma 3 Destroyer - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -13114,14 +13114,14 @@ class Mission
 														};
 														class Attribute1
 														{
-															property="enableStamina";
-															expression="_this enablestamina _value;";
+															property="face";
+															expression="_this setface _value;";
 															class Value
 															{
 																class data
 																{
-																	singleType="BOOL";
-																	value=0;
+																	singleType="STRING";
+																	value="WhiteHead_06";
 																};
 															};
 														};
@@ -13153,14 +13153,14 @@ class Mission
 														};
 														class Attribute4
 														{
-															property="face";
-															expression="_this setface _value;";
+															property="enableStamina";
+															expression="_this enablestamina _value;";
 															class Value
 															{
 																class data
 																{
-																	singleType="STRING";
-																	value="WhiteHead_06";
+																	singleType="BOOL";
+																	value=0;
 																};
 															};
 														};
@@ -13202,14 +13202,14 @@ class Mission
 														};
 														class Attribute1
 														{
-															property="enableStamina";
-															expression="_this enablestamina _value;";
+															property="face";
+															expression="_this setface _value;";
 															class Value
 															{
 																class data
 																{
-																	singleType="BOOL";
-																	value=0;
+																	singleType="STRING";
+																	value="WhiteHead_04";
 																};
 															};
 														};
@@ -13241,14 +13241,14 @@ class Mission
 														};
 														class Attribute4
 														{
-															property="face";
-															expression="_this setface _value;";
+															property="enableStamina";
+															expression="_this enablestamina _value;";
 															class Value
 															{
 																class data
 																{
-																	singleType="STRING";
-																	value="WhiteHead_04";
+																	singleType="BOOL";
+																	value=0;
 																};
 															};
 														};
@@ -13786,7 +13786,7 @@ class Mission
 												dynamicSimulation=1;
 											};
 											id=252;
-											atlOffset=0.00030899048;
+											atlOffset=-140.66;
 										};
 										class Item1
 										{
@@ -14883,7 +14883,7 @@ class Mission
 												class Attribute1
 												{
 													property="ObjectCollision";
-													expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+													expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 													class Value
 													{
 														class data
@@ -22485,7 +22485,7 @@ class Mission
 												class Attribute0
 												{
 													property="ObjectCollision";
-													expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+													expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 													class Value
 													{
 														class data
@@ -22881,7 +22881,7 @@ class Mission
 												class Attribute1
 												{
 													property="ObjectCollision";
-													expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+													expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 													class Value
 													{
 														class data
@@ -23229,7 +23229,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={11786.449,27.051231,2308.5313};
+												position[]={11786.449,27.051231,2308.5312};
 												angles[]={0,4.7676821,0};
 											};
 											side="Empty";
@@ -24995,7 +24995,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -25092,7 +25092,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -26132,7 +26132,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=718;
-									atlOffset=0.80436897;
+									atlOffset=-140.66;
 								};
 								class Item24
 								{
@@ -30489,14 +30489,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_09";
 														};
 													};
 												};
@@ -30528,14 +30528,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_09";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -30577,14 +30577,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_10";
 														};
 													};
 												};
@@ -30616,14 +30616,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_10";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -30665,14 +30665,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="GreekHead_A3_06";
 														};
 													};
 												};
@@ -30704,14 +30704,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="GreekHead_A3_06";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -30753,14 +30753,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_07";
 														};
 													};
 												};
@@ -30792,14 +30792,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_07";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -30841,14 +30841,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_03";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -30880,14 +30880,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_03";
 														};
 													};
 												};
@@ -30929,14 +30929,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="AfricanHead_01";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -30968,14 +30968,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="AfricanHead_01";
 														};
 													};
 												};
@@ -31017,14 +31017,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_15";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -31056,14 +31056,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_15";
 														};
 													};
 												};
@@ -31076,7 +31076,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=928;
-									atlOffset=0.0089035034;
+									atlOffset=-140.66;
 								};
 								class Item89
 								{
@@ -31399,7 +31399,7 @@ class Mission
 										class Attribute1
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -32183,7 +32183,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -33677,7 +33677,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -35230,14 +35230,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_20";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -35269,14 +35269,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_20";
 														};
 													};
 												};
@@ -35318,14 +35318,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_12";
 														};
 													};
 												};
@@ -35357,14 +35357,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_12";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -35377,7 +35377,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=1114;
-									atlOffset=-5.7220459e-06;
+									atlOffset=-140.66;
 								};
 								class Item9
 								{
@@ -36587,7 +36587,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -36635,7 +36635,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -36683,7 +36683,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -36731,7 +36731,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -36923,7 +36923,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -36971,7 +36971,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -37019,7 +37019,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -37067,7 +37067,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -37115,7 +37115,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -37362,7 +37362,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -37662,6 +37662,7 @@ class Mission
 									};
 									id=1193;
 									type="Land_TankTracks_01_long_F";
+									atlOffset=-1.9073486e-06;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -37682,7 +37683,7 @@ class Mission
 								};
 							};
 							id=1149;
-							atlOffset=0.045413971;
+							atlOffset=-0.0019016266;
 						};
 						class Item8
 						{
@@ -38523,7 +38524,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=1237;
-									atlOffset=5.531311e-05;
+									atlOffset=-140.66;
 								};
 								class Item22
 								{
@@ -38707,7 +38708,7 @@ class Mission
 								};
 							};
 							id=1196;
-							atlOffset=0.3744278;
+							atlOffset=0.36769295;
 						};
 						class Item9
 						{
@@ -38739,7 +38740,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -39233,7 +39234,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={11779.166,25.468639,2404.7813};
+										position[]={11779.166,25.468639,2404.7812};
 										angles[]={0,1.6092775,0};
 									};
 									side="Empty";
@@ -40411,14 +40412,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="WhiteHead_10";
 														};
 													};
 												};
@@ -40450,14 +40451,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="WhiteHead_10";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -40668,7 +40669,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=1306;
-									atlOffset=4.196167e-05;
+									atlOffset=-140.66;
 								};
 								class Item41
 								{
@@ -42057,6 +42058,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=3885;
+									atlOffset=-140.66;
 								};
 								class Item2
 								{
@@ -42147,14 +42149,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -42186,14 +42188,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -42291,14 +42293,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -42330,14 +42332,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -42379,14 +42381,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -42418,14 +42420,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -42466,14 +42468,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -42505,14 +42507,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -42553,14 +42555,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -42592,14 +42594,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -42640,14 +42642,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -42679,14 +42681,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -42727,14 +42729,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -42766,14 +42768,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -42788,6 +42790,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=3887;
+									atlOffset=-140.66;
 								};
 								class Item3
 								{
@@ -42903,7 +42906,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -42950,7 +42953,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -45028,7 +45031,7 @@ class Mission
 										class Attribute1
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -45173,7 +45176,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -45322,7 +45325,7 @@ class Mission
 												class Attribute2
 												{
 													property="ObjectCollision";
-													expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+													expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 													class Value
 													{
 														class data
@@ -45491,7 +45494,7 @@ class Mission
 												class Attribute2
 												{
 													property="ObjectCollision";
-													expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+													expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 													class Value
 													{
 														class data
@@ -45729,6 +45732,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=1528;
+									atlOffset=-140.66;
 								};
 								class Item1
 								{
@@ -45877,7 +45881,7 @@ class Mission
 												class Attribute2
 												{
 													property="ObjectCollision";
-													expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+													expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 													class Value
 													{
 														class data
@@ -46046,7 +46050,7 @@ class Mission
 												class Attribute2
 												{
 													property="ObjectCollision";
-													expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+													expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 													class Value
 													{
 														class data
@@ -46242,6 +46246,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=1564;
+									atlOffset=-140.66;
 								};
 								class Item3
 								{
@@ -46284,14 +46289,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -46323,14 +46328,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -46413,7 +46418,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=1571;
-									atlOffset=-0.019426346;
+									atlOffset=-140.66;
 								};
 								class Item4
 								{
@@ -46456,14 +46461,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -46495,14 +46500,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -46560,7 +46565,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=1577;
-									atlOffset=-5.7220459e-06;
+									atlOffset=-140.66;
 								};
 								class Item5
 								{
@@ -49986,7 +49991,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={11821.396,28.272755,2218.4063};
+										position[]={11821.396,28.272755,2218.4062};
 										angles[]={6.2735796,0.094946884,0.011372928};
 									};
 									side="Empty";
@@ -58955,7 +58960,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={11853.713,27.570313,2146.175};
+										position[]={11853.713,27.570312,2146.175};
 										angles[]={0.10349211,1.6347244,6.2304902};
 									};
 									side="Empty";
@@ -61211,7 +61216,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={11796.067,25.896906,2433.6563};
+										position[]={11796.067,25.896906,2433.6562};
 										angles[]={0,0.061847027,0};
 									};
 									side="Empty";
@@ -64937,14 +64942,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -64976,14 +64981,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -65108,7 +65113,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=3283;
-									atlOffset=-1.9073486e-06;
+									atlOffset=-140.66;
 								};
 								class Item535
 								{
@@ -65207,14 +65212,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -65246,14 +65251,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -65400,6 +65405,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=3295;
+									atlOffset=-140.66;
 								};
 								class Item536
 								{
@@ -65442,14 +65448,14 @@ class Mission
 												};
 												class Attribute1
 												{
-													property="face";
-													expression="_this setface _value;";
+													property="enableStamina";
+													expression="_this enablestamina _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="STRING";
-															value="Default";
+															singleType="BOOL";
+															value=0;
 														};
 													};
 												};
@@ -65481,14 +65487,14 @@ class Mission
 												};
 												class Attribute4
 												{
-													property="enableStamina";
-													expression="_this enablestamina _value;";
+													property="face";
+													expression="_this setface _value;";
 													class Value
 													{
 														class data
 														{
-															singleType="BOOL";
-															value=0;
+															singleType="STRING";
+															value="Default";
 														};
 													};
 												};
@@ -65611,7 +65617,7 @@ class Mission
 										dynamicSimulation=1;
 									};
 									id=3310;
-									atlOffset=-1.9073486e-06;
+									atlOffset=-140.66;
 								};
 								class Item537
 								{
@@ -66263,7 +66269,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={11959.266,30.601563,2214.7507};
+												position[]={11959.266,30.601562,2214.7507};
 												angles[]={0.031720825,1.503777,0.063842297};
 											};
 											side="Empty";
@@ -67142,7 +67148,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={11965.986,26.332539,2164.9063};
+												position[]={11965.986,26.332539,2164.9062};
 												angles[]={0.0057671038,1.503777,0.12863886};
 											};
 											side="Empty";
@@ -69373,7 +69379,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={11937.033,32.573406,2091.9063};
+										position[]={11937.033,32.573406,2091.9062};
 										angles[]={0.0022902426,3.2055206,0.012835478};
 									};
 									side="Empty";
@@ -72016,7 +72022,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72064,7 +72070,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72112,7 +72118,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72160,7 +72166,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72208,7 +72214,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72255,7 +72261,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72303,7 +72309,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72351,7 +72357,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72398,7 +72404,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72445,7 +72451,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72493,7 +72499,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72540,7 +72546,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72588,7 +72594,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72635,7 +72641,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72682,7 +72688,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72729,7 +72735,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -72776,7 +72782,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -74437,7 +74443,7 @@ class Mission
 								class Attribute1
 								{
 									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 									class Value
 									{
 										class data
@@ -74529,7 +74535,7 @@ class Mission
 								class Attribute1
 								{
 									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 									class Value
 									{
 										class data
@@ -74621,7 +74627,7 @@ class Mission
 								class Attribute1
 								{
 									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 									class Value
 									{
 										class data
@@ -74714,7 +74720,7 @@ class Mission
 								class Attribute1
 								{
 									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 									class Value
 									{
 										class data
@@ -74805,7 +74811,7 @@ class Mission
 								class Attribute0
 								{
 									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 									class Value
 									{
 										class data
@@ -74866,7 +74872,7 @@ class Mission
 								class Attribute1
 								{
 									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 									class Value
 									{
 										class data
@@ -74958,7 +74964,7 @@ class Mission
 								class Attribute1
 								{
 									property="ObjectCollision";
-									expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 									class Value
 									{
 										class data
@@ -75017,7 +75023,7 @@ class Mission
 						};
 					};
 					id=249;
-					atlOffset=0.55092049;
+					atlOffset=0.55091476;
 				};
 				class Item1
 				{
@@ -75040,7 +75046,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={11785.112,24.775015,2325.4187};
-										angles[]={0,4.7499557,-0};
+										angles[]={0,4.7499557,0};
 									};
 									side="West";
 									flags=7;
@@ -75058,7 +75064,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75146,7 +75152,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75234,7 +75240,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75321,7 +75327,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75408,7 +75414,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75495,7 +75501,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75582,7 +75588,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75653,6 +75659,7 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""Platoon HQ""]};";
 							};
 							id=7391;
+							atlOffset=-140.66;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -75701,7 +75708,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75789,7 +75796,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75877,7 +75884,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -75965,7 +75972,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76066,7 +76073,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76154,7 +76161,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76242,7 +76249,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76330,7 +76337,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76401,6 +76408,7 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""Rifle Squad 1""]};";
 							};
 							id=7399;
+							atlOffset=-140.66;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -76449,7 +76457,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76536,7 +76544,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76624,7 +76632,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76712,7 +76720,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76813,7 +76821,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76901,7 +76909,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -76989,7 +76997,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77077,7 +77085,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77148,6 +77156,7 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""Rifle Squad 2""]};";
 							};
 							id=7408;
+							atlOffset=-140.66;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -77196,7 +77205,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77283,7 +77292,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77371,7 +77380,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77458,7 +77467,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77558,7 +77567,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77646,7 +77655,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77734,7 +77743,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77822,7 +77831,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -77893,6 +77902,7 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""Rifle Squad 3""]};";
 							};
 							id=7417;
+							atlOffset=-140.66;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -77941,7 +77951,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78028,7 +78038,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78116,7 +78126,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78203,7 +78213,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78290,7 +78300,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78377,7 +78387,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78465,7 +78475,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78536,6 +78546,7 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""Weapons Squad""]};";
 							};
 							id=7426;
+							atlOffset=-140.66;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -78584,7 +78595,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78672,7 +78683,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78743,7 +78754,7 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""Sniper Team""]};";
 							};
 							id=7434;
-							atlOffset=1.9073486e-06;
+							atlOffset=-140.66;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -78792,7 +78803,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78879,7 +78890,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -78966,7 +78977,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79053,7 +79064,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79140,7 +79151,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79228,7 +79239,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79299,6 +79310,7 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""Support Squad""]};";
 							};
 							id=7437;
+							atlOffset=-140.66;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -79347,7 +79359,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79434,7 +79446,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79521,7 +79533,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79608,7 +79620,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79695,7 +79707,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79782,7 +79794,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79870,7 +79882,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -79958,7 +79970,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80046,7 +80058,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80134,7 +80146,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80222,7 +80234,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80310,7 +80322,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80398,7 +80410,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80486,7 +80498,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80574,7 +80586,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80662,7 +80674,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80733,7 +80745,7 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""Ground Vehicle Crew""]};";
 							};
 							id=7444;
-							atlOffset=-1.9073486e-06;
+							atlOffset=-140.66;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -80782,7 +80794,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80870,7 +80882,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -80958,7 +80970,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81046,7 +81058,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81134,7 +81146,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81222,7 +81234,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81310,7 +81322,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81398,7 +81410,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81469,7 +81481,7 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""Air Wing Crew""]};";
 							};
 							id=7461;
-							atlOffset=1.9073486e-06;
+							atlOffset=-140.66;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -81519,7 +81531,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81608,7 +81620,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81697,7 +81709,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81786,7 +81798,7 @@ class Mission
 										class Attribute0
 										{
 											property="ObjectCollision";
-											expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+											expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 											class Value
 											{
 												class data
@@ -81857,11 +81869,11 @@ class Mission
 								init="if (isServer) then {this setGroupIdGlobal [""God Squadron""]};";
 							};
 							id=7470;
-							atlOffset=0.00029182434;
+							atlOffset=-140.66;
 						};
 					};
 					id=2903;
-					atlOffset=0.16928864;
+					atlOffset=-140.66;
 				};
 				class Item2
 				{
@@ -84302,7 +84314,7 @@ class Mission
 						class Item58
 						{
 							dataType="Trigger";
-							position[]={6063.0313,243.08821,9756.9844};
+							position[]={6063.0312,243.08821,9756.9844};
 							angle=3.4198837;
 							class Attributes
 							{
@@ -84603,7 +84615,7 @@ class Mission
 						class Item76
 						{
 							dataType="Trigger";
-							position[]={16848.883,241.66022,17810.563};
+							position[]={16848.883,241.66022,17810.562};
 							angle=3.4198837;
 							class Attributes
 							{
@@ -87509,7 +87521,7 @@ class Mission
 				};
 			};
 			id=248;
-			atlOffset=33.328972;
+			atlOffset=14.607998;
 		};
 		class Item1
 		{
@@ -89060,7 +89072,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={7774.2793,846.00208,19287.063};
+												position[]={7774.2793,846.00208,19287.062};
 												angles[]={0,0.52278268,0};
 											};
 											side="Empty";
@@ -89363,7 +89375,7 @@ class Mission
 														class Attribute0
 														{
 															property="ObjectCollision";
-															expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+															expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 															class Value
 															{
 																class data
@@ -89397,7 +89409,7 @@ class Mission
 														class Attribute0
 														{
 															property="ObjectCollision";
-															expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+															expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 															class Value
 															{
 																class data
@@ -89431,7 +89443,7 @@ class Mission
 														class Attribute0
 														{
 															property="ObjectCollision";
-															expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+															expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 															class Value
 															{
 																class data
@@ -89465,7 +89477,7 @@ class Mission
 														class Attribute0
 														{
 															property="ObjectCollision";
-															expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+															expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 															class Value
 															{
 																class data
@@ -89499,7 +89511,7 @@ class Mission
 														class Attribute0
 														{
 															property="ObjectCollision";
-															expression="[_this, 	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+															expression="private _actualValue = _value; if (_actualValue isEqualType []) then { _actualValue = _actualValue # 0 }; if (_actualValue isEqualType 0) then { _actualValue = _actualValue isEqualTo 1 }; [_this, _actualValue] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
 															class Value
 															{
 																class data
@@ -90013,7 +90025,7 @@ class Mission
 											};
 											id=4882;
 											type="Jbad_opx2_concrete_oneside1";
-											atlOffset=0.00024414063;
+											atlOffset=0.00024414062;
 										};
 										class Item15
 										{
@@ -90200,7 +90212,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={7885.0313,836.78308,19212.99};
+												position[]={7885.0312,836.78308,19212.99};
 												angles[]={0,5.6424851,0};
 											};
 											side="Empty";
@@ -90656,7 +90668,7 @@ class Mission
 											};
 											id=4919;
 											type="jbad_Wall_L3_5m";
-											atlOffset=-0.00024414063;
+											atlOffset=-0.00024414062;
 										};
 										class Item13
 										{
@@ -90758,7 +90770,7 @@ class Mission
 											};
 											id=4925;
 											type="jbad_Wall_L3_5m";
-											atlOffset=-0.00024414063;
+											atlOffset=-0.00024414062;
 										};
 										class Item19
 										{
@@ -90894,7 +90906,7 @@ class Mission
 											};
 											id=4933;
 											type="jbad_Wall_L3_5m";
-											atlOffset=-0.00024414063;
+											atlOffset=-0.00024414062;
 										};
 										class Item27
 										{
@@ -91556,7 +91568,7 @@ class Mission
 											};
 											id=4972;
 											type="jbad_Wall_L3_5m";
-											atlOffset=-0.00024414063;
+											atlOffset=-0.00024414062;
 										};
 										class Item66
 										{
@@ -93525,7 +93537,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={7849.5063,837.57153,19216.563};
+												position[]={7849.5063,837.57153,19216.562};
 												angles[]={6.2575932,6.2054071,0.025927955};
 											};
 											side="Empty";
@@ -93802,7 +93814,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={7855.4063,837.49701,19213.016};
+												position[]={7855.4062,837.49701,19213.016};
 												angles[]={6.2575932,3.2499671,0.00069053395};
 											};
 											side="Empty";
@@ -94871,7 +94883,7 @@ class Mission
 											};
 											id=5165;
 											type="jbad_Wall_L2_5m";
-											atlOffset=0.13476563;
+											atlOffset=0.13476562;
 										};
 										class Item21
 										{
