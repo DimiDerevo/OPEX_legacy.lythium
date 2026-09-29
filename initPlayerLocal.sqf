@@ -173,8 +173,6 @@
 
 	if (!OPEX_intro) then {5 fadeSound 1; enableRadio true};
 
-	[] call DD_fnc_initMarkerSystem;
-
 	DD_RemovePlayerVoice = true;
 	[] spawn {
 		while {DD_RemovePlayerVoice} do	{

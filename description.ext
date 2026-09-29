@@ -105,7 +105,6 @@
 			#include "scripts\Viperidae\vip_lit\fn\vip_lit_fnc.hpp"
 			#include "scripts\Tonic\VVS\Functions.h"
 			#include "scripts\Psychobastard\AIS\cfgFunctions.hpp"
-			#include "functions.hpp"
 		};
 
 // =========================================================================================================

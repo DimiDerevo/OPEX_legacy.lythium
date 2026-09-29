@@ -287,7 +287,7 @@ _arsenalArray append _muzzle;
 
 // ==========================Bipod==========================
 
-_bipod = ["BWA3_bipod_MG3", "BWA3_bipod_Harris","BWA3_bipod_Harris_green","BWA3_bipod_Harris_tan","rhsusf_acc_grip2","rhsusf_acc_grip2_tan","rhsusf_acc_grip2_wd","BWA3_bipod_Atlas","rhsusf_acc_grip1","rhsusf_acc_harris_swivel","rhsusf_acc_harris_bipod","rhsusf_acc_kac_grip","rhsusf_acc_kac_grip_frwd","rhsusf_acc_rvg_blk","rhsusf_acc_rvg_de","rhsusf_acc_tdstubby_blk","rhsusf_acc_tdstubby_tan","rhsusf_acc_grip3","rhsusf_acc_grip3_tan"];
+_bipod = ["BWA3_bipod_MG3", "BWA3_bipod_Harris","BWA3_bipod_Harris_green","BWA3_bipod_Harris_tan","rhsusf_acc_grip2","rhsusf_acc_grip2_tan","rhsusf_acc_grip2_wd","BWA3_bipod_Atlas","rhsusf_acc_grip1","rhsusf_acc_harris_swivel","rhsusf_acc_harris_bipod","rhsusf_acc_kac_grip","rhsusf_acc_kac_grip_frwd","rhsusf_acc_rvg_blk","rhsusf_acc_rvg_de","rhsusf_acc_tdstubby_blk","rhsusf_acc_tdstubby_tan","rhsusf_acc_grip3","rhsusf_acc_grip3_tan", "rhs_acc_smr_s_bcm_blk", "rhs_acc_smr_s_bcm_des", "rhs_acc_smr_s_bcm_tan", "rhs_acc_smr_s_bcm_wdl", "rhs_acc_smr_s_blk", "rhs_acc_smr_s_des", "rhs_acc_smr_s_tan", "rhs_acc_smr_s_wdl", "rhs_acc_smr_bcm_blk", "rhs_acc_smr_bcm_des", "rhs_acc_smr_bcm_tan", "rhs_acc_smr_bcm_wdl", "rhs_acc_smr_blk", "rhs_acc_smr_des", "rhs_acc_smr_tan", "rhs_acc_smr_wdl"];
 _arsenalArray append _bipod;
 
 // ==========================Mags==========================
