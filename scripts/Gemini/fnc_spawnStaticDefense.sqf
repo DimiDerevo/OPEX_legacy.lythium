@@ -60,14 +60,6 @@
 			// DEBUGGING
 			if (OPEX_debug) then
 				{
-					private ["_debugMarker"];
-					_debugMarker = createMarker [format ["OPEX_debugMarker_staticDefense_%1", random 100000], _flatPosition];
-					_debugMarker setMarkerType "mil_dot";
-					_debugMarker setMarkerColor "ColorOrange";
-					[_static, _debugMarker] spawn
-						{
-							while {alive (_this select 0)} do {sleep 1; (_this select 1) setMarkerPos (position (_this select 0))};
-							deleteMarker (_this select 1);
-						};
+					[[format ["OPEX_debugMarker_staticDefense_%1", random 100000], getPosATL _static, "ICON", "mil_dot", [0.8, 0.8], 0, "Solid", "ColorOrange", 1, ""], "zeus", _lifeTime, _static] spawn Gemini_fnc_createMarker2;
 				};
 		};

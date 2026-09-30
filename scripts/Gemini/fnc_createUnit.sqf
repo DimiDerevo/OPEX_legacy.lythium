@@ -330,7 +330,7 @@
 		if (side _unit == civilian) then {_markerColor = "ColorYellow"};
 		if (side _unit == sideLogic) then {_markerAlpha = 0};
 
-		[[format ["OPEX_debugMarker_unit_%1", random 100000], getPosATL _unit, "ICON", "mil_dot", [0.8, 0.8], 0, "Solid", _markerColor, _markerAlpha, ""], "zeus", "distance", _unit] spawn Gemini_fnc_createMarker2;
+		[[format ["OPEX_debugMarker_unit_%1", random 100000], getPosATL _unit, "ICON", "mil_dot", [0.8, 0.8], 0, "Solid", _markerColor, _markerAlpha, ""], "zeus", _lifeTime, _unit] spawn Gemini_fnc_createMarker2;
 	};
 
 // =========================================================================================================

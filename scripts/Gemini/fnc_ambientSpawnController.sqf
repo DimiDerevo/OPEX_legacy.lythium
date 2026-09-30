@@ -17,23 +17,23 @@ private _newSpawnType = "";
 private _playerCount = 0;
 private _newType = "";
 
-OPEX_ambientEnemyData = [
-//  ["name",    [current, max], [limit, coef, time multi, base weight]], weight
-    ["Patrol",          [0, 2], [6, 0.70, 1.0, 1.0]],                    1.0,
-    ["Bivouac",         [0, 1], [3, 0.30, 2.0, 0.8]],                    0.8,
-    ["Ambush",          [0, 1], [3, 0.30, 1.5, 0.5]],                    0.5,
-    ["Cache",           [0, 1], [3, 0.20, 2.0, 0.3]],                    0.3,
-    ["Garrison",        [0, 1], [3, 0.20, 2.5, 0.3]],                    0.3,
-    ["Roadblock",       [0, 1], [3, 0.20, 1.5, 0.3]],                    0.3,
-    ["Reinforcement",   [0, 2], [6, 0.60, 1.0, 0.5]],                    0.5,
-    ["IED",             [0, 2], [5, 0.50, 1.5, 0.5]],                    0.5
+OPEX_ambientEnemyData = [ 
+//  ["name",    [current, max], [limit, coef, time multi, base weight]], weight 
+    ["Patrol",          [0, 2], [3, 0.70, 1.0, 1.0]],                    1.0, 
+    ["Bivouac",         [0, 1], [1, 0.30, 2.0, 0.8]],                    0.8, 
+    ["Ambush",          [0, 1], [1, 0.30, 1.5, 0.5]],                    0.5, 
+    ["Cache",           [0, 1], [1, 0.20, 2.0, 0.3]],                    0.3, 
+    ["Garrison",        [0, 1], [1, 0.20, 2.5, 0.3]],                    0.3, 
+    ["Roadblock",       [0, 1], [1, 0.20, 1.5, 0.3]],                    0.3, 
+    ["Reinforcement",   [0, 2], [2, 0.60, 1.0, 0.5]],                    0.5, 
+    ["IED",             [0, 2], [5, 0.50, 1.5, 0.5]],                    0.5 
 ];
 
-OPEX_ambientFriendData = [
-//  ["name",    [current, max], [limit, coef, time multi, base weight]], weight
-    ["Patrol",          [0, 1], [3, 0.30, 1.0, 0.8]],                    0.8,
-    ["Roadblock",       [0, 1], [2, 0.15, 1.5, 0.1]],                    0.1,
-    ["Air",             [0, 1], [1, 0.10, 1.0, 0.1]],                    0.1
+OPEX_ambientFriendData = [ 
+//  ["name",    [current, max], [limit, coef, time multi, base weight]], weight 
+    ["Patrol",          [0, 1], [2, 0.30, 1.0, 0.8]],                    0.8, 
+    ["Roadblock",       [0, 1], [1, 0.15, 1.5, 0.1]],                    0.1, 
+    ["Air",             [0, 1], [1, 0.10, 1.0, 0.1]],                    0.1 
 ];
 
 while {true} do {
