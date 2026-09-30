@@ -182,5 +182,6 @@ class Gemini
 				class unassignVehicle {file = "scripts\Gemini\fnc_unassignVehicle.sqf";};
 				class useInventoryObject {file = "scripts\Gemini\fnc_useInventoryObject.sqf";};
 				class vehicleMusicReceiver {file = "scripts\Gemini\fnc_vehicleMusicReceiver.sqf";};
+				class sanitizeRoads {file = "scripts\Gemini\fnc_sanitizeRoads.sqf";};
 			};
 	};

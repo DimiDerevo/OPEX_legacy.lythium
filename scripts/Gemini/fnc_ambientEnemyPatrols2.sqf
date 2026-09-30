@@ -3,7 +3,7 @@
 if (OPEX_playingPlayers isEqualTo []) exitWith {};
 private _player = selectRandom OPEX_playingPlayers;
 private _type = ["infantry"];
-if (count ((getPosATL _player) nearRoads  OPEX_spawnDistanceMaxi) > 100) then {
+if (count ([((getPosATL _player) nearRoads  OPEX_spawnDistanceMaxi)] call Gemini_fnc_sanitizeRoads) > 100) then {
 	if (random 100 < 10) then {_type = ["motorized"]};
 };
 private _squad = [

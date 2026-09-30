@@ -47,7 +47,7 @@ for "_i" from 1 to (count OPEX_enemy_handGrenades) do {_crate addItemCargoGlobal
 
 // SPAWNING A TRUCK
 private _truck = [_truckType, _truckPos] call Gemini_fnc_createVehicle;
-_nearRoads = _crate nearRoads 35;
+_nearRoads = [_crate nearRoads 35] call Gemini_fnc_sanitizeRoads;
 if (count _nearRoads > 1)
 	then {_truck setPos (position (_nearRoads select 0)); _truck setDir ([(_nearRoads select 0), (_nearRoads select 1)] call BIS_fnc_DirTo)}
 	else {_dir = [_truck, _crate] call BIS_fnc_relativeDirTo; _truck setDir (_dir + 180)};

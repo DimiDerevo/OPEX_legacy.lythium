@@ -10,7 +10,7 @@ private _vehiclePos = position _vehicle;
 private ["_radius"];
 if (count _this > 1) then {_radius = _this select 1} else {_radius = 15};
 
-private _nearRoads = _vehiclePos nearRoads _radius;
+private _nearRoads = ([_vehiclePos nearRoads _radius] call Gemini_fnc_sanitizeRoads);
 if (count _nearRoads == 0) exitWith {};
 
 private _road = _nearRoads select 0;

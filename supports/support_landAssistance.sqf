@@ -91,7 +91,7 @@
 			// SPAWNING SQUAD
 			private ["_squad"];
 			private _roadsNearby = [];
-			private _roadsNearby = _validPos nearRoads 75;
+			private _roadsNearby = ([_validPos nearRoads 75] call Gemini_fnc_sanitizeRoads);
 			if ((count _roadsNearby > 0) && (random 10 >= 5))
 			then
 				{

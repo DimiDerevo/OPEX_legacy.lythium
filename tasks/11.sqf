@@ -108,7 +108,7 @@
 			_camoNet setVectorUp (surfaceNormal (position _camoNet));
 			_camoNet allowDamage true;
 		};
-	if (count (_emptyPos nearRoads 15) > 0) then {[_armoredVehicle, 15] call Gemini_fnc_parkVehicle};
+	if (count ([_emptyPos nearRoads 15] call Gemini_fnc_sanitizeRoads) > 0) then {[_armoredVehicle, 15] call Gemini_fnc_parkVehicle};
 	sleep 0.1;
 
 	// SPAWNING CRATES

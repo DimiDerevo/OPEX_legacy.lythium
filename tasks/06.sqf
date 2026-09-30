@@ -35,7 +35,7 @@
 	if (_roadPos isEqualTo [0,0,0]) exitWith {["hint", "STR_hint_noTaskPos"] remoteExec ["Gemini_fnc_globalHint"]; [] remoteExec ["Gemini_fnc_taskReset"]};
 
 	// LOOKING FOR 2 CONSECUTIVE ROAD SEGMENTS
-	private _road = (_roadPos nearRoads 20) select 0; if (isNil "_road") exitWith {["hint", "STR_hint_noTaskPos"] remoteExec ["Gemini_fnc_globalHint"]; [] remoteExec ["Gemini_fnc_taskReset"]};
+	private _road = ([_roadPos nearRoads 20] call Gemini_fnc_sanitizeRoads) select 0; if (isNil "_road") exitWith {["hint", "STR_hint_noTaskPos"] remoteExec ["Gemini_fnc_globalHint"]; [] remoteExec ["Gemini_fnc_taskReset"]};
 	private _road1 = (roadsConnectedTo _road) select 0; if (isNil "_road1") exitWith {["hint", "STR_hint_noTaskPos"] remoteExec ["Gemini_fnc_globalHint"]; [] remoteExec ["Gemini_fnc_taskReset"]};
 	private _road2 = (roadsConnectedTo _road) select 1; if (isNil "_road2") exitWith {["hint", "STR_hint_noTaskPos"] remoteExec ["Gemini_fnc_globalHint"]; [] remoteExec ["Gemini_fnc_taskReset"]};
 

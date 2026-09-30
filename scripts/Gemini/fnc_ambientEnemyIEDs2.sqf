@@ -6,7 +6,7 @@ private _player = selectRandom OPEX_playingPlayers;
 // LOOKING FOR A RANDOM ROAD AROUND SELECTED PLAYER
 private _roadPos = ["road", _player, OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi * 0.9] call Gemini_fnc_findPos;
 if (_roadPos isEqualTo [0,0,0]) exitWith {};
-private _road = (_roadPos nearRoads 15) select 0;
+private _road = ([_roadPos nearRoads 15] call Gemini_fnc_sanitizeRoads) select 0;
 _roadPos = (_road modelToWorld [((boundingBox _road) select 1 select 0) * 0.9, 0, 0]); // returning a position at the side of the road
 
 // SPAWNING IED

@@ -6,10 +6,10 @@ private _player = selectRandom OPEX_playingPlayers;
 // LOOKING FOR A RANDOM ROAD AROUND SELECTED PLAYER
 private _roadPos = ["road", _player] call Gemini_fnc_findPos;
 if (_roadPos isEqualTo [0,0,0]) exitWith {};
-private _roadPos = (_roadPos nearRoads 15) select 0;
+private _roadPos = ([_roadPos nearRoads 15] call Gemini_fnc_sanitizeRoads) select 0;
 
 // LOOKING FOR CONNECTED ROADS
-private _nearRoads = _roadPos nearRoads 50;
+private _nearRoads = ([_roadPos nearRoads 50] call Gemini_fnc_sanitizeRoads);
 if (count _nearRoads < 3) exitWith {};
 private _road = _nearRoads select 0;
 private _connectedRoads = [];

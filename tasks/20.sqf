@@ -36,7 +36,7 @@
 	// LOOKING FOR A ROAD
 	private _roadPos = ["road", OPEX_mapCenter, 0, OPEX_mapRadius] call Gemini_fnc_findPos;
 	if (_roadPos isEqualTo [0,0,0]) exitWith {["hint", "STR_hint_noTaskPos"] remoteExec ["Gemini_fnc_globalHint"]; [] remoteExec ["Gemini_fnc_taskReset"]};
-	private _convoyStart = (_roadPos nearRoads 10) select 0;
+	private _convoyStart = ([_roadPos nearRoads 10] call Gemini_fnc_sanitizeRoads) select 0;
 
 	// LOOKING FOR A DESTINATION
 	private _convoyDestination = [["industry", "military"], _roadPos, 2000, OPEX_mapRadius] call Gemini_fnc_findPos;

@@ -799,7 +799,7 @@ R3F_LOG_FNCT_3D_get_objets_genants_rayon =
 				if !(typeOf _x in ["Snake_random_F", "ButterFly_random", "HouseFly", "HoneyBee", "Mosquito"]) then
 				{
 					// Filtre : ignorer les segments de routes
-					if ({_x == _e} count (getPos _e nearRoads 1) == 0) then
+					if ({_x == _e} count ([getPos _e nearRoads 1] call Gemini_fnc_sanitizeRoads) == 0) then
 					{
 						_elements_terrain pushBack _e;
 					};

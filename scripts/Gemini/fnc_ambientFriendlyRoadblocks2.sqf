@@ -10,10 +10,10 @@ if (_roadPos isEqualTo [0,0,0]) exitWith {};
 // CHECKING IF ENEMIES ARE NEARBY (to avoid roadblocks proximity)
 if (count (([_roadPos, 250, 250, 0, false] nearEntities [["CAManBase"], false, true, true]) select {side _x == OPEX_enemy_side1}) > 0) exitWith {};
 
-private _roadPos = (_roadPos nearRoads 15) select 0;
+private _roadPos = ([_roadPos nearRoads 15] call Gemini_fnc_sanitizeRoads) select 0;
 
 // LOOKING FOR CONNECTED ROADS
-private _nearRoads = _roadPos nearRoads 50;
+private _nearRoads = ([_roadPos nearRoads 50] call Gemini_fnc_sanitizeRoads);
 if (count _nearRoads < 3) exitWith {};
 private _road = _nearRoads select 0;
 private _connectedRoads = [];

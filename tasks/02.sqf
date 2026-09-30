@@ -63,7 +63,7 @@
 	// SPAWNING SMALL CAMP NEARBY MORTAR
 	private _campPos = ["land", _mortarPos, 15, 75, 2] call Gemini_fnc_findPos;
 	private "_lightSource";
-	if ((!(_campPos isEqualTo [0,0,0])) && (count (_campPos nearRoads 25) == 0)) then
+	if ((!(_campPos isEqualTo [0,0,0])) && (count ([_campPos nearRoads 25] call Gemini_fnc_sanitizeRoads) == 0)) then
 		{
 			_lightSource = [["Campfire_burning_F"], _campPos, random 360, true, "task"] call Gemini_fnc_createVehicle; ["Land_ClutterCutter_large_F", _lightSource, random 360, true, "task"] call Gemini_fnc_createVehicle;
 			for "_i" from 1 to (selectRandom [2,3,4,5]) do {private _tent = [["Land_TentA_F", "Land_TentDome_F"], ["land", _lightSource, 1, 15, 4] call Gemini_fnc_findPos, random 360, true, "task"] call Gemini_fnc_createVehicle; private _clutterCutter = ["Land_ClutterCutter_large_F", _tent, random 360, true, "task"] call Gemini_fnc_createVehicle};
