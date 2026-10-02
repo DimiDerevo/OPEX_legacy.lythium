@@ -181,5 +181,8 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then {[body_1, "mil_objective", "colorRed", "BODIES", "task"] call Gemini_fnc_createMarker};
-	// {_x setPos getPos player} forEach [body_1, body_2, body_3, body_4, body_5];
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld body_1, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorBlue", 1, "BODY 1"], "zeus", "task", body_1] spawn Gemini_fnc_createMarker2;
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld body_2, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorBlue", 1, "BODY 2"], "zeus", "task", body_2] spawn Gemini_fnc_createMarker2;
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld body_3, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorBlue", 1, "BODY 3"], "zeus", "task", body_3] spawn Gemini_fnc_createMarker2;
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld body_4, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorBlue", 1, "BODY 4"], "zeus", "task", body_4] spawn Gemini_fnc_createMarker2;
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld body_5, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorBlue", 1, "BODY 5"], "zeus", "task", body_5] spawn Gemini_fnc_createMarker2;

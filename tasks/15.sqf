@@ -155,4 +155,4 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then {[_instigatorPos, "mil_objective", "colorRed", "INSTIGATOR", "task"] call Gemini_fnc_createMarker};
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld instigator, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "INSTIGATOR"], "zeus", "task", instigator] spawn Gemini_fnc_createMarker2;

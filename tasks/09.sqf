@@ -190,13 +190,4 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then
-		{
-			suspect = _civilian;
-			private _marker = [_civilian, "mil_objective", "colorRed", "SUSPECT", "task"] call Gemini_fnc_createMarker;
-			[_civilian, _marker] spawn
-				{
-					while {alive (_this select 0)} do {sleep 1; (_this select 1) setMarkerPos (position (_this select 0))};
-					deleteMarker (_this select 1);
-				};
-		};
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _civilian, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "SUSPECT"], "zeus", "task", _civilian] spawn Gemini_fnc_createMarker2;

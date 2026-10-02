@@ -152,21 +152,8 @@
 // =========================================================================================================
 // DEBUGGING
 // =========================================================================================================
-
-	if (_debug && !isNil "_sniper") then
-		{
-			//systemChat format ["DISTANCE BETWEEN SNIPER AND TARGET: %1 meters", round (_sniper distance _randomPos)];
-			//sniper = _sniper;
-			private _markerSniper = [_sniper, "mil_objective", "colorRed", "SNIPER", "task"] call Gemini_fnc_createMarker;
-			private _markerSpotter = [_spotter, "mil_objective", "colorRed", "SPOTTER", "task"] call Gemini_fnc_createMarker;
-			[_sniper, _markerSniper] spawn
-				{
-					while {alive (_this select 0)} do {sleep 1; (_this select 1) setMarkerPos (position (_this select 0))};
-					deleteMarker (_this select 1);
-				};
-			[_spotter, _markerSpotter] spawn
-				{
-					while {alive (_this select 0)} do {sleep 1; (_this select 1) setMarkerPos (position (_this select 0))};
-					deleteMarker (_this select 1);
-				};
-		};
+	
+	if (!isNil "_sniper") then {
+		[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _sniper, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "SNIPER"], "zeus", "task", _sniper] spawn Gemini_fnc_createMarker2;
+		[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _spotter, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "SPOTTER"], "zeus", "task", _spotter] spawn Gemini_fnc_createMarker2;
+	};

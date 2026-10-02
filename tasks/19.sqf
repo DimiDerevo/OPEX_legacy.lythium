@@ -123,4 +123,4 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then {[_lightSource, "mil_objective", "colorRed", "CAMP", "task"] call Gemini_fnc_createMarker};
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _lightSource, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "CAMP"], "zeus", "task", _lightSource] spawn Gemini_fnc_createMarker2;

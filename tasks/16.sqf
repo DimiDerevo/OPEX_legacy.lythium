@@ -472,9 +472,4 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then
-		{
-			[_IEDpos, "mil_objective", "colorRed", "IED", "task"] call Gemini_fnc_createMarker;
-			player setUnitTrait ["explosiveSpecialist", true];
-			player addItem "toolKit";
-		};
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _IEDpos, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "IED"], "zeus", "task"] spawn Gemini_fnc_createMarker2;

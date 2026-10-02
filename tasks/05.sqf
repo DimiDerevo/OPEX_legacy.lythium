@@ -195,4 +195,4 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then {[_reporter, "mil_warning", "ColorBlue", "HOSTAGE", "task"] call Gemini_fnc_createMarker};
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _reporter, "ICON", "mil_warning", [0.8, 0.8], 0, "Solid", "ColorBlue", 1, "HOSTAGE"], "zeus", "task", _reporter] spawn Gemini_fnc_createMarker2;

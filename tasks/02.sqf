@@ -158,4 +158,4 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then {[_mortar, "mil_warning", "ColorRed", "MORTAR", "task"] call Gemini_fnc_createMarker};
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _mortar, "ICON", "mil_warning", [0.8, 0.8], 0, "Solid", "ColorRed", 1, "MORTAR"], "zeus", "task", _mortar] spawn Gemini_fnc_createMarker2;

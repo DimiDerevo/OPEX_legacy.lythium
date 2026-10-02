@@ -171,4 +171,6 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug && !isNil "_armoredVehicle") then {[_armoredVehicle, "mil_objective", "colorRed", "ARMORED VEHICLE", "task"] call Gemini_fnc_createMarker};
+	if (!isNil "_armoredVehicle") then {
+		[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _armoredVehicle, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "ARMORED VEHICLE"], "zeus", "task", _armoredVehicle] spawn Gemini_fnc_createMarker2;
+	};

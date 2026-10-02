@@ -231,9 +231,6 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (OPEX_debug) then
-		{
-			[officer_1, "mil_objective", "colorRed", "OFFICER 1", "task"] call Gemini_fnc_createMarker;
-			[officer_2, "mil_objective", "colorRed", "OFFICER 2", "task"] call Gemini_fnc_createMarker;
-			[officer_3, "mil_objective", "colorRed", "OFFICER 3", "task"] call Gemini_fnc_createMarker;
-		};
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld officer_1, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "OFFICER 1"], "zeus", "task", officer_1] spawn Gemini_fnc_createMarker2;
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld officer_2, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "OFFICER 2"], "zeus", "task", officer_2] spawn Gemini_fnc_createMarker2;
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld officer_3, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorRed", 1, "OFFICER 3"], "zeus", "task", officer_3] spawn Gemini_fnc_createMarker2;

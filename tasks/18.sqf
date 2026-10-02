@@ -162,4 +162,4 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then {[_crashPos, "mil_objective", "colorRed", "DRONE", "task"] call Gemini_fnc_createMarker; drone_18 = _drone; publicVariable "drone_18"; player addItem "ToolKit"};
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _drone, "ICON", "mil_objective", [0.8, 0.8], 0, "Solid", "colorBlue", 1, "DRONE"], "zeus", "task", _drone] spawn Gemini_fnc_createMarker2;

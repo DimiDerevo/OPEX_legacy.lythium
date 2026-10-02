@@ -200,8 +200,5 @@
 // DEBUGGING
 // =========================================================================================================
 
-	if (_debug) then
-		{
-			[_pilot, "mil_warning", "ColorBlue", "PILOT", "task"] call Gemini_fnc_createMarker;
-			[_aircraft, "mil_warning", "ColorBlue", "AIRCRAFT", "task"] call Gemini_fnc_createMarker;
-		};
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _pilot, "ICON", "mil_warning", [0.8, 0.8], 0, "Solid", "ColorBlue", 1, "PILOT"], "zeus", "task", _pilot] spawn Gemini_fnc_createMarker2;
+	[[format ["OPEX_marker_task_%1", ceil random 100000], getPosWorld _aircraft, "ICON", "mil_warning", [0.8, 0.8], 0, "Solid", "ColorBlue", 1, "AIRCRAFT"], "zeus", "task", _aircraft] spawn Gemini_fnc_createMarker2;
