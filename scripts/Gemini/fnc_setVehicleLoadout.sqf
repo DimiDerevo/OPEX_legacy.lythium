@@ -21,14 +21,14 @@ if (_loadoutTypeOverride isEqualTo "") then {
         case "fuchsmed":        {_loadout = OPEX_vehicleTypeFuchsMed#1};
         case "truck":           {_loadout = OPEX_vehicleTypeTruck#1};
         case "heli":            {_loadout = OPEX_vehicleTypeHeli#1};
-        case "defaulttruck":    {_loadout = OPEX_loadoutHeliDefault#1};
-        case "defaultheli":     {_loadout = OPEX_loadoutCarDefault#1};
+        case "defaulttruck":    {_loadout = OPEX_loadoutCarDefault#1};
+        case "defaultheli":     {_loadout = OPEX_loadoutHeliDefault#1};
     };
 };
 
 if (_loadout isEqualTo []) then {
-    if (_vehicle isKindOf "Helicopter") then {_loadout = OPEX_loadoutHeliDefault};
-    if (_vehicle isKindOf "LandVehicle") then {_loadout = OPEX_loadoutCarDefault};
+    if (_vehicle isKindOf "Helicopter") then {_loadout = OPEX_loadoutCivHeliDefault};
+    if (_vehicle isKindOf "LandVehicle") then {_loadout = OPEX_loadoutCivCarDefault};
 };
 
 if (_loadout isNotEqualTo []) then {

@@ -82,7 +82,7 @@ private _getPosition = {
 				case "forest"					:	{_position = (selectBestPlaces [_center, _maxDistance, "(1 + forest + trees) * (1 - sea) * (1 - houses)", _maxDistance / 10, 1]) select 0 select 0; _position pushBack 0};
 				case "hill"						:	{_position = (selectBestPlaces [_center, _maxDistance, "(1 + hills) * (1 - sea)", _maxDistance / 10, 1]) select 0 select 0; _position pushBack 0};
 
-				case "road"						:	{private _roads = (_center nearRoads _maxDistance) select {_center distance2D _x > _minDistance}; if (count _roads > 0) then {_position = position (selectRandom _roads)}};
+				case "road"						:	{private _roads = ([_center nearRoads _maxDistance] call Gemini_fnc_sanitizeRoads) select {_center distance2D _x > _minDistance}; if (count _roads > 0) then {_position = position (selectRandom _roads)}};
 				case "building"					:	{private _buildings = ([_center, _maxDistance] call Gemini_fnc_findBuildings) select {_center distance2D _x > _minDistance}; if (count _buildings > 0) then {_position = position (selectRandom _buildings)}};
 
 				case "city"						:	{_position = [OPEX_locations_cities, _center, _minDistance, _maxDistance] call _selectLocation};
@@ -105,8 +105,8 @@ private _getPosition = {
 		private _isGround = (!surfaceIsWater _position) && (_position select 2 < 1);
 		private _isWater = surfaceIsWater _position;
 		private _isOnRoad = (isOnRoad ASLToAGL _position) && ((_position select 2) < 0.1);
-		private _isFarRoad = ((_position nearRoads 100) isEqualTo []);
-		private _isNearRoad = !((_position nearRoads 25) isEqualTo []);
+		private _isFarRoad = (([_position nearRoads 100] call Gemini_fnc_sanitizeRoads) isEqualTo []);
+		private _isNearRoad = !(([_position nearRoads 25] call Gemini_fnc_sanitizeRoads) isEqualTo []);
 		private _isFarBuilding = ((nearestTerrainObjects [_position, ["House","Building"], 100]) isEqualTo []);
 		private _isNearBuilding = !((nearestTerrainObjects [_position, ["House","Building"], 50]) isEqualTo []);
 		private _isInsideBuilding = _position call Gemini_fnc_isInsideBuilding;

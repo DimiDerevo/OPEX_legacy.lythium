@@ -594,6 +594,11 @@ OPEX_vehicleTypeHeli = [
 ];
 OPEX_loadoutHeliDefault = [
     [
+        ["kat_IFAK", 2]
+    ], []
+];
+OPEX_loadoutCivHeliDefault = [
+    [
         ["BWA3_MP7_RSAS_pointer", 2],
         ["BWA3_40Rnd_46x30_MP7", 8],
         ["BWA3_DM32_Purple", 2],
@@ -614,4 +619,10 @@ OPEX_loadoutCarDefault = [
     ], [
         ["BWA3_AssaultPack_Tropen", 1]
     ]
+];
+OPEX_loadoutCivCarDefault = [
+    [
+        ["ToolKit", 1],
+        ["ACE_rope15", 1]
+    ], []
 ];

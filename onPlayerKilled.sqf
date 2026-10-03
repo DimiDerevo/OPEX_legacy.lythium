@@ -3,9 +3,11 @@
 
 // SAVING GEAR
 //player setVariable ["current_loadout", getUnitLoadout player];
-[player, [missionNamespace, "myLoadout"]] call BIS_fnc_saveInventory;
+// [player, [missionNamespace, "myLoadout"]] call BIS_fnc_saveInventory;
+private _loadout = [getUnitLoadout player] call acre_api_fnc_filterUnitLoadout;
+missionNamespace setVariable ["DD_myLoadout", _loadout, false];
 
- // SAVING PRIMARY WEAPON (because the BIS_fnc_saveInventory function above doesn't always restore the primary weapon as it should)
+//  // SAVING PRIMARY WEAPON (because the BIS_fnc_saveInventory function above doesn't always restore the primary weapon as it should)
 missionNamespace setVariable ["myPrimaryWeapon", primaryWeapon player];
 missionNamespace setVariable ["myPrimaryWeaponItems", primaryWeaponItems player];
 

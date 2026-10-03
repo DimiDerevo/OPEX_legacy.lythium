@@ -1,6 +1,9 @@
-﻿// LOADING GEAR
+﻿waitUntil {(isSwitchingWeapon player) isEqualTo false && (stance player) isNotEqualTo "PRONE"};
+
+// LOADING GEAR
 //player setUnitLoadout (player getVariable ["current_loadout", []]);
-[player, [missionNamespace, "myLoadout"]] call BIS_fnc_loadInventory;
+//[player, [missionNamespace, "myLoadout"]] call BIS_fnc_loadInventory;
+player setUnitLoadout (missionNamespace getVariable ["DD_myLoadout", []]);
 
 // LOADING INSIGNIA
 sleep 0.1;
