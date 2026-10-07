@@ -57,6 +57,7 @@
 	private _skill = param [7, [0,1], [[]]];
 	private _probability = param [8, 100, [0]];
 	private _lifeTime = param [9, "distance", [""]];
+	private _isPatrol = param [10, false, [false]];
 
 	// DEBUGGING
 if (OPEX_debug) then
@@ -94,7 +95,13 @@ if (OPEX_debug) then
 				};
 		} else {_position = _center};
 	if (_position isEqualTo [0,0,0]) exitWith {};
-
+	private _exit = false;
+	switch (_side) do {
+		case east: {if ([_position, [west], 150] call Gemini_fnc_areEnemiesNearby) then {_exit = true}};
+		case west: {if ([_position, [east], 300] call Gemini_fnc_areEnemiesNearby) then {_exit = true}};
+	};
+	if (_exit) exitWith {};
+	
 	if (OPEX_debug) then
 		{
 			diag_log text format ["[spawnSquad.sqf called from: %11] Creating squad at pos: %12 | args: [%1, %2, %3, %4, %5, %6, %7, %8, %9, %10]", _side, _types, _quantity, _center, _radius, _mission, _destination, _skill, _probability, _lifeTime, _fnc_scriptNameParent, _position];

@@ -23,7 +23,7 @@
 // ----------------------------------------------------------------------
 
 	// UNIFORM
-	_unit forceAddUniform (selectRandom OPEX_friendly_ghillieUniforms);
+	_unit forceAddUniform (selectRandom OPEX_friendly_commonUniforms);
 	[_unit] spawn Gemini_fnc_setUnitInsigna;
 
 	// VEST

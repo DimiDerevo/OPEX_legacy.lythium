@@ -171,7 +171,7 @@
 				if (_selectedRole == "chopperPilot") then {[_unit, {_this execVM "loadouts\full\chopperPilot.sqf"}] remoteExec ["spawn", _unit]};
 				if (_selectedRole == "aircraftPilot") then {[_unit, {_this execVM "loadouts\full\aircraftPilot.sqf"}] remoteExec ["spawn", _unit]};
 				if (_selectedRole == "ammoAssistant") then {[_unit, {_this execVM "loadouts\full\ammoAssistant.sqf"}] remoteExec ["spawn", _unit]};
-				if (_selectedRole == "aa") then {[_unit, {_this execVM "loadouts\full\aa.sqf"}] remoteExec ["spawn", _unit]};
+				if (_selectedRole == "aa") then {[_unit, {_this execVM "loadouts\full\rifleman.sqf"}] remoteExec ["spawn", _unit]};
 				if (_selectedRole == "repairer") then {[_unit, {_this execVM "loadouts\full\repairer.sqf"}] remoteExec ["spawn", _unit]};
 				if (_selectedRole == "crewman") then {[_unit, {_this execVM "loadouts\full\crewman.sqf"}] remoteExec ["spawn", _unit]};
 				if (_selectedRole == "radioOperator") then {[_unit, {_this execVM "loadouts\full\radioOperator.sqf"}] remoteExec ["spawn", _unit]};
@@ -196,7 +196,7 @@
 				if (_selectedRole == "chopperPilot") then {[_unit] execVM "loadouts\full\chopperPilot.sqf"};
 				if (_selectedRole == "aircraftPilot") then {[_unit] execVM "loadouts\full\aircraftPilot.sqf"};
 				if (_selectedRole == "ammoAssistant") then {[_unit] execVM "loadouts\full\ammoAssistant.sqf"};
-				if (_selectedRole == "aa") then {[_unit] execVM "loadouts\full\aa.sqf"};
+				if (_selectedRole == "aa") then {[_unit] execVM "loadouts\full\rifleman.sqf"};
 				if (_selectedRole == "repairer") then {[_unit] execVM "loadouts\full\repairer.sqf"};
 				if (_selectedRole == "crewman") then {[_unit] execVM "loadouts\full\crewman.sqf"};
 				if (_selectedRole == "radioOperator") then {[_unit] execVM "loadouts\full\radioOperator.sqf"};

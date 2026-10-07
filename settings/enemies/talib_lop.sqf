@@ -93,9 +93,15 @@
 	OPEX_enemy_crewman = "LOP_AM_OPF_Infantry_Rifleman_2";
 	OPEX_enemy_commonUnits = [OPEX_enemy_rifleman];
 	OPEX_enemy_specialUnits = [OPEX_enemy_grenadier, OPEX_enemy_MG, OPEX_enemy_AT, OPEX_enemy_marksman, OPEX_enemy_AA];
-	OPEX_enemy_allUnitsWeights = [1, 0.3, 0.5, 1.5, 0.15, 0.05];
+	OPEX_enemy_allUnitsWeights = [1, 0.3, 0.5, 0.5, 0.15, 0.05];
 	OPEX_enemy_allUnits = [OPEX_enemy_rifleman, OPEX_enemy_grenadier, OPEX_enemy_MG, OPEX_enemy_AT, OPEX_enemy_marksman, OPEX_enemy_AA];
-	OPEX_enemy_units = OPEX_enemy_commonUnits + OPEX_enemy_commonUnits + OPEX_enemy_specialUnits;
+	OPEX_enemy_units = [];
+	for "_i" from 1 to 100 do {OPEX_enemy_units pushBack OPEX_enemy_rifleman};
+	for "_i" from 1 to 30 do {OPEX_enemy_units pushBack OPEX_enemy_grenadier};
+	for "_i" from 1 to 50 do {OPEX_enemy_units pushBack OPEX_enemy_MG};
+	for "_i" from 1 to 70 do {OPEX_enemy_units pushBack OPEX_enemy_AT};
+	for "_i" from 1 to 15 do {OPEX_enemy_units pushBack OPEX_enemy_marksman};
+	for "_i" from 1 to 5 do {OPEX_enemy_units pushBack OPEX_enemy_AA};
 
 	// VEHICLES
 	OPEX_enemy_transportTrucks = ["LOP_AFR_Civ_Ural", "LOP_AFR_Civ_Ural_open"];

@@ -11,6 +11,8 @@ waitUntil {!isNil "OPEX_validBuildings"};
 OPEX_ambientSpawnHandlerLoop = true;
 OPEX_ambientSpawnBaseInterval = 20;
 DD_playingPlayersTest = 10;
+DD_disableAmbientSpawnRed = false;
+DD_disableAmbientSpawnBlue = false;
 private _handle = [] spawn {};
 private _interval = OPEX_ambientSpawnBaseInterval;
 private _newSpawnType = "";
@@ -56,6 +58,7 @@ while {true} do {
         
         switch (["east", "west"] selectRandomWeighted [0.9, 0.1]) do {
             case "east": {
+                if (DD_disableAmbientSpawnRed) exitwith {};
                 switch ((selectRandomWeighted OPEX_ambientEnemyData)#0) do {
                     case (OPEX_ambientEnemyData#00#0):    {if (OPEX_ambientEnemyData#00#1#0 < OPEX_ambientEnemyData#00#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#00#2#2; _handle = ([00] spawn Gemini_fnc_ambientEnemyPatrols2)}};
                     case (OPEX_ambientEnemyData#02#0):    {if (OPEX_ambientEnemyData#02#1#0 < OPEX_ambientEnemyData#02#1#1) then  {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientEnemyData#02#2#2; _handle = ([02] spawn Gemini_fnc_ambientEnemyBivouacs2)}};
@@ -68,6 +71,7 @@ while {true} do {
                 };  
             };
             case "west": {
+                if (DD_disableAmbientSpawnBlue) exitwith {};
                 switch ((selectRandomWeighted OPEX_ambientFriendData)#0) do {
                     case (OPEX_ambientFriendData#00#0):    {if ((OPEX_ambientFriendData#00#1#0 < OPEX_ambientFriendData#00#1#1) && !(OPEX_taskID == "06")) then     {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientFriendData#00#2#2; _handle = ([00] spawn Gemini_fnc_ambientFriendlyPatrols2)}};
                     case (OPEX_ambientFriendData#02#0):    {if (OPEX_ambientFriendData#02#1#0 < OPEX_ambientFriendData#02#1#1) then                                 {_interval = OPEX_ambientSpawnBaseInterval * OPEX_ambientFriendData#02#2#2; _handle = ([02] spawn Gemini_fnc_ambientFriendlyRoadblocks2)}};

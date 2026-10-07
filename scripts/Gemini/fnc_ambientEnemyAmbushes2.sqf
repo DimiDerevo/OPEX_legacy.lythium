@@ -7,6 +7,7 @@ private _overwatchPos = [];
 // LOOKING FOR A RANDOM ROAD AROUND SELECTED PLAYER
 private _roadPos = ["road", _player, OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi * 0.8] call Gemini_fnc_findPos;
 if (_roadPos isEqualTo [0,0,0]) exitWith {};
+if ([_roadPos, [west], 200] call Gemini_fnc_areEnemiesNearby) exitWith {};
 
 // SPAWNING AMBUSH
 for "_i" from 1 to (selectRandom [1,1,1,2,2,2,3]) do {

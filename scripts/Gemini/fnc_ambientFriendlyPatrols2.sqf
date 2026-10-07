@@ -5,7 +5,7 @@ if (OPEX_playingPlayers isEqualTo []) exitWith {};
 private _player = selectRandom OPEX_playingPlayers;
 
 // SPAWNING FRIENDS
-private _squad = [OPEX_friendly_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "motorized", "motorized", "armored"], selectRandom [4,8], _player, [OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi], "patrol", _player, OPEX_friendly_AIskill, 100] call Gemini_fnc_spawnSquad;
+private _squad = [OPEX_friendly_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "motorized", "motorized", "armored"], selectRandom [4,8], _player, [OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi], "patrol", _player, OPEX_friendly_AIskill, 100, "distance", true] call Gemini_fnc_spawnSquad;
 if (isNil "_squad") exitWith {};
 
 OPEX_ambientFriendData#_index#1 set [0, ((OPEX_ambientFriendData#_index#1#0) + 1)];

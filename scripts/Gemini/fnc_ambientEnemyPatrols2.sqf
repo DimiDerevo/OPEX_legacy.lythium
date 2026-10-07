@@ -15,7 +15,9 @@ private _squad = [
 	"patrol", 
 	_player, 
 	OPEX_enemy_AIskill, 
-	100
+	100,
+	"distance",
+	true
 ] call Gemini_fnc_spawnSquad;
 if (isNil "_squad") exitWith {};
 OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];

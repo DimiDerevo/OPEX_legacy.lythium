@@ -163,7 +163,7 @@
 		};
 
 	// TPW
-	0 = [10,1000,1,1] execVM "scripts\TPW\tpw_hud_init.sqf";
+	//0 = [10,1000,1,1] execVM "scripts\TPW\tpw_hud_init.sqf"; // This BS forces closing aperture in low moonlight conditions until pitch black
 	0 = [60,5] execvm "scripts\TPW\tpw_furniture.sqf";
 
 	// PSYCHOBASTARD

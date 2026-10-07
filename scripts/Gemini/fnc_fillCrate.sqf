@@ -51,7 +51,7 @@
 			if (typeOf _crate == "Box_NATO_WpsLaunch_F") then
 				{
 					_index = 0; for "_i" from 1 to (count OPEX_friendly_ATlaunchers) do {_crate addItemCargoGlobal [(OPEX_friendly_ATlaunchers select _index), 10]; _index = _index + 1};
-					_index = 0; for "_i" from 1 to (count OPEX_friendly_AAlaunchers) do {_crate addItemCargoGlobal [(OPEX_friendly_AAlaunchers select _index), 3]; _index = _index + 1};
+					//_index = 0; for "_i" from 1 to (count OPEX_friendly_AAlaunchers) do {_crate addItemCargoGlobal [(OPEX_friendly_AAlaunchers select _index), 3]; _index = _index + 1};
 				};
 
 			// AMMO
@@ -77,7 +77,7 @@
 					private ["_compiledMagazines", "_launcherMagazines"];
 					_compiledMagazines = [];
 					_launcherMagazines = [];
-					{_launcherMagazines append (getArray (configfile >> "CfgWeapons" >> _x >> "magazines"))} forEach (OPEX_friendly_ATlaunchers + OPEX_friendly_AAlaunchers);
+					{_launcherMagazines append (getArray (configfile >> "CfgWeapons" >> _x >> "magazines"))} forEach (OPEX_friendly_ATlaunchers);
 					{_compiledMagazines pushBackUnique _x} forEach _launcherMagazines;
 					_index = 0; for "_i" from 1 to (count _compiledMagazines) do {_crate addItemCargoGlobal [(_compiledMagazines select _index), 10]; _index = _index + 1};
 
@@ -178,7 +178,7 @@
 											{
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_commonUniforms_woodland) do {_clothes pushBackUnique (OPEX_friendly_commonUniforms_woodland select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_specialUniforms_woodland) do {_clothes pushBackUnique (OPEX_friendly_specialUniforms_woodland select _index); _index = _index + 1};
-												_index = 0; for "_i" from 1 to (count OPEX_friendly_ghillieUniforms_woodland) do {_clothes pushBackUnique (OPEX_friendly_ghillieUniforms_woodland select _index); _index = _index + 1};
+												//_index = 0; for "_i" from 1 to (count OPEX_friendly_ghillieUniforms_woodland) do {_clothes pushBackUnique (OPEX_friendly_ghillieUniforms_woodland select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_heliPilotUniforms_woodland) do {_clothes pushBackUnique (OPEX_friendly_heliPilotUniforms_woodland select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_aircraftPilotUniforms_woodland) do {_clothes pushBackUnique (OPEX_friendly_aircraftPilotUniforms_woodland select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_tankPilotUniforms_woodland) do {_clothes pushBackUnique (OPEX_friendly_tankPilotUniforms_woodland select _index); _index = _index + 1};
@@ -229,7 +229,7 @@
 											{
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_commonUniforms_desert) do {_clothes pushBackUnique (OPEX_friendly_commonUniforms_desert select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_specialUniforms_desert) do {_clothes pushBackUnique (OPEX_friendly_specialUniforms_desert select _index); _index = _index + 1};
-												_index = 0; for "_i" from 1 to (count OPEX_friendly_ghillieUniforms_desert) do {_clothes pushBackUnique (OPEX_friendly_ghillieUniforms_desert select _index); _index = _index + 1};
+												//_index = 0; for "_i" from 1 to (count OPEX_friendly_ghillieUniforms_desert) do {_clothes pushBackUnique (OPEX_friendly_ghillieUniforms_desert select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_heliPilotUniforms_desert) do {_clothes pushBackUnique (OPEX_friendly_heliPilotUniforms_desert select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_aircraftPilotUniforms_desert) do {_clothes pushBackUnique (OPEX_friendly_aircraftPilotUniforms_desert select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_tankPilotUniforms_desert) do {_clothes pushBackUnique (OPEX_friendly_tankPilotUniforms_desert select _index); _index = _index + 1};
@@ -280,7 +280,7 @@
 											{
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_commonUniforms_snow) do {_clothes pushBackUnique (OPEX_friendly_commonUniforms_snow select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_specialUniforms_snow) do {_clothes pushBackUnique (OPEX_friendly_specialUniforms_snow select _index); _index = _index + 1};
-												_index = 0; for "_i" from 1 to (count OPEX_friendly_ghillieUniforms_snow) do {_clothes pushBackUnique (OPEX_friendly_ghillieUniforms_snow select _index); _index = _index + 1};
+												//_index = 0; for "_i" from 1 to (count OPEX_friendly_ghillieUniforms_snow) do {_clothes pushBackUnique (OPEX_friendly_ghillieUniforms_snow select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_heliPilotUniforms_snow) do {_clothes pushBackUnique (OPEX_friendly_heliPilotUniforms_snow select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_aircraftPilotUniforms_snow) do {_clothes pushBackUnique (OPEX_friendly_aircraftPilotUniforms_snow select _index); _index = _index + 1};
 												_index = 0; for "_i" from 1 to (count OPEX_friendly_tankPilotUniforms_snow) do {_clothes pushBackUnique (OPEX_friendly_tankPilotUniforms_snow select _index); _index = _index + 1};

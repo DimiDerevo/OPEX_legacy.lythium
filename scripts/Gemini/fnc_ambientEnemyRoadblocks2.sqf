@@ -6,6 +6,7 @@ private _player = selectRandom OPEX_playingPlayers;
 // LOOKING FOR A RANDOM ROAD AROUND SELECTED PLAYER
 private _roadPos = ["road", _player] call Gemini_fnc_findPos;
 if (_roadPos isEqualTo [0,0,0]) exitWith {};
+if ([_roadPos, [west], 300] call Gemini_fnc_areEnemiesNearby) exitWith {};
 private _roadPos = ([_roadPos nearRoads 15] call Gemini_fnc_sanitizeRoads) select 0;
 
 // LOOKING FOR CONNECTED ROADS

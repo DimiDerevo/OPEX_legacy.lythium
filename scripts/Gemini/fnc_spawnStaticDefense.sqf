@@ -33,7 +33,7 @@
 				{
 					if ((_staticType in OPEX_enemy_MGstatics) || (_staticType in OPEX_friendly_MGstatics)) then {_composition = "compositions\mg.sqf"};
 					if ((_staticType in OPEX_enemy_ATstatics) || (_staticType in OPEX_friendly_ATstatics)) then {_composition = "compositions\at.sqf"};
-					if ((_staticType in OPEX_enemy_AAstatics) || (_staticType in OPEX_friendly_AAstatics)) then {_composition = "compositions\aa.sqf"};
+					if ((_staticType in OPEX_enemy_AAstatics) || (_staticType in OPEX_friendly_AAstatics)) then {_composition = "compositions\rifleman.sqf"};
 					if ((_staticType in OPEX_enemy_mortarStatics) || (_staticType in OPEX_friendly_mortarStatics)) then {_composition = "compositions\mortar.sqf"};
 					_flatPosition = _position;
 				};

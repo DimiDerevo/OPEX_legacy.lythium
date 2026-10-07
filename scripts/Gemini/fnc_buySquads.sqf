@@ -86,7 +86,7 @@
 						if ((_unitTypes select _count) == OPEX_friendly_MGLight) then {[_unit] execVM "loadouts\full\mgLight.sqf"};
 						if ((_unitTypes select _count) == OPEX_friendly_MGHeavy) then {[_unit] execVM "loadouts\full\mgHeavy.sqf"};
 						if ((_unitTypes select _count) == OPEX_friendly_AT) then {[_unit] execVM "loadouts\full\at.sqf"};
-						if ((_unitTypes select _count) == OPEX_friendly_AA) then {[_unit] execVM "loadouts\full\aa.sqf"};
+						if ((_unitTypes select _count) == OPEX_friendly_AA) then {[_unit] execVM "loadouts\full\rifleman.sqf"};
 						if ((_unitTypes select _count) == OPEX_friendly_ghillie) then {[_unit] execVM "loadouts\full\ghillieSniper.sqf"};
 						if ((_unitTypes select _count) == OPEX_friendly_spotter) then {[_unit] execVM "loadouts\full\ghillieSpotter.sqf"};
 						if ((_unitTypes select _count) == OPEX_friendly_marksman) then {[_unit] execVM "loadouts\full\marksman.sqf"};

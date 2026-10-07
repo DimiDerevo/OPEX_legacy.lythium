@@ -9,6 +9,7 @@ private _player = selectRandom OPEX_playingPlayers;
 // LOOKING FOR A RANDOM LOCATION AROUND SELECTED PLAYER
 private _locationPos = [["industry", "military", "isolated"], _player] call Gemini_fnc_findPos;
 if (_locationPos isEqualTo [0,0,0]) exitWith {};
+if ([_locationPos, [west], 500] call Gemini_fnc_areEnemiesNearby) exitWith {};
 _locationSize = ((triggerArea ((_locationPos nearObjects ["EmptyDetector", 5]) select 0)) select 0) max ((triggerArea ((_locationPos nearObjects ["EmptyDetector", 5]) select 0)) select 1);
 
 

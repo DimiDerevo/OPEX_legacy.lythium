@@ -76,6 +76,7 @@ if ((typeOf _vehicle) in (OPEX_enemy_transportTrucks + OPEX_enemy_fuelTrucks + O
 	};
 
 [_vehicle] call Gemini_fnc_setVehicleLoadout;
+if (_vehicle isKindoF "LOP_Nissan_PKM_base") then {_vehicle addMagazinesTurret ["rhs_mag_762x54mm_100", [0], random [2, 4, 7]]};
 
 // INITIALIZING MUSIC RECEIVER
 if ((_vehicle isKindOf "landVehicle") || (_vehicle isKindOf "air") || (_vehicle isKindOf "ship") || (_vehicle isKindOf "tank")) then {waitUntil {!isNil "Gemini_fnc_vehicleMusicReceiver_initVehicle"}; 0 = [_vehicle] spawn Gemini_fnc_vehicleMusicReceiver_initVehicle};

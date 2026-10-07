@@ -64,7 +64,7 @@
 					_positions = [[0, -0.8, 1.85], [0, -0.8, 1.15]];
 					for "_i" from 1 to (count _positions) do
 						{
-							_weapons = OPEX_friendly_ATlaunchers + OPEX_friendly_AAlaunchers;
+							_weapons = OPEX_friendly_ATlaunchers;
 							_weapon = "Library_WeaponHolder" createVehicle (_positions select _index);
 							_weapon addWeaponCargoGlobal [_weapons select _index, 1];
 							[_this, _weapon, _positions select _index] call BIS_fnc_relPosObject;

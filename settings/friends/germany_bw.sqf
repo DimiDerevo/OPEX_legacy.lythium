@@ -201,7 +201,7 @@
 	OPEX_friendly_MGrifles = OPEX_friendly_MGriflesLight + OPEX_friendly_MGriflesHeavy; // don't delete this line if you have defined any of these variables
 	OPEX_friendly_compactRifles = ["BWA3_MP7"];
 	OPEX_friendly_precisionRifles = ["BWA3_G28"];
-	OPEX_friendly_sniperRifles = ["BWA3_G82", "BWA3_G29"];
+	OPEX_friendly_sniperRifles = ["BWA3_G29"];
 	OPEX_friendly_ATlaunchers = ["BWA3_Bunkerfaust","BWA3_CarlGustav","BWA3_PzF3","BWA3_RGW90"];
 	OPEX_friendly_AAlaunchers = ["BWA3_Fliegerfaust"];
 	OPEX_friendly_shotguns = ["rhs_weap_M590_8RD", "rhs_weap_M590_5RD"];

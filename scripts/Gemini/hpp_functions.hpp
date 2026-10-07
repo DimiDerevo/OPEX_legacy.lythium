@@ -2,6 +2,7 @@ class Gemini
 	{
 		class myFunctions
 			{
+				class areEnemiesNearby {file = "scripts\Gemini\fnc_areEnemiesNearby.sqf";};
 				class addAction {file = "scripts\Gemini\fnc_addAction.sqf";};
 				class addLoadedWeapon {file = "scripts\Gemini\fnc_addLoadedWeapon.sqf";};
 				class addSupport {file = "scripts\Gemini\fnc_addSupport.sqf";};

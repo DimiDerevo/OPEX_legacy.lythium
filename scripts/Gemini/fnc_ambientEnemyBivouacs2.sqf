@@ -6,6 +6,7 @@ private _player = selectRandom OPEX_playingPlayers;
 // LOOKING FOR A RANDOM ABANDONED AREA AROUND SELECTED PLAYER
 private _position = ["land_isolated", _player, OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi * 0.9, 5] call Gemini_fnc_findPos;
 if (_position isEqualTo [0,0,0]) exitWith {};
+if ([_position, [west], 500] call Gemini_fnc_areEnemiesNearby) exitWith {};
 private _lightSourcePos =  ["land", _position, 1, 10, 2] call Gemini_fnc_findPos;
 if (_lightSourcePos isEqualTo [0,0,0]) exitWith {};
 

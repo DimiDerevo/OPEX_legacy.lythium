@@ -262,7 +262,7 @@ switch (_side) do
 						case OPEX_friendly_MGLight			:	{[_unit] execVM "loadouts\full\mgLight.sqf"};
 						case OPEX_friendly_MGHeavy			:	{[_unit] execVM "loadouts\full\mgHeavy.sqf"};
 						case OPEX_friendly_AT				:	{[_unit] execVM "loadouts\full\at.sqf"};
-						case OPEX_friendly_AA				:	{[_unit] execVM "loadouts\full\aa.sqf"};
+						case OPEX_friendly_AA				:	{[_unit] execVM "loadouts\full\rifleman.sqf"};
 						case OPEX_friendly_ghillie			:	{[_unit] execVM "loadouts\full\ghillieSniper.sqf"};
 						case OPEX_friendly_spotter			:	{[_unit] execVM "loadouts\full\ghillieSpotter.sqf"};
 						case OPEX_friendly_marksman			:	{[_unit] execVM "loadouts\full\marksman.sqf"};
@@ -289,7 +289,7 @@ switch (_side) do
 				if ((typeOf _unit) == OPEX_friendly_MGLight) then {[_unit] execVM "loadouts\full\mgLight.sqf"};
 				if ((typeOf _unit) == OPEX_friendly_MGHeavy) then {[_unit] execVM "loadouts\full\mgHeavy.sqf"};
 				if ((typeOf _unit) == OPEX_friendly_AT) then {[_unit] execVM "loadouts\full\at.sqf"};
-				if ((typeOf _unit) == OPEX_friendly_AA) then {[_unit] execVM "loadouts\full\aa.sqf"};
+				if ((typeOf _unit) == OPEX_friendly_AA) then {[_unit] execVM "loadouts\full\rifleman.sqf"};
 				if ((typeOf _unit) == OPEX_friendly_ghillie) then {[_unit] execVM "loadouts\full\ghillieSniper.sqf"};
 				if ((typeOf _unit) == OPEX_friendly_spotter) then {[_unit] execVM "loadouts\full\ghillieSpotter.sqf"};
 				if ((typeOf _unit) == OPEX_friendly_marksman) then {[_unit] execVM "loadouts\full\marksman.sqf"};

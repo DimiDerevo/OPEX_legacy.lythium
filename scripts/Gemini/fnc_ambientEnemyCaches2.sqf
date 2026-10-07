@@ -8,6 +8,7 @@ private _player = selectRandom OPEX_playingPlayers;
 // LOOKING FOR THE NEAREST ISOLATED LOCATION AROUND SELECTED PLAYER
 private _locationPos = ["isolated", _player] call Gemini_fnc_findPos;
 if (_locationPos isEqualTo [0,0,0]) exitWith {};
+if ([_locationPos, [west], 500] call Gemini_fnc_areEnemiesNearby) exitWith {};
 _locationSize = ((triggerArea ((_locationPos nearObjects ["EmptyDetector", 5]) select 0)) select 0) max ((triggerArea ((_locationPos nearObjects ["EmptyDetector", 5]) select 0)) select 1);
 
 private _cratePos = ["land", _locationPos, 0, _locationSize / 2, 5] call Gemini_fnc_findPos;

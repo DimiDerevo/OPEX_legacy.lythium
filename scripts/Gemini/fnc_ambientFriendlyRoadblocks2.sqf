@@ -6,6 +6,7 @@ private _player = selectRandom OPEX_playingPlayers;
 // LOOKING FOR A RANDOM ROAD AROUND SELECTED PLAYER
 private _roadPos = ["road", _player] call Gemini_fnc_findPos;
 if (_roadPos isEqualTo [0,0,0]) exitWith {};
+if ([_roadPos, [east], 300] call Gemini_fnc_areEnemiesNearby) exitWith {};
 
 // CHECKING IF ENEMIES ARE NEARBY (to avoid roadblocks proximity)
 if (count (([_roadPos, 250, 250, 0, false] nearEntities [["CAManBase"], false, true, true]) select {side _x == OPEX_enemy_side1}) > 0) exitWith {};
