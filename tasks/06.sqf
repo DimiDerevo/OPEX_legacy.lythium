@@ -238,7 +238,12 @@
 						{
 
 							// SPAWNING SQUAD
-							private _squad = [OPEX_enemy_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "motorized", "motorized", "armored"], -1, _truck, [500, 1500], "attack", _truck, OPEX_enemy_AIskill, 100, "task"] call Gemini_fnc_spawnSquad;
+							private _type = selectRandomWeighted [
+								"infantry", 0.45,
+								"motorized", 0.45,
+								"armored", 0.10
+							];
+							private _squad = [OPEX_enemy_side1, _type, -1, _truck, [500, 1500], "attack", _truck, OPEX_enemy_AIskill, 100, "task"] call Gemini_fnc_spawnSquad;
 
 							// INCREASING WAVE COUNT
 							currentEnemyWaves = currentEnemyWaves + 1;

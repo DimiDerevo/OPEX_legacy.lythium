@@ -11,7 +11,12 @@ private _player = selectRandom _spottedPlayers;
 private _reinforcePos = getPosATL _player;
 
 // SPAWNING ENEMIES
-private _squad = [OPEX_enemy_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "motorized", "motorized", "motorized", "motorized", "motorized", "motorized", "armored"], selectRandom [3,3,3,5,5,5,5,5,8], _player, [OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi], "attack", [_reinforcePos#0 + (random 250) - (random 250), _reinforcePos#1 + (random 250) - (random 250), _reinforcePos#2], OPEX_enemy_AIskill, 100] call Gemini_fnc_spawnSquad;
+private _type = selectRandomWeighted [
+	"infantry", 0.45,
+	"motorized", 0.45,
+	"armored", 0.10
+];
+private _squad = [OPEX_enemy_side1, _type, selectRandom [3,3,3,5,5,5,5,5,8], _player, [OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi], "attack", [_reinforcePos#0 + (random 250) - (random 250), _reinforcePos#1 + (random 250) - (random 250), _reinforcePos#2], OPEX_enemy_AIskill, 100] call Gemini_fnc_spawnSquad;
 if (isNil "_squad") exitWith {};
 
 OPEX_ambientEnemyData#_index#1 set [0, ((OPEX_ambientEnemyData#_index#1#0) + 1)];

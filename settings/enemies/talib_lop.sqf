@@ -111,7 +111,7 @@
 	OPEX_enemy_motorizedVehicles = OPEX_enemy_transportTrucks + OPEX_enemy_transportCars + OPEX_enemy_combatCars;
 	OPEX_enemy_zodiacs = ["I_G_Boat_Transport_01_F", "O_G_Boat_Transport_01_F"];
 	OPEX_enemy_ships = ["C_Boat_Civil_01_F"];
-	OPEX_enemy_armored = ["rhs_2s3_at_tv", "rhs_2s1_at_tv", "LOP_ISTS_OPF_BMP1", "LOP_TKA_BMP1D", "LOP_ISTS_OPF_BMP2", "LOP_TKA_BMP2D", "LOP_AM_OPF_BTR60", "LOP_SLA_BTR70", "LOP_ISTS_OPF_T34", "LOP_ISTS_OPF_T55", "LOP_ISTS_OPF_BMP1", "LOP_ISTS_OPF_BMP2", "LOP_AM_OPF_BTR60", "LOP_SLA_BTR70", "LOP_ISTS_OPF_T34", "LOP_ISTS_OPF_T55", "LOP_ISTS_OPF_M113_W"];
+	OPEX_enemy_armored = ["LOP_AM_OPF_BTR60", "LOP_ISTS_OPF_M113_W"];
 	OPEX_enemy_MGstatics = ["LOP_AM_OPF_Static_DSHKM", "LOP_AM_OPF_Kord", "LOP_AM_OPF_Kord_High", "LOP_AM_OPF_Static_M2", "LOP_AM_OPF_Static_M2_MiniTripod", "LOP_AM_OPF_NSV_TriPod"];
 	OPEX_enemy_GLstatics = ["LOP_AM_OPF_AGS30_TriPod", "LOP_AM_OPF_Static_Mk19_TriPod"];
 	OPEX_enemy_ATstatics = ["LOP_AM_OPF_Static_SPG9", "LOP_AM_OPF_Static_AT4"];

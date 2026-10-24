@@ -27,7 +27,12 @@ private _mainFunction =
 		OPEX_ambientFriendlyPatrols = OPEX_ambientFriendlyPatrols + 1; publicVariable "OPEX_ambientFriendlyPatrols";
 
 		// SPAWNING FRIENDS
-		private _squad = [OPEX_friendly_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "motorized", "motorized", "armored"], selectRandom [4,8], _player, [OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi], "patrol", _player, OPEX_friendly_AIskill, 100] call Gemini_fnc_spawnSquad;
+		private _type = selectRandomWeighted [
+			"infantry", 0.45,
+			"motorized", 0.45,
+			"armored", 0.10
+		];
+		private _squad = [OPEX_friendly_side1, _type, selectRandom [4,8], _player, [OPEX_spawnDistanceMini, OPEX_spawnDistanceMaxi], "patrol", _player, OPEX_friendly_AIskill, 100] call Gemini_fnc_spawnSquad;
 		if (isNil "_squad") exitWith {OPEX_ambientFriendlyPatrols = OPEX_ambientFriendlyPatrols - 1; publicVariable "OPEX_ambientFriendlyPatrols"};
 
 		// SENDING RADIO MESSAGE + CREATING MARKER TO INFORM PLAYERS THAT A FRIEND PATROL IS NEARBY

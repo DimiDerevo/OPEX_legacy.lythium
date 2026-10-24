@@ -96,7 +96,12 @@
 							for "_i" from 1 to ([1,2,3,4,5,6] selectRandomWeighted [0.1, 1.0, 0.5, 0.2, 0.2, 0.1]) do
 								{
 									// SPAWNING SQUAD
-									private _squad = [OPEX_enemy_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "motorized", "motorized", "motorized", "motorized", "motorized", "armored"], -1, _squadPos, 50, "attack", _villagePos, OPEX_enemy_AIskill, 100, "task"] call Gemini_fnc_spawnSquad;
+									private _type = selectRandomWeighted [
+										"infantry", 0.45,
+										"motorized", 0.45,
+										"armored", 0.10
+									];
+									private _squad = [OPEX_enemy_side1, _type, -1, _squadPos, 50, "attack", _villagePos, OPEX_enemy_AIskill, 100, "task"] call Gemini_fnc_spawnSquad;
 									if ((leader _squad) distance2D _villagePos <= 500) then {_squad setSpeedMode "normal"};
 									if (((leader _squad) distance2D _villagePos > 500) && ((leader _squad) distance2D _villagePos <= 1000)) then {_squad setSpeedMode "normal"};
 									if ((leader _squad) distance2D _villagePos > 1000) then {_squad setSpeedMode "normal"};

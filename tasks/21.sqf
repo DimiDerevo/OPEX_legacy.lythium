@@ -105,7 +105,12 @@
 				{
 					for "_i" from 1 to (selectRandom [1,2,3,4,5]) do
 						{
-							[OPEX_enemy_side1, ["infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "infantry", "motorized", "armored"], -1, _chopperPos, [500, 1000], "attack", _chopperPos, OPEX_enemy_AIskill, 75, "task"] call Gemini_fnc_spawnSquad;
+							private _type = selectRandomWeighted [
+								"infantry", 0.45,
+								"motorized", 0.45,
+								"armored", 0.10
+							];
+							[OPEX_enemy_side1, _type, -1, _chopperPos, [500, 1000], "attack", _chopperPos, OPEX_enemy_AIskill, 75, "task"] call Gemini_fnc_spawnSquad;
 						};
 				};
 		};
