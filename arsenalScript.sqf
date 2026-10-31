@@ -526,7 +526,7 @@ _vest_LBT6094_MC = [
 "MMM_TMC6094A_556_MultiCam_top04_front03_sides03_bot00_tape00",
 "MMM_TMC6094A_556_MultiCam_top05_front03_sides03_bot00_tape00"
 ];
-
+_arsenalArray append _vest_LBT6094_MC;
 // ==========================Backpack==========================
 
 
