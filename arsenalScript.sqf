@@ -6,8 +6,11 @@ _rifle_G27 = ["BWA3_G27", "BWA3_G27_tan"];
 _arsenalArray append _rifle_G27;
 _rifle_G28 = ["BWA3_G28"];
 _arsenalArray append _rifle_G28;
-_rifle_G29 = ["BWA3_G29"];
-_arsenalArray append _rifle_G29;
+//_rifle_G29 = ["BWA3_G29"];
+//_arsenalArray append _rifle_G29;
+_rifle_G22A2 = ["MSS_AXSR_762_DE","MSS_AXSR_762_BLK","MSS_AXSR_762_SAGE","MSS_AXSR_762_Camo","MSS_AXSR_300WM_DE","MSS_AXSR_300WM_BLK",
+"MSS_AXSR_300WM_SAGE","MSS_AXSR_300WM_Camo","MSS_AXSR_65CM_DE","MSS_AXSR_65CM_BLK","MSS_AXSR_65CM_SAGE","MSS_AXSR_65CM_Camo"];
+_arsenalArray append _rifle_G22A2   ;
 
 _rifle_G36A2 = ["BWA3_G36A2"];
 _arsenalArray append _rifle_G36A2;
@@ -42,8 +45,6 @@ _rifleHK416_D14_stock = ["rhs_weap_hk416d145"];
 _arsenalArray append _rifleHK416_D14_stock;
 _rifleHK416_D14_desert = ["rhs_weap_hk416d145_d"];
 _arsenalArray append _rifleHK416_D14_desert;
-_rifleHK416_D14_desertnet = ["rhs_weap_hk416d145_d_2"];
-_arsenalArray append _rifleHK416_D14_desertnet;
 _rifleHK416_D14_M320 = ["rhs_weap_hk416d145_m320"];
 _arsenalArray append _rifleHK416_D14_M320;
 _rifleHK416_D14_woodland = ["rhs_weap_hk416d145_wd"];
@@ -51,23 +52,9 @@ _arsenalArray append _rifleHK416_D14_woodland;
 _rifleHK416_D14_woodlandnet = ["rhs_weap_hk416d145_wd"];
 _arsenalArray append _rifleHK416_D14_woodlandnet;
 
-_rifleHK416_D10_SMR = ["rhs_weap_HK416D10_smr"];
-_arsenalArray append _rifleHK416_D10_SMR;
-_rifleHK416_D10_SMR_des = ["rhs_weap_HK416D10_smr_des"];
-_arsenalArray append _rifleHK416_D10_SMR_des;
-_rifleHK416_D10_SMR_tan = ["rhs_weap_HK416D10_smr_tan"];
-_arsenalArray append _rifleHK416_D10_SMR_tan;
-_rifleHK416_D10_SMR_wdl = ["rhs_weap_HK416D10_smr_wdl"];
-_arsenalArray append _rifleHK416_D10_SMR_wdl;
-
-_rifleHK416_D15_SMR = ["rhs_weap_HK416D15_smr"];
-_arsenalArray append _rifleHK416_D15_SMR;
-_rifleHK416_D15_SMR_des = ["rhs_weap_HK416D15_smr_des"];
-_arsenalArray append _rifleHK416_D15_SMR_des;
-_rifleHK416_D15_SMR_tan = ["rhs_weap_HK416D15_smr_tan"];
-_arsenalArray append _rifleHK416_D15_SMR_tan;
-_rifleHK416_D15_SMR_wdl = ["rhs_weap_HK416D15_smr_wdl"];
-_arsenalArray append _rifleHK416_D15_SMR_wdl;
+_rifle_HK416_modern = ["MCC_HK416A8_556_11_BLK_HK","MCC_HK416A8_556_11_BLK_CTR","MCC_HK416A8_556_11_BLK_Bravo","MCC_HK416A8_556_14_BLK_HK",
+"MCC_HK416A8_556_14_BLK_CTR","MCC_HK416A8_556_14_BLK_Bravo","MCC_HK416A8_556_16_BLK_HK","MCC_HK416A8_556_16_BLK_CTR","MCC_HK416A8_556_16_BLK_Bravo","MCC_G95_KSK_556"];
+_arsenalArray append _rifle_HK416_modern;
 // ==========================Sidearm==========================
 
 _pistol_P8 = ["BWA3_P8"];
@@ -128,7 +115,98 @@ _headgear_FAST = ["BWA3_OpsCore_FastMT", "BWA3_OpsCore_FastMT_Fleck", "BWA3_OpsC
 "BWA3_OpsCore_FastMT_Peltor_Multi", "BWA3_OpsCore_FastMT_SOF_Multi", "BWA3_OpsCore_FastMT_Peltor", "BWA3_OpsCore_FastMT_SOF", "BWA3_OpsCore_FastMT_Tropen", 
 "BWA3_OpsCore_FastMT_Peltor_Tropen", "BWA3_OpsCore_FastMT_SOF_Tropen"];
 _arsenalArray append _headgear_FAST;
+_headgear_airframe = ["MIG_AIRFRAME_TAN_CLEAN", "MIG_AIRFRAME_TAN_COVER", "MIG_AIRFRAME_TAN_FULL_KIT", "MIG_AIRFRAME_OCP_CLEAN","MIG_AIRFRAME_OCP_COVER", 
+"MIG_AIRFRAME_OCP_FULL_KIT"];
+_arsenalArray append _headgear_airframe;
+_headgear_FTHS = ["MIG_FTHS_TAN_CLEAN","MIG_FTHS_OCP_CLEAN","MIG_FTHS_BLK_CLEAN","MIG_FTHS_TAN_FULL_KIT","MIG_FTHS_MOAB_FULL_KIT","MIG_FTHS_OCP_FULL_KIT",
+"MIG_FTHS_TAN_PLATATAC","MIG_FTHS_BRN_PLATATAC","MIG_FTHS_OCP_PLATATAC","MIG_FTHS_BLK_PLATATAC","MIG_FTHS_OCP_SCRIM","MIG_FTHS_OD_SCRIM","MIG_FTHS_SCRIM_TAN"];
+_arsenalArray append _headgear_FTHS;
+_headgear_bikehelmet = ["MIG_Galvion_Bump_TAN_Full","MIG_Galvion_Bump_BLK_Full"];
+_arsenalArray append _headgear_bikehelmet;
 
+
+_headgear_beanie = ["MMM_UA_FleeceBeanie_Tan",
+"MMM_UA_FleeceBeanie_Tan_HowardImpactSport",
+"MMM_UA_FleeceBeanie_Tan_PeltorComTac3",
+"MMM_UA_FleeceBeanie_Tan_SordinSPX",
+"MMM_UA_FleeceBeanie_Black",
+"MMM_UA_FleeceBeanie_Black_HowardImpactSport",
+"MMM_UA_FleeceBeanie_Black_PeltorComTac3",
+"MMM_UA_FleeceBeanie_Black_SordinSPX",
+"MMM_UA_FleeceBeanie_Coyote",
+"MMM_UA_FleeceBeanie_Coyote_HowardImpactSport",
+"MMM_UA_FleeceBeanie_Coyote_PeltorComTac3",
+"MMM_UA_FleeceBeanie_Coyote_SordinSPX",
+"MMM_UA_FleeceBeanie_Olive",
+"MMM_UA_FleeceBeanie_Olive_HowardImpactSport",
+"MMM_UA_FleeceBeanie_Olive_PeltorComTac3",
+"MMM_UA_FleeceBeanie_Olive_SordinSPX",
+"MMM_UA_FleeceBeanie_MultiCam",
+"MMM_UA_FleeceBeanie_MultiCam_HowardImpactSport",
+"MMM_UA_FleeceBeanie_MultiCam_PeltorComTac3",
+"MMM_UA_FleeceBeanie_MultiCam_SordinSPX",
+"MMM_UA_FleeceBeanie_Green",
+"MMM_UA_FleeceBeanie_Green_HowardImpactSport",
+"MMM_UA_FleeceBeanie_Green_PeltorComTac3",
+"MMM_UA_FleeceBeanie_Green_SordinSPX",
+"MMM_UA_FleeceBeanie_MTP",
+"MMM_UA_FleeceBeanie_MTP_HowardImpactSport",
+"MMM_UA_FleeceBeanie_MTP_PeltorComTac3",
+"MMM_UA_FleeceBeanie_MTP_SordinSPX",
+"MMM_UA_FleeceBeanie_MM14",
+"MMM_UA_FleeceBeanie_MM14_HowardImpactSport",
+"MMM_UA_FleeceBeanie_MM14_PeltorComTac3",
+"MMM_UA_FleeceBeanie_MM14_SordinSPX",
+"MMM_UA_FleeceRipStop_Tan",
+"MMM_UA_FleeceRipStop_Tan_HowardImpactSport",
+"MMM_UA_FleeceRipStop_Tan_PeltorComTac3",
+"MMM_UA_FleeceRipStop_Tan_SordinSPX",
+"MMM_UA_FleeceRipStop_DarkOlive",
+"MMM_UA_FleeceRipStop_DarkOlive_HowardImpactSport",
+"MMM_UA_FleeceRipStop_DarkOlive_PeltorComTac3",
+"MMM_UA_FleeceRipStop_DarkOlive_SordinSPX",
+"MMM_UA_FleeceRipStop_MultiCam",
+"MMM_UA_FleeceRipStop_MultiCam_HowardImpactSport",
+"MMM_UA_FleeceRipStop_MultiCam_PeltorComTac3",
+"MMM_UA_FleeceRipStop_MultiCam_SordinSPX",
+"MMM_UA_FleeceRipStop_ArmyOlive",
+"MMM_UA_FleeceRipStop_ArmyOlive_HowardImpactSport",
+"MMM_UA_FleeceRipStop_ArmyOlive_PeltorComTac3",
+"MMM_UA_FleeceRipStop_ArmyOlive_SordinSPX"];
+_arsenalArray append _headgear_beanie;
+_headgear_MMMbalaklava = ["MMM_UA_AssaultFR_Tan",
+"MMM_UA_AssaultFR_Tan_HowardImpactSport",
+"MMM_UA_AssaultFR_Tan_PeltorComTac3",
+"MMM_UA_AssaultFR_Tan_SordinSPX",
+"MMM_UA_AssaultFR_Green",
+"MMM_UA_AssaultFR_Green_HowardImpactSport",
+"MMM_UA_AssaultFR_Green_PeltorComTac3",
+"MMM_UA_AssaultFR_Green_SordinSPX",
+"MMM_UA_AssaultFR_Grey",
+"MMM_UA_AssaultFR_Grey_HowardImpactSport",
+"MMM_UA_AssaultFR_Grey_PeltorComTac3",
+"MMM_UA_AssaultFR_Grey_SordinSPX",
+"MMM_UA_AssaultFR_Black",
+"MMM_UA_AssaultFR_Black_HowardImpactSport",
+"MMM_UA_AssaultFR_Black_PeltorComTac3",
+"MMM_UA_AssaultFR_Black_SordinSPX",
+"MMM_UA_AssaultFRfull_Tan",
+"MMM_UA_AssaultFRfull_Tan_HowardImpactSport",
+"MMM_UA_AssaultFRfull_Tan_PeltorComTac3",
+"MMM_UA_AssaultFRfull_Tan_SordinSPX",
+"MMM_UA_AssaultFRfull_Green",
+"MMM_UA_AssaultFRfull_Green_HowardImpactSport",
+"MMM_UA_AssaultFRfull_Green_PeltorComTac3",
+"MMM_UA_AssaultFRfull_Green_SordinSPX",
+"MMM_UA_AssaultFRfull_Grey",
+"MMM_UA_AssaultFRfull_Grey_HowardImpactSport",
+"MMM_UA_AssaultFRfull_Grey_PeltorComTac3",
+"MMM_UA_AssaultFRfull_Grey_SordinSPX",
+"MMM_UA_AssaultFRfull_Black",
+"MMM_UA_AssaultFRfull_Black_HowardImpactSport",
+"MMM_UA_AssaultFRfull_Black_PeltorComTac3",
+"MMM_UA_AssaultFRfull_Black_SordinSPX"];
+_arsenalArray append _headgear_MMMbalaklava;
 _headgear_cap_tan = ["H_MilCap_tan"];
 _arsenalArray append _headgear_cap_tan;
 _headgear_bandana_tan = ["H_Bandana_sand_headset"];
@@ -1461,7 +1539,12 @@ _facewear_all = ["cigs_Apollo_cig0","G_Aviator","G_Balaclava_blk","G_Balaclava_B
 "cigs_black_devil_cig0","G_Bandanna_sport","G_Bandanna_RedFlame1","G_Bandanna_BlueFlame2","rhs_ess_black","G_Balaclava_Tropentarn","G_Balaclava_GreenStrips",
 "rhs_balaclava","G_Balaclava_RedStrips","kat_Armband_Red_Cross_Goggles"];
 _arsenalArray append _facewear_all;
-
+_facewear_MMMbalaklava = ["MMM_UA_AssaultFR_face_Black","MMM_UA_AssaultFR_face_Green","MMM_UA_AssaultFR_face_Grey","MMM_UA_AssaultFR_face_Tan","MMM_UA_AssaultFRfull_face_Black",
+"MMM_UA_AssaultFRfull_face_Green", "MMM_UA_AssaultFRfull_face_Grey","MMM_UA_AssaultFRfull_face_Tan"];
+_arsenalArray append _facewear_MMMbalaklava;
+_facewear_viperHood = ["molot_lapa_facewear_mc_v1","molot_lapa_facewear_mc_v2","molot_lapa_facewear_mcal_v1","molot_lapa_facewear_mcal_v2",
+"molot_lapa_facewear_mct_v1","molot_lapa_facewear_mct_v2","molot_lapa_facewear_sapsan_v1","molot_lapa_facewear_sapsan_v2"];
+_arsenalArray append _facewear_viperHood;
 // ==========================NVG==========================
 
 _nvg_NVG_all = ["rhsusf_ANPVS_14","rhsusf_ANPVS_15","cigs_Apollo_cig0_nv","kat_Armband_Red_Cross_NVG","cigs_black_devil_cig0_nv","cigs_cigars_cigar0_nv",
@@ -1474,6 +1557,8 @@ _arsenalArray append _nvg_NVG_all;
 // Makarov's NVGs
 _MMM_PVS14 = ["MMM_UA_L3PVS14_G_Kaska1M","MMM_UA_L3PVS14_G_TorD","MMM_UA_L3PVS14_G_cup_Kaska1M","MMM_UA_L3PVS14_G_cup_TorD","MMM_UA_L3PVS14_W_Kaska1M","MMM_UA_L3PVS14_W_TorD","MMM_UA_L3PVS14_W_cup_Kaska1M","MMM_UA_L3PVS14_W_cup_TorD"];
 _arsenalArray append _MMM_PVS14;
+_nvg_PVS31 = ["MIG_PVS31_STD","MIG_PVS31_DayOps_STD","MIG_PVS31_LOW_Up","MIG_PVS31_LOW"];
+_arsenalArray append _nvg_PVS31;
 // ==========================Binocular==========================
 
 _bino_Binocular_Common = ["Binocular"];
@@ -1503,7 +1588,8 @@ _arsenalArray append _watch_Normal;
 // ==========================Shights==========================
 _sight = ["rhsusf_acc_ELCAN", "rhsusf_acc_ELCAN_ard", "BWA3_optic_PMII_ShortdotCC","BWA3_optic_PMII_DMR","BWA3_optic_PMII_DMR_MicroT1_front","BWA3_optic_PMII_DMR_MicroT1_rear","BWA3_optic_CompM2","BWA3_optic_CompM2_green","BWA3_optic_CompM2_tan","BWA3_optic_MicroT1","BWA3_optic_MicroT2","tsp_acc_t2_unity_black","tsp_acc_t2_unity_black_g33_black_flip","tsp_acc_t2_unity_black_g33_tan_flip","tsp_acc_t2_unity_tan","tsp_acc_t2_unity_tan_g33_black_flip","tsp_acc_t2_unity_tan_g33_tan_flip","BWA3_optic_CarlGustav","BWA3_optic_EOTech552","BWA3_optic_EOTech552_green","BWA3_optic_EOTech552_tan","tsp_acc_xps3_black","tsp_acc_xps3_black_unity_black","tsp_acc_xps3_black_unity_black_g33_black_flip","tsp_acc_xps3_black_unity_black_g33_tan_flip","tsp_acc_xps3_black_unity_tan","tsp_acc_xps3_black_unity_tan_g33_black_flip","tsp_acc_xps3_black_unity_tan_g33_tan_flip","tsp_acc_xps3_tan","tsp_acc_xps3_tan_unity_black","tsp_acc_xps3_tan_unity_black_g33_black_flip","tsp_acc_xps3_tan_unity_black_g33_tan_flip","tsp_acc_xps3_tan_unity_tan","tsp_acc_xps3_tan_unity_tan_g33_black_flip","tsp_acc_xps3_tan_unity_tan_g33_tan_flip","BWA3_optic_EOTech","BWA3_optic_EOTech_sand","BWA3_optic_EOTech_sand_Mag_Off","BWA3_optic_EOTech_Mag_Off","optic_Holosight_arid_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_lush_F","optic_Holosight","optic_Holosight_smg_khk_F","optic_Holosight_smg","optic_Holosight_smg_blk_F","TOTT_EXPS3_Tan","TOTT_EXPS3_Tan_G33","rhsusf_acc_EOTECH","rhsusf_acc_g33_T1","rhsusf_acc_g33_xps3","rhsusf_acc_g33_xps3_tan","rhsusf_acc_ACOG2","rhsusf_acc_ACOG","rhsusf_acc_ACOG3","rhsusf_acc_eotech_552","rhsusf_acc_eotech_552_d","rhsusf_acc_eotech_552_wd","rhsusf_acc_compm4","rhsusf_acc_mrds","rhsusf_acc_mrds_fwd","rhsusf_acc_mrds_c","rhsusf_acc_mrds_fwd_c","BWA3_optic_NSA80","rhsusf_acc_nxs_3515x50_md","rhsusf_acc_nxs_3515x50f1_h58","rhsusf_acc_nxs_3515x50f1_md","rhsusf_acc_nxs_3515x50f1_h58_sun","rhsusf_acc_nxs_3515x50f1_md_sun","rhsusf_acc_nxs_5522x56_md","rhsusf_acc_nxs_5522x56_md_sun","rhsusf_acc_M8541","rhsusf_acc_M8541_d","rhsusf_acc_M8541_low","rhsusf_acc_M8541_low_d","rhsusf_acc_M8541_low_wd","rhsusf_acc_M8541_mrds","rhsusf_acc_M8541_wd","rhsusf_acc_premier_low","rhsusf_acc_premier","rhsusf_acc_premier_mrds","rhsusf_acc_LEUPOLDMK4","rhsusf_acc_LEUPOLDMK4_2","rhsusf_acc_LEUPOLDMK4_d","rhsusf_acc_LEUPOLDMK4_wd","rhsusf_acc_LEUPOLDMK4_2_d","rhsusf_acc_LEUPOLDMK4_2_mrds","rhsusf_acc_RM05","rhsusf_acc_RM05_fwd","BWA3_optic_RSAS","BWA3_optic_RSAS_brown","BWA3_optic_RSAS_green","BWA3_optic_RSAS_riser","BWA3_optic_RSAS_sand","BWA3_optic_RSAS_tan","rhsusf_acc_T1_high","rhsusf_acc_T1_low","rhsusf_acc_T1_low_fwd","TOTT_t2_gmicro13","TOTT_t2_gmicro193","TOTT_t2_leap","TOTT_t2_leap_Caps","TOTT_t2_leap_G33","TOTT_t2_lt660","TOTT_t2_lt660_Tan_G33","TOTT_t2_lt751","TOTT_t2_lt751_fts","TOTT_t2_lt751_g33","TOTT_t2_unity_blk","TOTT_t2_unity","TOTT_t2_unity_blk_G33","TOTT_t2_unity_G33","rhsusf_acc_ACOG_d","rhsusf_acc_ACOG_wd","rhsusf_acc_ACOG_RMR","TOTT_XPS3","TOTT_XPS3_LT101","TOTT_XPS3_FTS","TOTT_XPS3_LT101_FTS","TOTT_XPS3_g33","TOTT_XPS3_LT101_g33","rhsusf_acc_eotech_xps3","BWA3_optic_ZO4x30","BWA3_optic_ZO4x30_brown","BWA3_optic_ZO4x30_MicroT2","BWA3_optic_ZO4x30_MicroT2_brown","BWA3_optic_ZO4x30_RSAS","BWA3_optic_ZO4x30_RSAS_brown","BWA3_optic_ZO4x30i","BWA3_optic_ZO4x30i_MicroT2","BWA3_optic_ZO4x30i_MicroT2_sand","BWA3_optic_ZO4x30i_RSAS","BWA3_optic_ZO4x30i_sand","BWA3_optic_ZO4x30i_RSAS_sand", "BWA3_optic_M5Xi_MSR", "BWA3_optic_M5Xi_MSR_MicroT2", "BWA3_optic_M5Xi_Tremor3", "BWA3_optic_M5Xi_Tremor3_MicroT2"];
 _arsenalArray append _sight;
-
+_sight_sb_PM2 = ["MSS_SB_PMII_525_BLK_GM_NO_NO_NO","MSS_SB_PMII_525_BLK_GM_NO_NO_NV","MSS_SB_PMII_525_FDE_GM_NO_NO_NO","MSS_SB_PMII_525_FDE_GM_NO_NO_NV"]; 
+_arsenalArray append _sight_sb_PM2;
 // ==========================Pointers==========================
 
 _pointer = ["rhsusf_acc_anpeq15side_bk","rhsusf_acc_anpeq15_bk_top","rhsusf_acc_anpeq15_bk","rhsusf_acc_anpeq15side","rhsusf_acc_anpeq15_top","rhsusf_acc_anpeq15","rhsusf_acc_anpeq15_wmx","rhsusf_acc_anpeq15A","rhsusf_acc_anpeq16a","rhsusf_acc_anpeq16a_top","rhs_acc_at4_handler","ACE_DBAL_A3_Green","ACE_DBAL_A3_Red","acc_flashlightMax","acc_flashlightMax_smg_01","ACE_acc_pointer_green","acc_pointer_IR","BWA3_acc_VarioRay_irlaser_black","BWA3_acc_VarioRay_irlaser","BWA3_acc_LLMPI_irlaser","BWA3_acc_LLM01_irlaser","BWA3_acc_LLM01_irlaser_green","BWA3_acc_LLM01_irlaser_tan","BWA3_acc_LLM01_irlaser_underbarrel","rhsusf_acc_M952V","tsp_acc_ngal_black","tsp_acc_ngal_side_black","tsp_acc_ngal_tan","tsp_acc_ngal_front_black","tsp_acc_ngal_front_tan","tsp_acc_ngal_side_tan","rhsusf_acc_wmx","rhsusf_acc_wmx_bk"];
@@ -1513,12 +1599,17 @@ _arsenalArray append _pointer;
 
 _muzzle = ["BWA3_muzzle_snds_Impuls_IIA","BWA3_muzzle_snds_QDSS","BWA3_muzzle_snds_QDSS_green","BWA3_muzzle_snds_QDSS_tan","rhsusf_acc_nt4_black","rhsusf_acc_nt4_tan","BWA3_muzzle_snds_Rotex_II","BWA3_muzzle_snds_Rotex_IIA","BWA3_muzzle_snds_Rotex_IIIC","BWA3_muzzle_snds_Rotex_IIIC_green","BWA3_muzzle_snds_Rotex_IIIC_tan","BWA3_muzzle_snds_Rotex_Monoblock","rhsusf_acc_rotex5_grey","rhsusf_acc_rotex5_tan","rhsusf_acc_rotex_mp7_aor1","rhsusf_acc_rotex_mp7","rhsusf_acc_rotex_mp7_desert","rhsusf_acc_rotex_mp7_winter"];
 _arsenalArray append _muzzle;
-
+_MSS_muzzle = ["MSS_TBAC_MagnusSR_C_DE","MSS_TBAC_MagnusSR_RR_C_DE","MSS_TBAC_MagnusSR_C_OD","MSS_TBAC_MagnusSR_RR_C_OD","MSS_TBAC_MagnusSR_RR_C_BLK","MSS_TBAC_MagnusSR_C_BLK"];
+_arsenalArray append _MSS_muzzle;
+_MCC_muzzle = ["MCC_RotexV_556","MCC_RotexV_556_FDE","MCC_RotexV_556_GRY","MCC_RotexV_D_556","MCC_RotexV_D_556_FDE","MCC_RotexV_D_556_GRY","MCC_RotexV_C_556","MCC_RotexV_C_556_FDE","MCC_RotexV_C_556_GRY"];
+_arsenalArray append _MCC_muzzle;
 // ==========================Bipod==========================
 
 _bipod = ["BWA3_bipod_MG3", "BWA3_bipod_Harris","BWA3_bipod_Harris_green","BWA3_bipod_Harris_tan","rhsusf_acc_grip2","rhsusf_acc_grip2_tan","rhsusf_acc_grip2_wd","BWA3_bipod_Atlas","rhsusf_acc_grip1","rhsusf_acc_harris_swivel","rhsusf_acc_harris_bipod","rhsusf_acc_kac_grip","rhsusf_acc_kac_grip_frwd","rhsusf_acc_rvg_blk","rhsusf_acc_rvg_de","rhsusf_acc_tdstubby_blk","rhsusf_acc_tdstubby_tan","rhsusf_acc_grip3","rhsusf_acc_grip3_tan", "rhs_acc_smr_s_bcm_blk", "rhs_acc_smr_s_bcm_des", "rhs_acc_smr_s_bcm_tan", "rhs_acc_smr_s_bcm_wdl", "rhs_acc_smr_s_blk", "rhs_acc_smr_s_des", "rhs_acc_smr_s_tan", "rhs_acc_smr_s_wdl", "rhs_acc_smr_bcm_blk", "rhs_acc_smr_bcm_des", "rhs_acc_smr_bcm_tan", "rhs_acc_smr_bcm_wdl", "rhs_acc_smr_blk", "rhs_acc_smr_des", "rhs_acc_smr_tan", "rhs_acc_smr_wdl"];
 _arsenalArray append _bipod;
-
+_MSS_bipod = ["MSS_Atlas_BT10","MSS_Atlas_BT35","MSS_Atlas_BT65","MSS_Atlas_BT72","MSS_EI_Revoloution","MSS_Harris_SBRMP","MSS_Magpul_BLK","MSS_Magpul_FDE","MSS_MDT_CYKE","MSS_Rome_Bipod"];
+_arsenalArray append _MSS_bipod;
+_MCC_bipod = ["MCC_MLOK_AFG_BLK","MCC_MLOK_AFG_FDE","MCC_MLOK_AFG_GRY","MCC_MLOK_AFG_OD","MCC_BCM_VFG_FDE","MCC_MLOK_MVG_BLK","MCC_MLOK_MVG_BLK","MCC_MLOK_MVG_FDE","MCC_MLOK_MVG_GRY","MCC_MLOK_MVG_OD"];
 // ==========================Mags==========================
 
 _mags = ["ACE_10Rnd_127x99_Mag", "ACE_10Rnd_127x99_AMAX_Mag", "ACE_10Rnd_127x99_API_Mag", "BWA3_10Rnd_86x70_G29", "BWA3_10Rnd_86x70_G29_Tracer", "BWA3_20Rnd_762x51_G28","BWA3_20Rnd_762x51_G28_AP","BWA3_20Rnd_762x51_G28_Tracer","BWA3_20Rnd_762x51_G28_LR","BWA3_CarlGustav_HE","BWA3_CarlGustav_HEAT","BWA3_CarlGustav_HEDP","BWA3_CarlGustav_Illum","BWA3_CarlGustav_Smoke","BWA3_120Rnd_762x51_soft","BWA3_120Rnd_762x51_Tracer_soft","BWA3_120Rnd_762x51","BWA3_120Rnd_762x51_Tracer","BWA3_30Rnd_556x45_G36","BWA3_30Rnd_556x45_G36_Tracer","BWA3_30Rnd_556x45_G36_AP","rhs_mag_M397_HET","rhs_mag_M433_HEDP","rhs_mag_M441_HE","rhs_mag_M583A1_white","rhs_mag_M585_white_cluster","rhs_mag_m661_green","rhs_mag_m662_red","rhs_mag_M663_green_cluster","rhs_mag_M664_red_cluster","rhs_mag_m713_Red","rhs_mag_m714_White","rhs_mag_m715_Green","rhs_mag_m716_yellow","rhs_mag_M781_Practice","BWA3_200Rnd_556x45","BWA3_200Rnd_556x45_Tracer","BWA3_20Rnd_46x30_MP7","BWA3_20Rnd_46x30_MP7_SD","BWA3_40Rnd_46x30_MP7","BWA3_40Rnd_46x30_MP7_SD","BWA3_1Rnd_Flare_Multistar_Green","BWA3_12Rnd_45ACP_P12","BWA3_1Rnd_Flare_Multistar_Red","BWA3_1Rnd_Flare_Multistar_White","BWA3_1Rnd_Flare_Singlestar_Green","BWA3_1Rnd_Flare_Illum","BWA3_1Rnd_Flare_Singlestar_Red","BWA3_1Rnd_Flare_Singlestar_White","BWA3_PzF3_Tandem", "BWA3_15Rnd_9x19_P8"];
@@ -1527,6 +1618,18 @@ _mags_CSW = ["ace_csw_100Rnd_127x99_mag", "ACE_1Rnd_82mm_Mo_HE", "ACE_1Rnd_82mm_
 _arsenalArray append _mags_CSW;
 _mags_rhs = ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull_Tracer_Red","rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red","rhs_mag_30Rnd_556x45_M200_Stanag","rhs_mag_30Rnd_556x45_M855A1_EPM","rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger","rhs_mag_30Rnd_556x45_M855A1_EPM_Ranger_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_EPM_Pull","rhs_mag_30Rnd_556x45_M855A1_EPM_Pull_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_EPM_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red","rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red","rhs_mag_30Rnd_556x45_M855_PMAG_Tan_Tracer_Red","rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red","rhs_mag_30Rnd_556x45_M855_PMAG","rhs_mag_30Rnd_556x45_M855_PMAG_Tan","rhs_mag_30Rnd_556x45_M855A1_PMAG","rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan","rhs_mag_30Rnd_556x45_M855_Stanag_Pull","rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red","rhs_mag_30Rnd_556x45_M855_Stanag_Ranger_Tracer_Red","rhs_mag_30Rnd_556x45_M855_Stanag_Ranger","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger","rhs_mag_30Rnd_556x45_M855_Stanag","rhs_mag_30Rnd_556x45_M855A1_Stanag"];
 _arsenalArray append _mags_rhs;
+_mags_MSS_300WM =
+["MSS_10rnd_300WM_212ELDX_AXSR","MSS_10rnd_300WM_Mk248Mod0_AXSR","MSS_10rnd_300WM_Mk248Mod1_AXSR","MSS_10rnd_300WM_212ELDX_AXSR_Camo","MSS_10rnd_300WM_Mk248Mod0_AXSR_Camo",
+"MSS_10rnd_300WM_Mk248Mod1_AXSR_Camo","MSS_10rnd_300WM_212ELDX_AXSR_FDE","MSS_10rnd_300WM_Mk248Mod0_AXSR_FDE","MSS_10rnd_300WM_Mk248Mod1_AXSR_FDE"];
+_arsenalArray append _mags_MSS_300WM;
+_mags_MSS_762 = ["MSS_10rnd_762_FMJ_AXSR","MSS_10rnd_762_M852_AXSR","MSS_10rnd_762_M62_AXSR","MSS_10rnd_762_FMJ_AXSR_Camo","MSS_10rnd_762_M852_AXSR_Camo",
+"MSS_10rnd_762_M62_AXSR_Camo", "MSS_10rnd_762_FMJ_AXSR_FDE","MSS_10rnd_762_M852_AXSR_FDE","MSS_10rnd_762_M62_AXSR_FDE"];
+_arsenalArray append _mags_MSS_762;
+_mags_MSS_65CM = ["MSS_10rnd_65CM_140ELD_AXSR","MSS_10rnd_65CM_130FED_AXSR","MSS_10rnd_65CM_140ELD_AXSR_Camo","MSS_10rnd_65CM_130FED_AXSR_Camo",
+"MSS_10rnd_65CM_140ELD_AXSR_FDE","MSS_10rnd_65CM_130FED_AXSR_FDE"];
+_arsenalArray append _mags_MSS_65CM;
+_mags_MCC_hk416 = ["MCC_HK_556_30_RAL_M855A1","MCC_HK_556_30_RAL_M995","MCC_HK_556_30_BLK_M855A1","MCC_HK_556_30_BLK_M995","MCC_HK_556_30_FDE_M855A1","MCC_HK_556_30_FDE_M855A1"];
+_arsenalArray append _mags_MCC_hk416;
 // ==========================Grenades==========================
 
 _grenades = ["Chemlight_blue","Chemlight_green","ACE_Chemlight_HiBlue","ACE_Chemlight_HiGreen","ACE_Chemlight_HiRed","ACE_Chemlight_HiWhite","ACE_Chemlight_IR","ACE_Chemlight_Orange","ACE_Chemlight_HiYellow","Chemlight_red","ACE_Chemlight_UltraHiOrange","Chemlight_yellow","ACE_Chemlight_White","BWA3_DM25","BWA3_DM32_Blue","BWA3_DM32_Green","BWA3_DM32_Orange","BWA3_DM32_Purple","BWA3_DM32_Red","BWA3_DM32_Yellow","BWA3_DM51A1","ACE_HandFlare_Green","ACE_HandFlare_Red","ACE_HandFlare_White","tsp_flashbang_m84"];
